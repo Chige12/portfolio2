@@ -25,14 +25,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0%;
   height: 100%;
   background-image: linear-gradient(-45deg,
-    transparent 0%, transparent 38%,
-    $theme-navy 38%, $theme-navy 50%,
-    transparent 50%, transparent 88%,
-    $theme-navy 88%, $theme-navy );
-  background-size: 8px 8px;
+    transparent 0%, transparent 37%,
+    $theme-navy 37%, $theme-navy 50%,
+    transparent 50%, transparent 87%,
+    $theme-navy 87%, $theme-navy );
+  background-size: 7px 7px;
   transition: $time $bezier-fast-ease-out;
 }
 

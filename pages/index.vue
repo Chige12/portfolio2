@@ -28,43 +28,38 @@ export default {
       now_page:"Index",
       topics : [
         {
-          id: "",
+          id: "pro_karuta",
           title: "プログラミング言語かるた",
-          img: ".png",
-          link: "",
+          img: "go-haskell3ds-b.png",
           disc: "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
           color: "green"
         },
         {
-          id: "",
+          id: "git_karuta",
           title: "Gitコマンドかるた",
-          img: ".png",
-          link: "",
+          img: "gitkaruta.png",
           disc: "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
           color: "gray"
         },
         {
-          id: "",
-          title: "3番目",
-          img: ".png",
-          link: "",
-          disc: "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
+          id: "rewrite_kosen",
+          title: "高専映像塾キャッチ",
+          video: "content/rewrite-kosen.mp4",
+          disc: "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
           color: "pink"
         },
         {
-          id: "",
-          title: "４番目",
-          img: ".png",
-          link: "",
-          disc: "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
+          id: "phpcon2018_video",
+          title: "PHPカンファOPムービー",
+          img: "phpconfvideo5.png",
+          disc: "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
           color: "green"
         },
         {
-          id: "",
-          title: "５番目",
-          img: ".png",
-          link: "",
-          disc: "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
+          id: "can_you_read",
+          title: "難読地名くいず",
+          img: "can-you-read.jpg",
+          disc: "友人と全国の難読地名を集めてクイズを制作。デザインとCSSを担当。",
           color: "gray"
         }
       ]

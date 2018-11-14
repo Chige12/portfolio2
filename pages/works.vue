@@ -15,9 +15,38 @@ export default {
     GlobalMenu,
     Topics
   },
+  watch: {
+    '$route': 'getUrlHash'
+  },
+  mounted() {
+    this.urlHash = location.hash;
+    this.getUrlHash();
+  },
   data() {
     return {
-      now_page:"Works"
+      now_page:"Works",
+      tags:["design","video","web","illust","others","programming"],
+      urlHash:""
+    }
+  },
+  methods: {
+    OpenContent(urlHash){
+      var hoge = 1
+    },
+    getUrlHash () {
+      this.urlHash = location.hash;
+      if(this.urlHash){
+        var tag = false;
+        console.log(this.urlHash);
+        for (let i = 0; i < this.tags.length; i++) {
+          if(this.urlHash == "#"+this.tags[i]){
+            tag = true;
+          }
+        }
+        if(tag==false){
+          this.OpenContent(this.urlHash);
+        }
+      }
     }
   }
 }

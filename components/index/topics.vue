@@ -2,8 +2,9 @@
   .topics
     .carousel
       .topic(v-for="(topic,topic_id) in temp_topics" :class="{'topic-display':DisplayCarousel(topic_id)}")
-        nuxt-link(:to="topic.link" :class="`topic-`+topic.color").backcolor
-          img(src="").topic-img
+        nuxt-link(:to="'/works#'+topic.id" :class="`topic-`+topic.color").backcolor
+          video(v-if="topic.video" :src="`img/works/${topic.video}`" autoplay loop muted).topic-img
+          img(v-if="topic.img" :src="`img/works/${topic.img}`").topic-img
           .stripe
           .title: h1 {{topic.title}}
           .discription: p {{topic.disc}}
@@ -44,7 +45,6 @@ export default {
   },
   methods: {
     KeyDown(event) {
-      console.log(event.keyCode);
       var keyCode = event.keyCode;
       if(keyCode == 39){
         this.NextSelector(1)
@@ -171,6 +171,8 @@ export default {
         right: 0;
         bottom: 0;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .stripe {
         @include stripe();
@@ -222,7 +224,7 @@ export default {
           transform: scale(1.1);
         }
         .stripe {
-          width: 60%;
+          width: 80%;
         }
         .title {
           width:40rem;
