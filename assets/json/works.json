@@ -4,7 +4,7 @@
     "title":      "プログラミング言語かるた",
     "top_img":    "",
     "top_text":   "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
-    "category":   ["design","programming","video"],
+    "tags":   ["design","programming","video"],
     "type":       "multi",
     "content":{
       "img":    [],
@@ -20,7 +20,7 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "category":   ["video"],
+    "tags":   ["video"],
     "type":       "video",
     "content":{
       "img":    [],
@@ -36,7 +36,7 @@
     "title":      "高専映像塾プロモーションデザイン",
     "top_img":    "",
     "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
-    "category":   ["design","video"],
+    "tags":   ["design","video"],
     "type":       "image",
     "content":{
       "img":    [],

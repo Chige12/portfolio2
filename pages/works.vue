@@ -2,31 +2,34 @@
   .nuxt
     .works
       Header(:now_page="now_page")
+      WorkContents(:url_hash="urlHash" :contents="contents")
     GlobalMenu(:now_page="now_page")
 </template>
 <script>
 import Header from '~/components/header.vue'
 import GlobalMenu from '~/components/globalMenu.vue'
-import Topics from '~/components/index/topics.vue'
+import WorkContents from '~/components/work/contents.vue'
+import contents_data from '~/assets/json/works.json'
 
 export default {
   components: {
     Header,
     GlobalMenu,
-    Topics
+    WorkContents
   },
   watch: {
     '$route': 'getUrlHash'
   },
   mounted() {
-    this.urlHash = location.hash;
     this.getUrlHash();
+    
   },
   data() {
     return {
       now_page:"Works",
       tags:["design","video","web","illust","others","programming"],
-      urlHash:""
+      urlHash:"",
+      contents: contents_data
     }
   },
   methods: {
