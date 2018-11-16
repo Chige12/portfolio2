@@ -144,7 +144,7 @@ import PopupMail from '~/components/popup/mail.vue'
             z-index: 21;
             .t-gray {
               transition: .6s $bezier-fast-ease-out;
-              color: $theme-gray;
+              color: $theme-gray-1;
               z-index: 22;
             }
           }
@@ -217,10 +217,10 @@ import PopupMail from '~/components/popup/mail.vue'
           width: 38px;
           height: 38px;
           cursor: pointer;
-          .back-circle-mail {@include fan-clipping(38px,44px,$theme-green);}
+          .back-circle-mail {@include fan-clipping(38px,44px,$theme-green-li);}
           .back-circle-twitter {@include fan-clipping(38px,44px,$official-twitter);}
-          .back-circle-github {@include fan-clipping(38px,44px,$theme-mint);}
-          .back-circle-hatena {@include fan-clipping(38px,44px,$theme-gray);}
+          .back-circle-github {@include fan-clipping(38px,44px,$theme-mint-li);}
+          .back-circle-hatena {@include fan-clipping(38px,44px,$theme-gray-1);}
           img {
             position: absolute;
             top: 0;

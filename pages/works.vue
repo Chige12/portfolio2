@@ -2,7 +2,7 @@
   .nuxt
     .works
       Header(:now_page="now_page")
-      WorkContents(:url_hash="urlHash" :contents="contents")
+      WorkContents(:url_hash="urlHash" :contents="contents" ref="contents")
     GlobalMenu(:now_page="now_page")
 </template>
 <script>
@@ -21,14 +21,15 @@ export default {
     '$route': 'getUrlHash'
   },
   mounted() {
-    this.getUrlHash();
-    
+    this.$nextTick(() => {
+      this.getUrlHash();
+    });
   },
   data() {
     return {
       now_page:"Works",
-      tags:["design","video","web","illust","others","programming"],
-      urlHash:"",
+      tags:["design","video","web","illust","others"],
+      urlHash: "",
       contents: contents_data
     }
   },
@@ -42,11 +43,12 @@ export default {
         var tag = false;
         console.log(this.urlHash);
         for (let i = 0; i < this.tags.length; i++) {
-          if(this.urlHash == "#"+this.tags[i]){
-            tag = true;
-          }
+          if(this.urlHash == "#"+this.tags[i]){ tag = true; }
         }
-        if(tag==false){
+        if(tag==true){//hashがtagなら
+          //call child method
+          this.$refs.contents.hashTag(this.urlHash.slice(1))
+        }else{
           this.OpenContent(this.urlHash);
         }
       }

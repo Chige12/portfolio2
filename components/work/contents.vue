@@ -1,40 +1,32 @@
 <template lang="pug">
   .work_contents
     .contents_wrapper
-      .contents_menu
-        .menu_heading Search
-        .menu_content
-          input(type="text").search
-        .menu_heading Tags
-        .menu_content.tags
-          .taglist(v-for="TagList in TagsList")
-            nuxt-link(:to="'./works#'+TagList") {{TagList}}
-      .contents_list
+      ContentsMenu(:url_hash="url_hash" :contents="contents" ref="contents_menu")
+      ContentsList( :contents="contents" ref="contents_list").contents_list
 </template>
 
 <script>
+import ContentsMenu from '~/components/work/contentsMenu.vue'
+import ContentsList from '~/components/work/contentsList.vue'
+
 export default {
+  components:{
+    ContentsMenu,
+    ContentsList
+  },
   props: ["url_hash","contents"],
   data () {
     return {
-      tags:["design","video","web","illust"]
+      filter:{
+        serch:[],
+        tags:[]
+      }
     }
   },
   methods: {
-    
-  },
-  computed: {
-    TagsList(){
-      var tagsList = this.tags;
-      for (let i = 0; i < this.contents.length; i++) {
-        for (let j = 0; j < this.contents[i].tags.length; j++) {
-          if(tagsList.indexOf(this.contents[i].tags[j]) == -1){
-            tagsList.push(this.contents[i].tags[j]);
-          }
-        }
-      }
-      return tagsList;
-    }
+    hashTag(tag){
+       this.$refs.contents_menu.hashTag(tag);
+    },
   }
 }
 </script>
@@ -49,43 +41,6 @@ export default {
     width: 100%;
     display: flex;
     padding-left: 35px;
-    .contents_menu {
-      width: 170px;
-      .menu_heading {
-        @include roboto-medium(1.3rem);
-        color: $theme-gray-text;
-        margin: 2px 0;
-      }
-      .menu_content {
-        margin-bottom: 12px;
-        .search {
-          padding: 4px;
-          width: 170px;
-          @include noto-font(1.4rem,$theme-gray-text);
-          border: 1px solid $theme-gray;
-        }
-        .taglist {
-          width: auto;
-          display: inline-block;
-          margin: 2px;
-          padding: 4px 8px 5px;
-          border-radius: 4px;
-          background: $theme-gray;
-          transition: .2s $bezier-fast-ease-out;
-          &:hover {
-            background: $theme-navy;
-          }
-          a {
-            @include noto-font(1.4rem,#fff);
-          }
-        }
-      }
-      .menu_content.tags {
-        display:flex;
-        flex-wrap: wrap;
-      }
-
-    }
     .contents_list {
       width: calc(100% - 170px);
       padding: 45px;
