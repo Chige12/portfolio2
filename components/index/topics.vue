@@ -9,12 +9,16 @@
           .title: h1 {{topic.title}}
           .discription: p {{topic.disc}}
       .topic-prev(@click="PrevSelector(1)" :class="{'hide-prev':hide_prev_btn}")
+        font-awesome-icon(icon="angle-left").icon-angle.icon-angle-prev
       .topic-next(@click="NextSelector(1)")
+        font-awesome-icon(icon="angle-right").icon-angle.icon-angle-next
     .selector
       button.select-prev(@click="PrevSelector(1)" :class="{'hide-prev':hide_prev_btn}")
+        font-awesome-icon(icon="angle-left").icon-angle.icon-angle-prev
       .select-num(v-for="(number, number_id) in CarouselNumber")
         button.number(@click="NextSelector(number_id)") {{number}}
       button.select-next(@click="NextSelector(1)")
+        font-awesome-icon(icon="angle-right").icon-angle.icon-angle-next
 
 </template>
 
@@ -97,6 +101,7 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
+@import "~/assets/scss/animation.scss";
 
 .topics {
   .carousel {
@@ -118,6 +123,22 @@ export default {
       &:hover {
         opacity: .6;
       }
+    }
+    .icon-angle {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 7px;
+      font-size: 45px;
+      line-height: 45px;
+      color: white;
+    }
+    .icon-angle-prev {
+      animation : prevIcon 1.6s ease infinite;
+    }
+    .icon-angle-next {
+      animation : nextIcon 1.6s ease infinite;
     }
     .hide-prev {
       cursor: unset;
@@ -241,6 +262,7 @@ export default {
     margin-top: 12px;
     padding-left: 32px;
     button{
+      position: relative;
       background: $theme-gray;
       width: 48px;
       height: 36px;
@@ -250,6 +272,20 @@ export default {
       @include roboto-black(2.3rem);
       color: white;
       cursor: pointer;
+      .icon-angle {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 26px;
+        line-height: 26px;
+        color: white;
+      }
+      .icon-angle-prev:hover {animation : prevIcon 1.6s ease infinite;}
+      .icon-angle-next:hover {animation : nextIcon 1.6s ease infinite;}
+
       &:hover {
         background: $theme-navy;
       }
@@ -277,5 +313,7 @@ export default {
 .topic-enter, .topic-leave-to {
   width: 0;
 }
+
+
 </style>
 

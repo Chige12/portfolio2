@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run dev
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js remove @fortawesome/fontawesome-svg-core C:/Program Files/Git/yarn remove @fortawesome/free-solid-svg-icons C:/Program Files/Git yarn remove @fortawesome/vue-fontawesome
 
 PATH: 
-  C:\Users\Chige\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Chige\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone;C:\HashiCorp\Vagrant\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;C:\Users\Chige\Downloads\php-7.1.8-Win32-VC14-x64;C:\ProgramData\ComposerSetup\bin;C:\Users\Chige\AppData\Local\Programs\Python\Python36;C:\Users\Chige\AppData\Local\Programs\Python\Python36\Scripts;C:\Program Files (x86)\Yarn\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\Ruby24-x64\bin;C:\Users\Chige\AppData\Local\Microsoft\WindowsApps;C:\Users\Chige\AppData\Local\atom\bin;C:\Users\Chige\AppData\Local\Microsoft\WindowsApps;C:\Users\Chige\AppData\Roaming\Composer\vendor\bin;C:\Users\Chige\AppData\Local\Yarn\bin;C:\Users\Chige\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\Chige\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Chige\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone;C:\HashiCorp\Vagrant\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;C:\Users\Chige\Downloads\php-7.1.8-Win32-VC14-x64;C:\ProgramData\ComposerSetup\bin;C:\Users\Chige\AppData\Local\Programs\Python\Python36;C:\Users\Chige\AppData\Local\Programs\Python\Python36\Scripts;C:\Program Files (x86)\Yarn\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\Ruby24-x64\bin;C:\Users\Chige\AppData\Local\Microsoft\WindowsApps;C:\Users\Chige\AppData\Local\atom\bin;C:\Users\Chige\AppData\Local\Microsoft\WindowsApps;C:\Users\Chige\AppData\Roaming\Composer\vendor\bin;C:\Users\Chige\AppData\Local\Yarn\bin;C:\Users\Chige\AppData\Roaming\npm;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.5.1
@@ -29,8 +29,13 @@ npm manifest:
       "precommit": "npm run lint"
     },
     "dependencies": {
+      "@fortawesome/fontawesome-svg-core": "^1.2.8",
+      "@fortawesome/free-solid-svg-icons": "^5.5.0",
+      "@fortawesome/vue-fontawesome": "^0.1.2",
+      "add": "^2.0.6",
       "node-fetch": "^2.2.0",
-      "nuxt": "^2.0.0"
+      "nuxt": "^2.0.0",
+      "yarn": "^1.12.3"
     },
     "devDependencies": {
       "babel-eslint": "^8.2.1",
@@ -716,6 +721,26 @@ Lockfile:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   
+  "@fortawesome/fontawesome-common-types@^0.2.8":
+    version "0.2.8"
+    resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.8.tgz#8cacd1efd1aa956e1ef173f0abcf2ce1b7a0c66f"
+  
+  "@fortawesome/fontawesome-svg-core@^1.2.8":
+    version "1.2.8"
+    resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.8.tgz#b802b7f3d5b9d9d92ae92c18e865df468dcdf561"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "^0.2.8"
+  
+  "@fortawesome/free-solid-svg-icons@^5.5.0":
+    version "5.5.0"
+    resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.5.0.tgz#4d815df4bba076f209eb409bc56d9d830367a7c0"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "^0.2.8"
+  
+  "@fortawesome/vue-fontawesome@^0.1.2":
+    version "0.1.2"
+    resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.2.tgz#f993d7788bd6f031a1a20ff8f608ed0f36c83185"
+  
   "@nuxtjs/babel-preset-app@^0.7.0":
     version "0.7.0"
     resolved "https://registry.yarnpkg.com/@nuxtjs/babel-preset-app/-/babel-preset-app-0.7.0.tgz#b208a95e0a053259c29b99a9e4ca9ea2604dbdd2"
@@ -954,6 +979,10 @@ Lockfile:
   acorn@^5.0.0, acorn@^5.5.0, acorn@^5.6.2, acorn@^5.7.3:
     version "5.7.3"
     resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
+  
+  add@^2.0.6:
+    version "2.0.6"
+    resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
   
   ajv-errors@^1.0.0:
     version "1.0.0"
@@ -7094,18 +7123,15 @@ Lockfile:
       cliui "^2.1.0"
       decamelize "^1.0.0"
       window-size "0.1.0"
+  
+  yarn@^1.12.3:
+    version "1.12.3"
+    resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.12.3.tgz#fb4599bf1f8da01552bcc7e1571dfd4e53788203"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 3221225786
-  Command: C:\WINDOWS\system32\cmd.exe
-  Arguments: /d /s /c nuxt
-  Directory: C:\Users\Chige\Documents\work\MyPTsite\chige12_portfolio2018
-  Output:
-  
-      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
-      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
-      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
-      at ChildProcess.emit (events.js:182:13)
-      at maybeClose (internal/child_process.js:961:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  Error: This module isn't specified in a manifest.
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at Object.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:60445:15)
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
