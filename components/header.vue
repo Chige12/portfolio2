@@ -35,14 +35,17 @@ export default {
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 .header {
-  margin: 35px;
+  padding: 35px;
   display: flex;
   flex-wrap: nowrap;
+  transform: translate(0);
+  pointer-events: none;
   img.header-logo {
     width: 170px;
     height: 100px;
     padding: 24px 0 22px;
     background: $theme-gray;
+    pointer-events: auto;
   }
   .header-text {
     margin-left: 26px;
@@ -55,6 +58,7 @@ export default {
       transition-property: letter-spacing, transform;
       transition-duration: 1s, 2s;
       transition-timing-function: cubic-bezier(0,.86,.13,1), ease-out;
+      pointer-events: auto;
       &:hover {
         transform: skewX(-30deg) translateX(10px);
         letter-spacing: 60px;
@@ -62,6 +66,7 @@ export default {
     }
     .title {
       @include roboto-medium(1.6rem);
+      pointer-events: auto;
     }
   }
 }

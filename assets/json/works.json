@@ -2,10 +2,97 @@
   {
     "id":         "pro_karuta",
     "title":      "プログラミング言語かるた",
-    "top_img":    "",
+    "top_img":    "go-haskell3ds-b.png",
     "top_text":   "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
-    "tags":   ["design","programming","video"],
+    "tags":       ["design","programming","video"],
     "type":       "multi",
+    "date":       "2018/3",
+    "content":{
+      "img":    [],
+      "video":  {"site":"vimeo","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "git_karuta",
+    "title":      "Gitコマンドかるた",
+    "top_img":    "gitkaruta.png",
+    "top_text":   "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
+    "tags":       ["design","programming"],
+    "type":       "multi",
+    "date":       "2018/8",
+    "content":{
+      "img":    [],
+      "video":  {},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "rewrite_kosen",
+    "title":      "高専映像塾プロモデザイン",
+    "top_video":  "content/rewrite-kosen.mp4",
+    "top_img":    "",
+    "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
+    "tags":       ["design","video"],
+    "type":       "image",
+    "date":       "2018/10",
+    "content":{
+      "img":    [],
+      "video":  {"site":"none","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "phpcon2018_video",
+    "title":      "PHPカンファイベントムービー",
+    "top_img":    "phpconfvideo5.png",
+    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags":   ["video"],
+    "type":       "video",
+    "date":       "2018/8",
+    "content":{
+      "img":    [],
+      "video":  {"site":"vimeo","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "can_you_read",
+    "title":      "難読地名くいず",
+    "top_img":    "can-you-read.jpg",
+    "top_text":   "友人と全国の難読地名を集めてクイズを制作。デザインとCSSを担当。",
+    "tags":   ["web"],
+    "type":       "multi",
+    "date":       "2017/2",
+    "content":{
+      "img":    [],
+      "video":  {},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "phpcon2018_video",
+    "title":      "PHPカンファイベントムービー",
+    "top_img":    "phpconfvideo5.png",
+    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags":   ["video"],
+    "type":       "video",
+    "date":       "2018/8",
     "content":{
       "img":    [],
       "video":  {"site":"vimeo","link":""},
@@ -18,10 +105,11 @@
   {
     "id":         "phpcon2018_video",
     "title":      "PHPカンファイベントムービー",
-    "top_img":    "",
+    "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
     "tags":   ["video"],
     "type":       "video",
+    "date":       "2018/8",
     "content":{
       "img":    [],
       "video":  {"site":"vimeo","link":""},
@@ -32,15 +120,50 @@
     }
   },
   {
-    "id":         "rewrite_kosen",
-    "title":      "高専映像塾プロモーションデザイン",
-    "top_img":    "",
-    "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
-    "tags":   ["design","video"],
-    "type":       "image",
+    "id":         "phpcon2018_video",
+    "title":      "PHPカンファイベントムービー",
+    "top_img":    "phpconfvideo5.png",
+    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags":   ["video"],
+    "type":       "video",
+    "date":       "2018/8",
     "content":{
       "img":    [],
-      "video":  {"site":"none","link":""},
+      "video":  {"site":"vimeo","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "phpcon2018_video",
+    "title":      "PHPカンファイベントムービー",
+    "top_img":    "phpconfvideo5.png",
+    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags":   ["video"],
+    "type":       "video",
+    "date":       "2018/8",
+    "content":{
+      "img":    [],
+      "video":  {"site":"vimeo","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "phpcon2018_video",
+    "title":      "PHPカンファイベントムービー",
+    "top_img":    "phpconfvideo5.png",
+    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags":   ["video"],
+    "type":       "video",
+    "date":       "2018/8",
+    "content":{
+      "img":    [],
+      "video":  {"site":"vimeo","link":""},
       "text":   [],
       "link":[
         {"name":"","url":""}

@@ -1,8 +1,8 @@
 <template lang="pug">
   .work_contents
     .contents_wrapper
-      ContentsMenu(:url_hash="url_hash" :contents="contents" ref="contents_menu")
-      ContentsList( :contents="contents" ref="contents_list").contents_list
+      ContentsMenu(:filter="filter" :url_hash="url_hash" :contents="contents" ref="contents_menu" @ToggleShowTag="ToggleShowTag")
+      ContentsList(:filter="filter" :contents="contents" ref="contents_list" @toggleFilter="toggleFilterTag").contents_list
 </template>
 
 <script>
@@ -24,9 +24,17 @@ export default {
     }
   },
   methods: {
+    //ContentsMenu methods
     hashTag(tag){
-       this.$refs.contents_menu.hashTag(tag);
+      this.$refs.contents_menu.hashTag(tag);
     },
+    toggleFilterTag(tag){
+      this.$refs.contents_menu.toggleFilterTag(tag);
+    },
+    //ContentsList methods
+    ToggleShowTag(eye){
+      this.$refs.contents_list.ToggleShowTag(eye);
+    }
   }
 }
 </script>
@@ -36,15 +44,12 @@ export default {
 @import "~/assets/scss/mixin.scss";
 .work_contents {
   width: 100%;
-  padding-right: 410px;
   .contents_wrapper {
+    position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
-    padding-left: 35px;
-    .contents_list {
-      width: calc(100% - 170px);
-      padding: 45px;
-    }
+    overflow-y: overlay;
   }
 }
 </style>

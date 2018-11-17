@@ -3,6 +3,10 @@
     .menu_heading Keyword search
     .menu_content
       input(type="text").search
+    .tag-watch(@click="toggleEye()")
+      .tag-watch-text {{eye}}
+      font-awesome-icon(icon="eye" v-if="eye=='Hide all tags'").eye-icon
+      font-awesome-icon(icon="eye-slash" v-if="eye=='Show all tags'").eye-icon
     .menu_heading Tag filtering
     .menu_content.tags
       .taglist(v-for="(TagList,topic_id) in TagsList" @mouseover="tagOver(TagList)" @mouseleave="tagLeave(TagList)" @click="toggleFilterTag(TagList)")
@@ -15,14 +19,23 @@
 </template>
 <script>
 export default {
-  props: ["url_hash","contents"],
+  props: ["filter","url_hash","contents"],
   data () {
     return {
-      tags:["design","video","web","illust"],
-      filter_tags:[]
+      tags:["design","video","web","illust"],//defaultのfilteringタグ
+      eye:"Show all tags"//デフォルトでContentsのタグ非表示
     }
   },
   methods: {
+    toggleEye(){
+      if(this.eye=='Show all tags'){
+        this.eye = 'Hide all tags'
+        this.$emit('ToggleShowTag','Display')
+      }else{
+        this.eye = 'Show all tags'
+        this.$emit('ToggleShowTag','Remove')
+      }
+    },
     tagOver(tag){//hover
       var taghole = document.getElementById('taghole'+tag);
       var tagname = document.getElementById('tagname'+tag);
@@ -46,34 +59,34 @@ export default {
     hashTag(tag){//Hash読み込み用
       var taghole = document.getElementById('taghole'+tag);
       var tagname = document.getElementById('tagname'+tag);
-      this.filter_tags = [];
+      this.$parent.filter.tags = [];
       switch (tag) {
         case"design": case"video": case"web": case"illust":
-          this.filter_tags.push(tag); break;
+          this.$parent.filter.tags.push(tag); break;
         default: 
           for (let i = 0; i < (this.TagsList.length-4); i++) {
-            this.filter_tags.push(this.TagsList[i+4]);
+            this.$parent.filter.tags.push(this.TagsList[i+4]);
           } break;
       }
     },
     toggleFilterTag(tag){//UI操作用
       var taghole = document.getElementById('taghole'+tag);
       var tagname = document.getElementById('tagname'+tag);
-      if(this.filter_tags.indexOf(tag) == -1){
-        this.filter_tags.push(tag);//tag追加
+      if(this.filter.tags.indexOf(tag) == -1){
+        this.$parent.filter.tags.push(tag);//tag追加
       }else{
-        this.filter_tags.splice(this.filter_tags.indexOf(tag),1);//tag削除
+        this.$parent.filter.tags.splice(this.filter.tags.indexOf(tag),1);//tag削除
       }
     },
     filterTagCheck(tag){
-      if(this.filter_tags.indexOf(tag) == -1){
+      if(this.filter.tags.indexOf(tag) == -1){
         return true;
       }else{
         return false;
       }
     },
     FilterTagholeCheck(tag){
-      if(this.filter_tags.indexOf(tag) != -1){
+      if(this.filter.tags.indexOf(tag) != -1){
         switch (tag) {
           case"design": return "6px solid #73833f"; break; //$theme-green-1
           case"video":  return "6px solid #479a89"; break; //$theme-mint-1
@@ -84,7 +97,7 @@ export default {
       }
     },
     FilterTagnameCheck(tag){
-      if(this.filter_tags.indexOf(tag) != -1){
+      if(this.filter.tags.indexOf(tag) != -1){
         switch (tag) {
           case"design": return "#73833f"; break; //$theme-green-1
           case"video":  return "#479a89"; break; //$theme-mint-1
@@ -114,7 +127,29 @@ export default {
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 .contents_menu {
+  position: fixed;
+  top: 18px + 170px;
+  left: 35px;
   width: 170px;
+  pointer-events: none;
+  .tag-watch{
+    display: flex;
+    width: 100%;
+    margin: 4px 0;
+    margin-bottom: 16px;
+    pointer-events: auto;
+    cursor: pointer;
+    color: $theme-gray-text;
+    .tag-watch-text {
+      @include roboto-medium(1.4rem);
+      padding: 2.4px 0;
+      width: 9rem;
+    }
+    .eye-icon {
+      font-size: 20px;
+      padding: 2px;
+    }
+  }
   .menu_heading {
     @include roboto-medium(1.4rem);
     color: $theme-gray-text;
@@ -127,6 +162,7 @@ export default {
       width: 170px;
       @include noto-font(1.4rem,$theme-gray-text);
       border: 1px solid $theme-gray;
+      pointer-events: auto;
     }
     .taglist {
       width: auto;
@@ -135,6 +171,7 @@ export default {
       @include noto-font(1.5rem,#fff);
       line-height: 1.6rem;
       cursor: pointer;
+      pointer-events: auto;
       .taghole {
         width: 0;
         border-top: 6px solid transparent;
@@ -152,9 +189,9 @@ export default {
           display: block;
           transform: translateX(0);
           transition: .2s $bezier-fast-ease-out;
-        }
-        span.no-slide {
-          transform: translateX(4px);
+          &.no-slide {
+            transform: translateX(4px);
+          }
         }
         .check-icon {
           position: absolute;
@@ -193,14 +230,6 @@ export default {
             transform: translateX(4px);
           }
           .check-icon {
-            position: absolute;
-            margin: auto;
-            top:0;
-            bottom: 0;
-            left: 0px;
-            font-size: 14px;
-            line-height: 14px;
-            color: white;
             &-plus {
               transform:scale(1) translateX(0);
             }

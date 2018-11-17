@@ -1,8 +1,8 @@
 <template lang="pug">
   .nuxt
     .works
+      WorkContents(:url_hash="urlHash" :contents="contents" ref="contents").pre-workcontents
       Header(:now_page="now_page")
-      WorkContents(:url_hash="urlHash" :contents="contents" ref="contents")
     GlobalMenu(:now_page="now_page")
 </template>
 <script>
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       now_page:"Works",
-      tags:["design","video","web","illust","others"],
+      tags:["design","video","web","illust","others"],//hashからfilteringするタグ
       urlHash: "",
       contents: contents_data
     }
@@ -60,4 +60,14 @@ export default {
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 .nuxt {padding: 18px 0;}
+.works {
+  position: relative;
+  .pre-workcontents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 36px);
+  }
+}
 </style>

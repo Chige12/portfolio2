@@ -21,7 +21,7 @@
   background: $color;
 }
 
-@mixin stripe($time:.5s) {
+@mixin stripe($time:.5s,$color:$theme-navy) {
   position: absolute;
   top: 0;
   left: 0;
@@ -29,9 +29,9 @@
   height: 100%;
   background-image: linear-gradient(-45deg,
     transparent 0%, transparent 37%,
-    $theme-navy 37%, $theme-navy 50%,
+    $color 37%, $color 50%,
     transparent 50%, transparent 87%,
-    $theme-navy 87%, $theme-navy );
+    $color 87%, $color );
   background-size: 7px 7px;
   transition: $time $bezier-fast-ease-out;
 }
