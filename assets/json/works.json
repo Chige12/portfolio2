@@ -5,6 +5,7 @@
     "top_img":    "go-haskell3ds-b.png",
     "top_text":   "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
     "tags":       ["design","programming","video"],
+    "keyword":    ["programming","campfire","proかるた","booth"],
     "type":       "multi",
     "date":       "2018/3",
     "content":{
@@ -22,6 +23,7 @@
     "top_img":    "gitkaruta.png",
     "top_text":   "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
     "tags":       ["design","programming"],
+    "keyword":    ["github","gitかるた","booth"],
     "type":       "multi",
     "date":       "2018/8",
     "content":{
@@ -40,6 +42,7 @@
     "top_img":    "",
     "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
     "tags":       ["design","video"],
+    "keyword":    ["kosen","ナレッジスター","ロゴ","logo"],
     "type":       "image",
     "date":       "2018/10",
     "content":{
@@ -56,7 +59,8 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video","event"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{
@@ -73,7 +77,8 @@
     "title":      "難読地名くいず",
     "top_img":    "can-you-read.jpg",
     "top_text":   "友人と全国の難読地名を集めてクイズを制作。デザインとCSSを担当。",
-    "tags":   ["web"],
+    "tags":       ["web","design"],
+    "keyword":    ["canyouread","can-you-read"],
     "type":       "multi",
     "date":       "2017/2",
     "content":{
@@ -90,7 +95,8 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{
@@ -107,7 +113,8 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{
@@ -124,7 +131,8 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{
@@ -141,7 +149,8 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{
@@ -158,7 +167,7 @@
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":   ["video"],
+    "tags":       ["video"],
     "type":       "video",
     "date":       "2018/8",
     "content":{

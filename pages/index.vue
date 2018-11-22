@@ -1,7 +1,7 @@
 <template lang="pug">
   .nuxt
     .index
-      Header(:now_page="now_page")
+      Header(:now_page="now_page" ref="header")
       section.reel
         .play-video(@click="")
           video(src="").reel-video
@@ -73,6 +73,7 @@ export default {
 @import "~/assets/scss/mixin.scss";
 .nuxt {padding: 18px 0;}
 .index {
+  position: relative;
   section.reel {
     width: 100%;
     height: 330px;

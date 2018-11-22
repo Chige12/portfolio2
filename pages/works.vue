@@ -1,8 +1,8 @@
 <template lang="pug">
   .nuxt
     .works
-      WorkContents(:url_hash="urlHash" :contents="contents" ref="contents").pre-workcontents
-      Header(:now_page="now_page")
+      WorkContents(:url_hash="urlHash" :contents="contents" ref="work_contents" @header-state="headerState").pre-workcontents
+      Header(:now_page="now_page" ref="header")
     GlobalMenu(:now_page="now_page")
 </template>
 <script>
@@ -34,6 +34,9 @@ export default {
     }
   },
   methods: {
+    headerState(state){
+      this.$refs.header.headerState(state);
+    },
     OpenContent(urlHash){
       var hoge = 1
     },
@@ -47,10 +50,13 @@ export default {
         }
         if(tag==true){//hashがtagなら
           //call child method
-          this.$refs.contents.hashTag(this.urlHash.slice(1))
+          this.$refs.work_contents.hashTag(this.urlHash.slice(1));
         }else{
           this.OpenContent(this.urlHash);
         }
+      }else{
+        //call child method
+        this.$refs.work_contents.tagReset();
       }
     }
   }

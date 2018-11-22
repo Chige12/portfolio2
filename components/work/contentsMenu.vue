@@ -1,17 +1,17 @@
 <template lang="pug">
-  .contents_menu
+  .contents_menu(:class="{'contents_menu_fold':contents_menu_fold}")
     .menu_heading Keyword search
     .menu_content
-      input(type="text").search
+      input(type="text" v-model="filter.search").search
     .tag-watch(@click="toggleEye()")
       .tag-watch-text {{eye}}
       font-awesome-icon(icon="eye" v-if="eye=='Hide all tags'").eye-icon
       font-awesome-icon(icon="eye-slash" v-if="eye=='Show all tags'").eye-icon
     .menu_heading Tag filtering
     .menu_content.tags
-      .taglist(v-for="(TagList,topic_id) in TagsList" @mouseover="tagOver(TagList)" @mouseleave="tagLeave(TagList)" @click="toggleFilterTag(TagList)")
-        .taghole(:id="'taghole'+TagList" :style="{'border-right': FilterTagholeCheck(TagList)}" )
-        .tagname(:id="'tagname'+TagList" :style="{'background': FilterTagnameCheck(TagList)}" )
+      .taglist(v-for="(TagList,topic_id) in TagsList" @click="toggleFilterTag(TagList)")
+        .taghole(:class="'taghole-'+TagList" :style="{'border-right': FilterTagholeCheck(TagList)}" )
+        .tagname(:class="'tagname-'+TagList" :style="{'background': FilterTagnameCheck(TagList)}" )
           span(:class="{'no-slide':!filterTagCheck(TagList)}") {{TagList}}
           font-awesome-icon(icon="circle" v-if="filterTagCheck(TagList)").check-icon.check-icon-circle
           font-awesome-icon(icon="plus-circle" v-if="filterTagCheck(TagList)").check-icon.check-icon-plus
@@ -23,10 +23,14 @@ export default {
   data () {
     return {
       tags:["design","video","web","illust"],//defaultのfilteringタグ
-      eye:"Show all tags"//デフォルトでContentsのタグ非表示
+      eye:"Show all tags",//デフォルトでContentsのタグ非表示
+      contents_menu_fold:false
     }
   },
   methods: {
+    headerState(state){
+      this.contents_menu_fold = state;
+    },
     toggleEye(){
       if(this.eye=='Show all tags'){
         this.eye = 'Hide all tags'
@@ -36,29 +40,7 @@ export default {
         this.$emit('ToggleShowTag','Remove')
       }
     },
-    tagOver(tag){//hover
-      var taghole = document.getElementById('taghole'+tag);
-      var tagname = document.getElementById('tagname'+tag);
-      switch (tag) {
-        case"design": case"video": case"web": case"illust":
-          taghole.classList.add('taghole-hover-'+tag);
-          tagname.classList.add('tagname-hover-'+tag); break;
-        default: break;
-      }
-    },
-    tagLeave(tag){//hover
-      var taghole = document.getElementById('taghole'+tag);
-      var tagname = document.getElementById('tagname'+tag);
-      switch (tag) {
-        case"design": case"video": case"web": case"illust":
-          taghole.classList.remove('taghole-hover-'+tag);
-          tagname.classList.remove('tagname-hover-'+tag); break;
-        default: break;
-      }
-    },
     hashTag(tag){//Hash読み込み用
-      var taghole = document.getElementById('taghole'+tag);
-      var tagname = document.getElementById('tagname'+tag);
       this.$parent.filter.tags = [];
       switch (tag) {
         case"design": case"video": case"web": case"illust":
@@ -70,8 +52,6 @@ export default {
       }
     },
     toggleFilterTag(tag){//UI操作用
-      var taghole = document.getElementById('taghole'+tag);
-      var tagname = document.getElementById('tagname'+tag);
       if(this.filter.tags.indexOf(tag) == -1){
         this.$parent.filter.tags.push(tag);//tag追加
       }else{
@@ -132,6 +112,7 @@ export default {
   left: 35px;
   width: 170px;
   pointer-events: none;
+  transition: .3s $bezier-fast-ease-out;
   .tag-watch{
     display: flex;
     width: 100%;
@@ -215,17 +196,17 @@ export default {
       &:hover {
         .taghole { 
           border-right: 6px solid $theme-gray-2;
-          &-hover-design {border-right: 6px solid $theme-green-1;}
-          &-hover-video  {border-right: 6px solid $theme-mint-1;}
-          &-hover-web    {border-right: 6px solid $theme-navy;}
-          &-hover-illust {border-right: 6px solid $theme-pink;}
+          &-design {border-right: 6px solid $theme-green-1;}
+          &-video  {border-right: 6px solid $theme-mint-1;}
+          &-web    {border-right: 6px solid $theme-navy;}
+          &-illust {border-right: 6px solid $theme-pink;}
         }
         .tagname {
           background: $theme-gray-2;
-          &-hover-design {background: $theme-green-1;}
-          &-hover-video  {background: $theme-mint-1;}
-          &-hover-web    {background: $theme-navy;}
-          &-hover-illust {background: $theme-pink;}
+          &-design {background: $theme-green-1;}
+          &-video  {background: $theme-mint-1;}
+          &-web    {background: $theme-navy;}
+          &-illust {background: $theme-pink;}
           span {
             transform: translateX(4px);
           }
@@ -247,4 +228,7 @@ export default {
     flex-wrap: wrap;
   }
 }
+.contents_menu_fold {
+  top: 18px + 170px;
+} 
 </style>

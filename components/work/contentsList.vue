@@ -16,8 +16,8 @@
           .content-title {{content.title}}
         .content-info
           .info-tag(v-if="content.tags")
-            font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :style="{'color': TagIconColor(content.tags[0]),'padding':'3px'}" @click="ToggleTag(content_id)").info-tag-icon
-            font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :style="{'color': TagIconColor(content.tags[0]),'padding':'2px'}" @click="ToggleTag(content_id)").info-tag-icon
+            font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :class="'info-tag-icon-'+content.tags[0]" @click="ToggleTag(content_id)").info-tag-icon
+            font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :class="'info-tags-icon-'+content.tags[0]" @click="ToggleTag(content_id)").info-tags-icon
             ul.content-tags
               li.taglist(v-for="tag in content.tags" @click="toggleFilterTag(tag)")
                 .taghole(:class="'taghole-'+tag")
@@ -26,14 +26,18 @@
                   font-awesome-icon(icon="circle" v-if="filterTagCheck(tag)").check-icon.check-icon-circle
                   font-awesome-icon(icon="plus-circle" v-if="filterTagCheck(tag)").check-icon.check-icon-plus
                   font-awesome-icon(icon="check-circle" v-else="filterTagCheck(tag)").check-icon
-    .white_cover: .stripe
 </template>
 <script>
+//{'color': TagIconColor(content.tags[0]),'padding':'3px'}
+//{'color': TagIconColor(content.tags[0]),'padding':'2px'}
 export default {
   props: ["filter","contents"],
   data () {
     return {
     }
+  },
+  mounted () {
+    console.log(this.tagFiltering());
   },
   methods: {
     toggleFilterTag(tag){
@@ -45,28 +49,21 @@ export default {
     },
     ToggleShowTag(eye){
       var info_tags = document.getElementsByClassName('info-tag');
-      if(eye=='Display'){
-        for (let i = 0; i < this.contents.length; i++) {
-          info_tags[i].classList.add("info-tag-click");
-        }
-      }else if(eye=='Remove'){
-        for (let i = 0; i < this.contents.length; i++) {
-          info_tags[i].classList.remove("info-tag-click");
+      if(info_tags.length){
+        if(eye=='Display'){
+          for (let i = 0; i < this.contents.length; i++) {
+            info_tags[i].classList.add("info-tag-click");
+          }
+        }else if(eye=='Remove'){
+          for (let i = 0; i < this.contents.length; i++) {
+            info_tags[i].classList.remove("info-tag-click");
+          }
         }
       }
     },
     ToggleTag(content_id){
       var info_tags = document.getElementsByClassName('info-tag');
       info_tags[content_id].classList.toggle("info-tag-click");
-    },
-    TagIconColor(tag){
-      switch (tag) {
-        case"design": return "#73833f"; break; //$theme-green-1
-        case"video":  return "#479a89"; break; //$theme-mint-1
-        case"web":    return "#343141"; break; //$theme-navy
-        case"illust": return "#C42A66"; break; //$theme-pink
-        default:      return "#707069"; break; //$theme-gray-2
-      }
     },
     filterTagCheck(tag){
       if(this.filter.tags.indexOf(tag) == -1){
@@ -75,6 +72,34 @@ export default {
         return false;
       }
     },
+    //filteredContentsに使用
+    tagFiltering(){
+      var filteredTagContents = [];
+      if(this.filter.tags == []){
+        filteredTagContents = this.contents;
+      }else{
+        for (let i = 0; i < this.contents.length; i++) {
+          //tagがそのcontentに含まれていたらそのcontentを追加
+          for (let j = 0; j < this.filter.tags.length; j++){
+            if(this.contents[i].tags.indexOf(this.filter.tags[j]) !== -1 ){
+              filteredTagContents.push(this.contents[i]); break;
+            }
+          }
+        }
+      }
+      return filteredTagContents;
+    },
+  },
+  computed: {
+    filteredContents() {
+      var seachArray = this.filter.search.split(/\s+/);//seachのtextを配列にする
+      //var tagFiltered = this.tagFiltering();//タグでfiltering済みの配列
+
+      var filterCon1 = []
+      //関連度の高いものから表示
+      for (let i = 0; i < tagFiltered.length; i++) {  
+      }
+    }
   }
 }
 </script>
@@ -102,6 +127,7 @@ export default {
         display: block;
         width: 100%;
         height: 100%;
+        transition: .3s $bezier-fast-ease-out;
         overflow: hidden;
         .content-img-cover {
           position: relative;
@@ -171,6 +197,7 @@ export default {
           }
         }
         &:hover{
+          background: rgba($theme-gray-li,0.4);
           .content-img-cover {
             .open-info-cover {
               height: 100%;
@@ -198,14 +225,22 @@ export default {
           cursor: pointer;
           margin: 0;
           padding: 0;
-          .info-tag-icon {
+          .info-tag-icon,.info-tags-icon {
             width: 26px;
             height: 26px;
             padding: 2px;//tagとtagsで異なる
             font-size: 22px;
             margin-top: 12px;
+            color:$theme-gray-2;
             transform: rotateZ(0deg);
             transition: .2s $bezier-fast-ease-out;
+            &-design  {color:$theme-green-1}
+            &-video   {color:$theme-mint-1}
+            &-web     {color:$theme-navy}
+            &-illust  {color:$theme-pink}
+          }
+          .info-tag-icon {
+            padding: 3px;
           }
           ul.content-tags {
             position: absolute;
@@ -286,7 +321,7 @@ export default {
             }
           }//end ul.content-tags
           &:hover {
-            .info-tag-icon {
+            .info-tag-icon,.info-tags-icon {
               transform: rotateZ(45deg);
             }
             ul.content-tags {
@@ -320,11 +355,11 @@ export default {
           }
         }
         .info-tag-click {
-          .info-tag-icon {
+          .info-tag-icon,.info-tags-icon {
             transform: rotateZ(90deg);
           }
           &:hover {
-            .info-tag-icon {
+            .info-tag-icon,.info-tags-icon {
               transform: rotateZ(90deg);
             }
           }
@@ -335,20 +370,6 @@ export default {
           }
         }
       }
-    }
-  }
-  .white_cover {
-    position: fixed;
-    top: 18px;
-    left: 0;
-    width: calc(100% - 45px);
-    height: 170px - 15px;
-    background: #fffc;
-    background: linear-gradient(to bottom, #fff 0%, #fffc 100%);
-    pointer-events: none;
-    .stripe {
-      @include stripe(.5s,#fff);
-      width: 100%;
     }
   }
 }

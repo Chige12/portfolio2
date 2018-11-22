@@ -1,7 +1,7 @@
 <template lang="pug">
   .nuxt
     .profile
-      Header(:now_page="now_page")
+      Header(:now_page="now_page" ref="header")
     GlobalMenu(:now_page="now_page")
 </template>
 <script>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      now_page:"Profile"
+      now_page:"Profile",
     }
   }
 }
@@ -26,4 +26,7 @@ export default {
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 .nuxt {padding: 18px 0;}
+.profile {
+  position: relative;
+}
 </style>
