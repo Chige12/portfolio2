@@ -1,69 +1,72 @@
 <template lang="pug">
   .contents-list
     .contents-list-wrapper
-      .contents-box(v-for="(content,content_id) in contents")
-        nuxt-link(:to="'./works#'+content.id").content-link
-          .content-img-cover
-            video(v-if="content.top_video" :src="`img/works/${content.top_video}`" autoplay loop muted).content-img
-            img(v-if="content.top_img" :src="`img/works/${content.top_img}`").content-img
-            .open-info-cover
-              .stripe
-              font-awesome-icon(icon="info-circle").open-info-icon
-          .content-date
-            .content-date-box
-              font-awesome-icon(icon="clock").date-icon
-              .date-text {{content.date}}
-          .content-title {{content.title}}
-        .content-info
-          .info-tag(v-if="content.tags")
-            font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :class="'info-tag-icon-'+content.tags[0]" @click="ToggleTag(content_id)").info-tag-icon
-            font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :class="'info-tags-icon-'+content.tags[0]" @click="ToggleTag(content_id)").info-tags-icon
-            ul.content-tags
-              li.taglist(v-for="tag in content.tags" @click="toggleFilterTag(tag)")
-                .taghole(:class="'taghole-'+tag")
-                .tagname(:class="'tagname-'+tag")
-                  span(:class="{'no-slide':!filterTagCheck(tag)}") {{tag}}
-                  font-awesome-icon(icon="circle" v-if="filterTagCheck(tag)").check-icon.check-icon-circle
-                  font-awesome-icon(icon="plus-circle" v-if="filterTagCheck(tag)").check-icon.check-icon-plus
-                  font-awesome-icon(icon="check-circle" v-else="filterTagCheck(tag)").check-icon
+      transition-group(name="content").contents-transition
+        .contents-box(v-for="(content,content_id) in filteredContents" :key="content_id + '-content'")
+          nuxt-link(:to="'./works#'+content.id").content-link
+            .content-img-cover
+              video(v-if="content.top_video" :src="`img/works/${content.top_video}`" autoplay loop muted).content-img
+              img(v-if="content.top_img" :src="`img/works/${content.top_img}`").content-img
+              .open-info-cover
+                .stripe
+                font-awesome-icon(icon="info-circle").open-info-icon
+            .content-date
+              .content-date-box(:class="{'content-date-box-lock': content.state.box_lock}")
+                font-awesome-icon(icon="clock").date-icon
+                .date-text {{content.date}}
+            .content-title {{content.title}}
+          .content-info
+            .info-tag(v-if="content.tags" :class="{'info-tag-click': content.state.tag_eye}")
+              font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :class="['info-tag-icon-'+content.tags[0]]" @click="ToggleTag(content_id)").info-tag-icon
+              font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :class="['info-tags-icon-'+content.tags[0]]" @click="ToggleTag(content_id)").info-tags-icon
+              ul.content-tags
+                li.taglist(v-for="tag in content.tags" @click="toggleFilterTag(tag)")
+                  .taghole(:class="'taghole-'+tag")
+                  .tagname(:class="'tagname-'+tag")
+                    span(:class="{'no-slide':!filterTagCheck(tag)}") {{tag}}
+                    font-awesome-icon(icon="circle" v-if="filterTagCheck(tag)").check-icon.check-icon-circle
+                    font-awesome-icon(icon="plus-circle" v-if="filterTagCheck(tag)").check-icon.check-icon-plus
+                    font-awesome-icon(icon="check-circle" v-else="filterTagCheck(tag)").check-icon
 </template>
 <script>
-//{'color': TagIconColor(content.tags[0]),'padding':'3px'}
-//{'color': TagIconColor(content.tags[0]),'padding':'2px'}
 export default {
   props: ["filter","contents"],
   data () {
     return {
+      state:{
+        box_lock : [],
+        tag_eye : []
+      }
     }
-  },
-  mounted () {
-    console.log(this.tagFiltering());
   },
   methods: {
     toggleFilterTag(tag){
       this.$emit('toggleFilter',tag);
     },
     ToggleDate(content_id){
-      var content_date = document.getElementsByClassName('content-date-box');
-      content_date[content_id].classList.toggle("content-date-box-lock");
+      if(this.contents[content_id].state.box_lock = false){
+        this.contents[content_id].state.box_lock = true;
+      }else{
+        this.contents[content_id].state.box_lock = false;
+      }
     },
-    ToggleShowTag(eye){
-      var info_tags = document.getElementsByClassName('info-tag');
-      if(info_tags.length){
+    ToggleShowTag(eye){     
         if(eye=='Display'){
           for (let i = 0; i < this.contents.length; i++) {
-            info_tags[i].classList.add("info-tag-click");
+            this.contents[i].state.tag_eye = true;
           }
         }else if(eye=='Remove'){
           for (let i = 0; i < this.contents.length; i++) {
-            info_tags[i].classList.remove("info-tag-click");
+            this.contents[i].state.tag_eye = false;
           }
         }
-      }
     },
     ToggleTag(content_id){
-      var info_tags = document.getElementsByClassName('info-tag');
-      info_tags[content_id].classList.toggle("info-tag-click");
+      if(this.contents[content_id].state.tag_eye == false){
+        this.contents[content_id].state.tag_eye = true;
+      }else{
+        this.contents[content_id].state.tag_eye = false;
+      }
     },
     filterTagCheck(tag){
       if(this.filter.tags.indexOf(tag) == -1){
@@ -71,34 +74,44 @@ export default {
       }else{
         return false;
       }
-    },
-    //filteredContentsに使用
-    tagFiltering(){
-      var filteredTagContents = [];
-      if(this.filter.tags == []){
-        filteredTagContents = this.contents;
-      }else{
-        for (let i = 0; i < this.contents.length; i++) {
-          //tagがそのcontentに含まれていたらそのcontentを追加
-          for (let j = 0; j < this.filter.tags.length; j++){
-            if(this.contents[i].tags.indexOf(this.filter.tags[j]) !== -1 ){
-              filteredTagContents.push(this.contents[i]); break;
-            }
-          }
-        }
-      }
-      return filteredTagContents;
-    },
+    }
   },
   computed: {
     filteredContents() {
-      var seachArray = this.filter.search.split(/\s+/);//seachのtextを配列にする
-      //var tagFiltered = this.tagFiltering();//タグでfiltering済みの配列
+      var filteredContents = [];
+      if(this.filter.search || this.filter.tags){
+        var seachArray = this.filter.search.split(/\s+/);//seachのtextを配列にする
+        for(var i in this.contents) {
+            var content = this.contents[i];
+            var seachCount = 0
+            var hitTagCount = 0;
 
-      var filterCon1 = []
-      //関連度の高いものから表示
-      for (let i = 0; i < tagFiltered.length; i++) {  
+            for (var j in content.tags){
+              if(this.filter.tags.indexOf(content.tags[j]) !== -1){
+                hitTagCount++;
+              }
+            }
+            
+            for (let j = 0; j < seachArray.length; j++) {
+              for (let k = 0; k < content.keyword.length; k++) {
+                if((content.title.toLowerCase().indexOf(seachArray[j].toLowerCase()) !== -1 ||
+                  content.keyword[k].toLowerCase().indexOf(seachArray[j].toLowerCase()) !== -1 ||
+                  content.top_text.toLowerCase().indexOf(seachArray[j].toLowerCase()) !== -1 ) 
+                  && (hitTagCount == this.filter.tags.length)) {
+                      seachCount++;
+                      break;
+                }
+              }
+            }
+            if(seachCount == seachArray.length){
+              filteredContents.push(content);
+            }
+        }
+      }else{
+        filteredContents = this.contents;
       }
+      return filteredContents;
+      this.ToggleShowTag(this.eye);
     }
   }
 }
@@ -112,16 +125,21 @@ export default {
   padding-left: 35px + 170px + 26px - 4px;
   .contents-list-wrapper {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     height: auto;
     padding-top: 170px;
+    .contents-transition {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+    }
     .contents-box{
       position: relative;
       width: calc(100% / 3);
       height: 270px;
       padding: 4px;
       margin-bottom: 20px;
+      overflow: hidden;
       .content-link {
         position: relative;
         display: block;
@@ -370,6 +388,16 @@ export default {
           }
         }
       }
+    }
+    .content-move {
+      transition: .5s $bezier-fast-ease-out;
+    }
+    .content-enter-active, .content-leave-active {
+      transition: .5s $bezier-fast-ease-out;
+      opacity: 1;
+    }
+    .content-enter, .content-leave-to{
+      opacity: 0;
     }
   }
 }

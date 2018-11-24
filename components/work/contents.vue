@@ -16,14 +16,17 @@ export default {
     ContentsList
   },
   props: ["url_hash","contents"],
+  mounted() {
+    //子のcomputed（検索結果のコンテンツ）にアクセス
+    this.$watch(() => this.$refs.contents_list.filteredContents, (value) => { this.rewriteFC(value);})
+  },
   data () {
     return {
       filter:{
         search:"",
         tags:[],
-        con_posiTop:0,
-        header_state_once:true
-      }
+      },
+      header_state_once: true
     }
   },
   methods: {
@@ -40,6 +43,9 @@ export default {
     },
     tagReset(){
       this.filter.tags = [];
+    },
+    rewriteFC(contents){
+      this.$emit('rewriteFC',contents);
     },
     //ContentsMenu methods
     hashTag(tag){

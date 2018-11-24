@@ -91,7 +91,7 @@
     }
   },
   {
-    "id":         "phpcon2018_video",
+    "id":         "phpcon2018_video1",
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
@@ -109,7 +109,7 @@
     }
   },
   {
-    "id":         "phpcon2018_video",
+    "id":         "phpcon2018_video2",
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
@@ -127,7 +127,7 @@
     }
   },
   {
-    "id":         "phpcon2018_video",
+    "id":         "phpcon2018_video3",
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
@@ -145,7 +145,7 @@
     }
   },
   {
-    "id":         "phpcon2018_video",
+    "id":         "phpcon2018_video4",
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
@@ -163,11 +163,12 @@
     }
   },
   {
-    "id":         "phpcon2018_video",
+    "id":         "phpcon2018_video5",
     "title":      "PHPカンファイベントムービー",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
     "tags":       ["video"],
+    "keyword":    ["php"],
     "type":       "video",
     "date":       "2018/8",
     "content":{

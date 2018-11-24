@@ -38,9 +38,6 @@ export default {
       }else if(State == "Fold"){
         this.header_state=true;//畳む
       }
-    },
-    hasClass(element, className) {
-      return (' ' + element.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' ' + className + ' ') !== -1;
     }
   }
 }
@@ -115,14 +112,9 @@ export default {
   }
 }
 .header-fold-work {
-  // padding: 12px 35px;
   .white_cover {
     height: 72px;
   }
-  // img.header-logo {
-  //   height: 36px;
-  //   padding: 6px 0 4px;
-  // }
   .header-text {
     .slogan span {
       transform: translateY(-24px);

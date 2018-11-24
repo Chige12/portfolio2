@@ -283,11 +283,10 @@ export default {
         line-height: 26px;
         color: white;
       }
-      .icon-angle-prev:hover {animation : prevIcon 1.6s ease infinite;}
-      .icon-angle-next:hover {animation : nextIcon 1.6s ease infinite;}
-
       &:hover {
         background: $theme-navy;
+        .icon-angle-prev {animation : prevIcon 1.6s ease infinite;}
+        .icon-angle-next {animation : nextIcon 1.6s ease infinite;}
       }
     }
     .select-prev, .select-next {
