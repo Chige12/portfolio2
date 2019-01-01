@@ -2,11 +2,13 @@
   font-family: $roboto-font;
   font-weight: $font-black;
   font-size: $size;
+  font-style: italic;
 }
 @mixin roboto-medium($size:1.6rem) {
   font-family: $roboto-font;
   font-weight: $font-medium;
   font-size: $size;
+  font-style: italic;
 }
 @mixin noto-font($size:1.6rem, $color:$theme-navy) {
   font-family: $noto-font;
