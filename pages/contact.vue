@@ -1,6 +1,6 @@
 <template lang="pug">
   .nuxt
-    .profile
+    .contact
       Header(:now_page="now_page" ref="header")
       p 現在制作中です。
     GlobalMenu(:now_page="now_page")
@@ -8,26 +8,25 @@
 <script>
 import Header from '~/components/header.vue'
 import GlobalMenu from '~/components/globalMenu.vue'
-import Topics from '~/components/index/topics.vue'
 
 export default {
   components: {
     Header,
-    GlobalMenu,
-    Topics
+    GlobalMenu
   },
   data() {
     return {
-      now_page:"Profile",
+      now_page:"Contact",
     }
   }
 }
+
 </script>
 <style lang="scss">
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 .nuxt {padding: 18px 0;}
-.profile {
+.contact {
   position: relative;
   p {
     font-size: 20px;

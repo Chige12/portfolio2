@@ -10,6 +10,11 @@
               p {{nowContent.title}}
               p.c-d-h-title-display {{nowContent.title}}
           p.c-d-h-top_text {{nowContent.top_text}}
+        .c-d-contents
+          .c-d-contents-wrapper
+            DetailMulti(:content="nowContent" v-if="'multi'== nowContent.type")
+            DetailImage(:content="nowContent" v-if="'image'== nowContent.type")
+            DetailVideo(:content="nowContent" v-if="'video'== nowContent.type")
         nuxt-link(to="./works" :class="[{'c-d-close-open':open}]" ).c-d-close
           .c-d-close-back(:class="'c-d-close-back-'+ nowContent.tag")
           font-awesome-icon(icon="times").close-icon
@@ -26,7 +31,16 @@
               nuxt-link(:to="'./works#'+moveId(3)").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle
 </template>
 <script>
+import DetailMulti from '~/components/work/detailType/multi.vue'
+import DetailImage from '~/components/work/detailType/image.vue'
+import DetailVideo from '~/components/work/detailType/video.vue'
+
 export default {
+  components: {
+    DetailMulti,
+    DetailImage,
+    DetailVideo
+  },
   props: ["url_hash","contents","open","filtered_contents"],
   data () {
     return {
@@ -40,17 +54,21 @@ export default {
   methods: {
     KeyDown(event) {
       var keyCode = event.keyCode;
-      if(keyCode == 39){
+      console.log(keyCode);
+      if(keyCode == 39){//右
         this.$router.push({ path: `./works#${this.moveId(1)}` })
       }
-      if(keyCode == 37){
+      if(keyCode == 37){//左
         this.$router.push({ path: `./works#${this.moveId(-1)}` })
       }
-      if(keyCode == 38){
+      if(keyCode == 38){//上
         this.$router.push({ path: `./works#${this.moveId(-3)}` })
       }
-      if(keyCode == 40){
+      if(keyCode == 40){//下
         this.$router.push({ path: `./works#${this.moveId(3)}` })
+      }
+      if(keyCode == 8){//backspace
+        this.$router.push({ path: `./works` })
       }
     },
     moveId(n){
@@ -59,13 +77,7 @@ export default {
       for (var i=0; i < filcons.length; i++) {
         if (this.url_hash == '#'+ filcons[i].id) {
           if (i+n < 0) {
-            if(i==0){
-              move_id = filcons[filcons.length-1-((filcons.length-1) % n)].id;
-            }else if(i == 1){
-              move_id = filcons[filcons.length-1-((filcons.length-2) % n)].id;
-            }else if(i == 2){
-              move_id = filcons[filcons.length-1-((filcons.length-0) % n)].id;
-            }
+              move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id;
           }else if(i+n >= filcons.length){
             move_id = filcons[(i % n)].id;
           }else{
@@ -140,6 +152,9 @@ export default {
       background: #fff;
       overflow: hidden;
       .c-d-header {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 140px;
         padding: 18px 110px 0px;
@@ -172,6 +187,19 @@ export default {
               color: $theme-navy;
             }
           }
+        }
+      }
+      .c-d-contents {
+        width: 100%;
+        height: 100%;
+        padding-right: 86px;
+        .c-d-contents-wrapper {
+          width: 100%;
+          height: 100%;
+          padding-top: 140px;
+          padding-left: 110px;
+          padding-right: 110px - 86px;
+          overflow-y: overlay;
         }
       }
       .c-d-close {

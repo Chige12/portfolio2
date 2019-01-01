@@ -15,7 +15,8 @@ export default {
       slogan:"",
       slogans: [
         [2017,"Challenging!!!"],
-        [2018,"FORWARD ONLY"]
+        [2018,"FORWARD ONLY"],
+        [2019,"STEP BY STEP"]
       ],
       header_state:false
     }

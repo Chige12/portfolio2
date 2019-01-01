@@ -7138,7 +7138,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 3221225786
+  Exit code: 1
   Command: C:\WINDOWS\system32\cmd.exe
   Arguments: /d /s /c nuxt
   Directory: C:\Users\Chige\Documents\work\MyPTsite\chige12_portfolio2018
