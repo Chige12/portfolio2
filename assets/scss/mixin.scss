@@ -21,6 +21,7 @@
   height: $size;
   border-radius: 50%;
   background: $color;
+  transition: .5s $bezier-fast-ease-out;
 }
 
 @mixin stripe($time:.5s,$color:$theme-navy) {

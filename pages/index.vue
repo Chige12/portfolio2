@@ -9,18 +9,15 @@
           .title: h1 PLAY REEL?
           .discription: p 2015~2018年に制作した動画から、お気に入りのものをピックアップして再編集したものです。
       Topics(:topics="topics")
-    GlobalMenu(:now_page="now_page")
 </template>
 
 <script>
 import Header from '~/components/header.vue'
-import GlobalMenu from '~/components/globalMenu.vue'
 import Topics from '~/components/index/topics.vue'
 
 export default {
   components: {
     Header,
-    GlobalMenu,
     Topics
   },
   data() {
@@ -76,13 +73,13 @@ export default {
   position: relative;
   section.reel {
     width: 100%;
-    height: 330px;
+    height: calc(100vh / 3);
     background: $theme-mint;
     margin-bottom: 12px;
     .play-video {
       position: relative;
       width: 100%;
-      height: 330px;
+      height: calc(100vh / 3);;
       overflow: hidden;
       cursor: pointer;
       .reel-video {

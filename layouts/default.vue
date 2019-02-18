@@ -3,10 +3,17 @@
     .screen-band-top
     .screen-band-bottom
     nuxt
+    GlobalMenu
 </template>
 
 <script>
+import GlobalMenu from '~/components/globalMenu.vue'
 
+export default {
+  components: {
+    GlobalMenu
+  }
+}
 </script>
 
 <style lang="scss">

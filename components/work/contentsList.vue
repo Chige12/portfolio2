@@ -121,7 +121,7 @@ export default {
 @import "~/assets/scss/mixin.scss";
 .contents-list {
   width: 100%;
-  padding-right: 410px + 45px - 4px;
+  padding-right: 365px + 45px + 26px - 4px;
   padding-left: 35px + 170px + 26px - 4px;
   .contents-list-wrapper {
     width: 100%;
