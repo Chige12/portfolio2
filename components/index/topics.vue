@@ -107,7 +107,7 @@ export default {
   .carousel {
     position: relative;
     width: 100%;
-    height: 330px;
+    height: calc(100vh / 3);
     display: flex;
     flex-wrap: nowrap;
     .topic-prev {
@@ -115,7 +115,7 @@ export default {
       top: 0;
       left: 0;
       width: 36px;
-      height: 330px;
+      height: calc(100vh / 3);
       background: $theme-navy;
       cursor: pointer;
       transition: .3s ease-in-out;
@@ -142,16 +142,33 @@ export default {
     }
     .hide-prev {
       cursor: unset;
+      background: $theme-navy;
+      .icon-angle {
+        display: none;
+      }
+      &:after {
+        position: absolute;
+        margin: auto;
+        content: "×";
+        color: #fff;
+        font-size: 3.6rem;
+        font-weight: 700;
+        top: 0;
+        left: 6px;
+        bottom: 0;
+        line-height: calc(100vh / 3);
+        height: calc(100vh / 3);
+      }
       &:hover {
-        opacity: 0;
+        opacity: .4;
       }
     }
     .topic-next {
       position: absolute;
       top: 0;
       right: 0;
-      width: calc(100%/3);
-      height: 330px; 
+      width: 36px;
+      height: calc(100vh / 3); 
       background: $theme-navy;
       cursor: pointer;
       transition: .3s ease-in-out;
@@ -163,7 +180,7 @@ export default {
     .topic {
       position: relative;
       width: 0;
-      height: 330px;
+      height: calc(100vh / 3);
       overflow: hidden;
       transition: .5s $bezier-fast-ease-out;
       &-display {
