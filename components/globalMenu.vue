@@ -1,7 +1,7 @@
 <template lang="pug">
   .global-menu
-    .global-menu-wrapper
-      a(href="/"): .circle-dot
+    .global-menu-wrapper(:class="{'menu-close':menu_close}")
+      .menu-button(@click="CloseMenu()"): .circle-dot
         .circle-dot-green
         .circle-dot-mint
         .circle-dot-navy
@@ -14,7 +14,7 @@
               .link-text {{page.name}}
       .about-me
         .profile
-          a(href="/"): img(src="~/assets/img/Chige.png")
+          a(href="/profile"): img(src="~/assets/img/Chige.png")
           .name
             .jp ちげ
             .id Chige12
@@ -52,13 +52,11 @@
 import PopupMail from '~/components/popup/mail.vue'
 
   export default {
-    props: ["now_page"],
     data() {
       return {
-        popup:false,
-        sub_popup:false,
-        sub_popup_result:"",
+        menu_close: false,
         page_list: [
+          {name:"Index",link:""},
           {name:"Profile",link:"profile"},
           {name:"Works",  link:"works"},
           {name:"Contact",link:"contact"}
@@ -71,6 +69,13 @@ import PopupMail from '~/components/popup/mail.vue'
       OpenMailPopUp() {
         //call child method
         this.$refs.mail.OpenPopUp();
+      },
+      CloseMenu(){
+        if(this.menu_close==false){
+          this.menu_close=true
+        }else{
+          this.menu_close=false
+        }
       }
     }
   }
@@ -89,20 +94,30 @@ import PopupMail from '~/components/popup/mail.vue'
     background: $white;
     padding: 0 75px;
     overflow: hidden;
-    .circle-dot {
-      margin-top: 80px;
-      width: 115px;
-      height: 17px;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      &-green {@include circle-dot(17px,$theme-green);}
-      &-mint  {@include circle-dot(17px,$theme-mint);}
-      &-navy  {@include circle-dot(17px,$theme-navy);}
-      &-pink  {@include circle-dot(17px,$theme-pink);}
+    transition: .5s $bezier-fast-ease-out;
+    .menu-button{
+      position: absolute;
+      top: 18px + 35px + 50px - 7px - 20px - 1px;
+      left: 75px - 30px;
+      padding: 20px 30px;
+      width: min-content;
+      cursor: pointer;
+      transition: .5s $bezier-fast-ease-out;
+      .circle-dot {
+        width: 110px;
+        height: 16px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        transition: .5s $bezier-fast-ease-out;
+        &-green {@include circle-dot(16px,$theme-green);}
+        &-mint  {@include circle-dot(16px,$theme-mint);}
+        &-navy  {@include circle-dot(16px,$theme-navy);}
+        &-pink  {@include circle-dot(16px,$theme-pink);}
+      }
     }
     .page-links {
-      margin-top: 32px;
+      margin-top: 138px;
       overflow: hidden;
       .link-cover {
         overflow: hidden;
@@ -174,6 +189,7 @@ import PopupMail from '~/components/popup/mail.vue'
       left: 0;
       right: 0;
       margin: 0 75px;
+      transition: .5s $bezier-fast-ease-out;
       .profile {
         display: flex;
         flex-wrap: nowrap;
@@ -231,6 +247,43 @@ import PopupMail from '~/components/popup/mail.vue'
           }
         }
       }
+    }
+  }
+  .menu-close {
+    top: 18px + 35px;
+    height: 14px + (16px * 2);
+    width: 70px + (24px * 2);
+    border-radius: 30px;
+    padding: 0;
+    .menu-button{
+      top: 0;
+      left: 0;
+      padding: 16px 24px;
+      .circle-dot {
+        width: 70px;
+        height: 14px;
+        &-green {@include circle-dot(14px,$theme-green);}
+        &-mint  {@include circle-dot(14px,$theme-mint);}
+        &-navy  {@include circle-dot(14px,$theme-navy);}
+        &-pink  {@include circle-dot(14px,$theme-pink);}
+      }
+    }
+    &:hover{
+      width: 365px;
+      padding: 0 75px;
+      background: #eee;
+      .menu-button{
+        left: (365px / 2) - (110px / 2) - 30px;
+        padding: 16px 30px;
+        width: 100%;
+      }
+      .circle-dot {
+        width: 110px;
+        height: 14px;
+      }
+    }
+    .about-me {
+      bottom: -90vh;
     }
   }
 }

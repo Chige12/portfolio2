@@ -3,7 +3,6 @@
     .works
       WorkContents(:url_hash="urlHash" :contents="contents" ref="work_contents" @header-state="headerState" @rewriteFC="rewriteFC").pre-workcontents
       Header(:now_page="now_page" ref="header")
-    GlobalMenu(:now_page="now_page")
     ContentsDetail(:url_hash="urlHash" :contents="contents" :open="detail_open" :filtered_contents="filtered_contents")
 </template>
 <script>
@@ -16,7 +15,6 @@ import contents_data from '~/assets/json/works.json'
 export default {
   components: {
     Header,
-    GlobalMenu,
     ContentsDetail,
     WorkContents
   },

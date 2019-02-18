@@ -107,7 +107,7 @@ export default {
   .carousel {
     position: relative;
     width: 100%;
-    height: calc(100vh / 3);
+    height: 330px;
     display: flex;
     flex-wrap: nowrap;
     .topic-prev {
@@ -115,7 +115,7 @@ export default {
       top: 0;
       left: 0;
       width: 36px;
-      height: calc(100vh / 3);
+      height: 330px;
       background: $theme-navy;
       cursor: pointer;
       transition: .3s ease-in-out;
@@ -151,7 +151,7 @@ export default {
       top: 0;
       right: 0;
       width: calc(100%/3);
-      height: calc(100vh / 3); 
+      height: 330px; 
       background: $theme-navy;
       cursor: pointer;
       transition: .3s ease-in-out;
@@ -163,7 +163,7 @@ export default {
     .topic {
       position: relative;
       width: 0;
-      height: calc(100vh / 3);
+      height: 330px;
       overflow: hidden;
       transition: .5s $bezier-fast-ease-out;
       &-display {

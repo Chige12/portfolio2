@@ -3,16 +3,13 @@
     .contact
       Header(:now_page="now_page" ref="header")
       p 現在制作中です。
-    GlobalMenu(:now_page="now_page")
 </template>
 <script>
 import Header from '~/components/header.vue'
-import GlobalMenu from '~/components/globalMenu.vue'
 
 export default {
   components: {
     Header,
-    GlobalMenu
   },
   data() {
     return {
