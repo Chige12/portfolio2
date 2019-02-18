@@ -76,13 +76,13 @@ export default {
   position: relative;
   section.reel {
     width: 100%;
-    height: 330px;
+    height: calc(100vh / 3);
     background: $theme-mint;
     margin-bottom: 12px;
     .play-video {
       position: relative;
       width: 100%;
-      height: 330px;
+      height: calc(100vh / 3);
       overflow: hidden;
       cursor: pointer;
       .reel-video {
