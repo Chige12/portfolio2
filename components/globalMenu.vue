@@ -8,7 +8,7 @@
         .circle-dot-pink
       .page-links
         .link-cover(v-for="(page, key) in page_list" :key="key")
-            nuxt-link(:to="'/'+page.link").link
+            nuxt-link(:to="'/'+page.link" :class="{'now-link':NowLink(page.link)}" @click="ReloadPath()").link
               .link-over.o-gray: .link-over-text.t-gray {{page.name}}
               .link-over.o-green: .link-over-text.t-green {{page.name}}
               .link-text {{page.name}}
@@ -61,10 +61,14 @@ import PopupMail from '~/components/popup/mail.vue'
           {name:"Works",  link:"works"},
           {name:"Contact",link:"contact"}
         ],
-        mail: "chige12tanu@gmail.com"
+        mail: "chige12tanu@gmail.com",
+        path: "",
       }
     },
     components: {PopupMail},
+    mounted() {
+      //this.ReloadPath()
+    },
     methods: {
       OpenMailPopUp() {
         //call child method
@@ -76,6 +80,14 @@ import PopupMail from '~/components/popup/mail.vue'
         }else{
           this.menu_close=false
         }
+      },
+      NowLink(page_link){
+        if(`/${page_link}`==this.path){
+          return true;
+        }
+      },
+      ReloadPath(){
+        this.path = location.pathname
       }
     }
   }
@@ -178,6 +190,14 @@ import PopupMail from '~/components/popup/mail.vue'
               .link-over-text {
                 transform: translateX(0);
               }
+            }
+          }
+        }
+        .now-link {
+          .link-over.o-gray {
+            transform: translateX(0);
+            .link-over-text.t-gray {
+              transform: translateX(0);
             }
           }
         }
