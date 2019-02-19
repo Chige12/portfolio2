@@ -1,9 +1,9 @@
 <template lang="pug">
   .nuxt
     .works
-      WorkContents(:url_hash="urlHash" :contents="contents" ref="work_contents" @header-state="headerState" @rewriteFC="rewriteFC").pre-workcontents
+      WorkContents(:url_hash="urlHash" :contents="contents" ref="work_contents" @header-state="headerState" @rewriteFC="rewriteFC" @OpenDetail="OpenDetail").pre-workcontents
       Header(:now_page="now_page" ref="header")
-    ContentsDetail(:url_hash="urlHash" :contents="contents" :open="detail_open" :filtered_contents="filtered_contents")
+    ContentsDetail(:url_hash="urlHash" :contents="contents" :open="detail_open" :filtered_contents="filtered_contents" ref="contents_detail")
 </template>
 <script>
 import Header from '~/components/header.vue'
@@ -50,9 +50,6 @@ export default {
     headerState(state){
       this.$refs.header.headerState(state);
     },
-    OpenContent(urlHash){
-      var hoge = 1
-    },
     getUrlHash () {
       this.urlHash = location.hash;
       if(this.urlHash){
@@ -69,7 +66,6 @@ export default {
             this.detail_open = true;
             this.detail_close_once = true;
           })
-          this.OpenContent(this.urlHash);
         }
       }else{
         //call child method
@@ -82,6 +78,9 @@ export default {
     },
     rewriteFC(contents){
       this.filtered_contents = contents;
+    },
+    OpenDetail(rect,content_id){
+      this.$refs.contents_detail.OpenDetail(rect,content_id);
     }
   }
 }
