@@ -18,7 +18,7 @@
         .c-d-image-flag(:class="'c-d-image-flag-'+ nowContent.tag")
         .quick-menu
           .c-d-close
-            nuxt-link(to="./works" :class="[{'c-d-close-open':open}]" )
+            .c-d-close-button(@click="CloseDetail()" :class="[{'c-d-close-open':open}]" )
               font-awesome-icon(icon="times").close-icon
           .quick-lists
             .quick-list(v-for="(fil_con, fil_con_id) in filtered_contents" :key="fil_con_id + '-fill_con_quick'")
@@ -26,10 +26,11 @@
                 .click-box-back(:class="'click-box-back-'+ fil_con.tags[0]")
           .quick-move
             .quick-move-wrapper
-              nuxt-link(:to="'./works#'+moveId(-3)").quick-move-icon.quick-move-icon-up:   font-awesome-icon(icon="angle-up"   ).quick-move-icon-angle
-              nuxt-link(:to="'./works#'+moveId(-1)").quick-move-icon.quick-move-icon-left: font-awesome-icon(icon="angle-left" ).quick-move-icon-angle
-              nuxt-link(:to="'./works#'+moveId(1)").quick-move-icon.quick-move-icon-right: font-awesome-icon(icon="angle-right").quick-move-icon-angle
-              nuxt-link(:to="'./works#'+moveId(3)").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle          </template>
+              nuxt-link(:to="`./works#${moveId(-3)}`").quick-move-icon.quick-move-icon-up:   font-awesome-icon(icon="angle-up"   ).quick-move-icon-angle
+              nuxt-link(:to="`./works#${moveId(-1)}`").quick-move-icon.quick-move-icon-left: font-awesome-icon(icon="angle-left" ).quick-move-icon-angle
+              nuxt-link(:to="`./works#${moveId(1)}`").quick-move-icon.quick-move-icon-right: font-awesome-icon(icon="angle-right").quick-move-icon-angle
+              nuxt-link(:to="`./works#${moveId(3)}`").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle
+</template>
 <script>
 import DetailMulti from '~/components/work/detailType/multi.vue'
 import DetailImage from '~/components/work/detailType/image.vue'
@@ -70,29 +71,25 @@ export default {
         this.$router.push({ path: `./works#${this.moveId(3)}` })
       }
       if(keyCode == 8 || keyCode == 27){//backspace or esc
+        if(this.now_id){
+          var now_content = document.getElementById(`content-${this.now_id}`);
+          this.rect = now_content.getBoundingClientRect();
+        }
         this.$router.push({ path: `./works` })
       }
     },
     moveId(n){
       var move_id = "";
       var filcons = this.filtered_contents;
-      if(this.now_id){
-        var now_content = document.getElementById(`content-${this.now_id}`);
-        this.rect = now_content.getBoundingClientRect();
-      }
       for (var i=0; i < filcons.length; i++) {
         if (this.url_hash == '#'+ filcons[i].id) {
           if (i+n < 0) {
-            move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id;
+            move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id; 
           }else if(i+n >= filcons.length){
             move_id = filcons[(i % n)].id;
           }else{
             move_id = filcons[i+n].id;
           }
-          break;
-        }else{
-          console.log(this.url_hash);
-          console.log(filcons)
           break;
         }
       }
@@ -103,6 +100,13 @@ export default {
       setTimeout(() => {
         location.hash = content_id;
       }, 150)
+    },
+    CloseDetail(){
+      if(this.now_id){
+        var now_content = document.getElementById(`content-${this.now_id}`);
+        this.rect = now_content.getBoundingClientRect();
+      }
+      this.$router.push({ path: `./works` })
     }
   },
   computed: {
@@ -116,7 +120,7 @@ export default {
           break;
         }
       }
-      this.now_id = now_content.id
+      this.now_id = now_content.id;
       return now_content;
     },
     styleObject() {
@@ -263,7 +267,7 @@ export default {
         .c-d-close {
           margin-bottom: 8px;
           padding: 2px;
-          a {
+          .c-d-close-button {
             display: block;
             width: 100%;
             text-align: center;

@@ -23,10 +23,12 @@ export default {
   },
   mounted() {
     var temp_contents = contents_data
+    var temp_state = {
+      box_lock:false,
+      tag_eye:false
+    }
     for (let i = 0; i < temp_contents.length; i++) {
-      temp_contents[i].state = {};
-      temp_contents[i].state.box_lock = false;
-      temp_contents[i].state.tag_eye = false;
+      temp_contents[i].state = temp_state;
     }
     this.contents = temp_contents;
     this.filtered_contents = temp_contents;
@@ -34,6 +36,7 @@ export default {
     this.$nextTick(() => {
       this.getUrlHash();
     });
+    
   },
   data() {
     return {
@@ -57,6 +60,7 @@ export default {
         console.log(this.urlHash);
         for (let i = 0; i < this.tags.length; i++) {
           if(this.urlHash == "#"+this.tags[i]){ tag = true; }
+          break;
         }
         if(tag==true){//hashがtagなら
           //call child method
