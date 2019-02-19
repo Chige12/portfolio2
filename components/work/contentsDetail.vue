@@ -82,9 +82,8 @@ export default {
       }
       for (var i=0; i < filcons.length; i++) {
         if (this.url_hash == '#'+ filcons[i].id) {
-          console.log(filcons)
           if (i+n < 0) {
-              move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id;
+            move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id;
           }else if(i+n >= filcons.length){
             move_id = filcons[(i % n)].id;
           }else{
