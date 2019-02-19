@@ -21,7 +21,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Chige12のPortfolioサイトです。寿司は寒ブリ、鍋はすき焼きが好きです。' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:500i,900i' }
     ]
   },
   /*
