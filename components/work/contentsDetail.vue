@@ -90,6 +90,10 @@ export default {
             move_id = filcons[i+n].id;
           }
           break;
+        }else{
+          console.log(this.url_hash);
+          console.log(filcons)
+          break;
         }
       }
       return move_id;
