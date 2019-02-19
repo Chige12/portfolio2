@@ -1,7 +1,7 @@
 <template lang="pug">
   .contents-detail
     .c-d-back(:class="{'c-d-back-open': open}")
-    .c-d-main(:class="{'c-d-main-open': open}")
+    .c-d-main(:class="{'c-d-main-open': open}" :style="styleObject")
       .c-d-wrapper
         .c-d-header
           p.c-d-h-id {{'#' + nowContent.id}}
@@ -15,10 +15,11 @@
             DetailMulti(:content="nowContent" v-if="'multi'== nowContent.type")
             DetailImage(:content="nowContent" v-if="'image'== nowContent.type")
             DetailVideo(:content="nowContent" v-if="'video'== nowContent.type")
-        nuxt-link(to="./works" :class="[{'c-d-close-open':open}]" ).c-d-close
-          .c-d-close-back(:class="'c-d-close-back-'+ nowContent.tag")
-          font-awesome-icon(icon="times").close-icon
+        .c-d-image-flag(:class="'c-d-image-flag-'+ nowContent.tag")
         .quick-menu
+          .c-d-close
+            nuxt-link(to="./works" :class="[{'c-d-close-open':open}]" )
+              font-awesome-icon(icon="times").close-icon
           .quick-lists
             .quick-list(v-for="(fil_con, fil_con_id) in filtered_contents" :key="fil_con_id + '-fill_con_quick'")
               nuxt-link(:to="'./works#'+fil_con.id" :class="{'click-box-now': url_hash == '#'+fil_con.id}").click-box
@@ -28,8 +29,7 @@
               nuxt-link(:to="'./works#'+moveId(-3)").quick-move-icon.quick-move-icon-up:   font-awesome-icon(icon="angle-up"   ).quick-move-icon-angle
               nuxt-link(:to="'./works#'+moveId(-1)").quick-move-icon.quick-move-icon-left: font-awesome-icon(icon="angle-left" ).quick-move-icon-angle
               nuxt-link(:to="'./works#'+moveId(1)").quick-move-icon.quick-move-icon-right: font-awesome-icon(icon="angle-right").quick-move-icon-angle
-              nuxt-link(:to="'./works#'+moveId(3)").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle
-</template>
+              nuxt-link(:to="'./works#'+moveId(3)").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle          </template>
 <script>
 import DetailMulti from '~/components/work/detailType/multi.vue'
 import DetailImage from '~/components/work/detailType/image.vue'
@@ -44,6 +44,8 @@ export default {
   props: ["url_hash","contents","open","filtered_contents"],
   data () {
     return {
+      rect:{},
+      now_id: ""
     }
   },
   mounted () {
@@ -67,15 +69,20 @@ export default {
       if(keyCode == 40){//下
         this.$router.push({ path: `./works#${this.moveId(3)}` })
       }
-      if(keyCode == 8){//backspace
+      if(keyCode == 8 || keyCode == 27){//backspace or esc
         this.$router.push({ path: `./works` })
       }
     },
     moveId(n){
       var move_id = "";
       var filcons = this.filtered_contents;
+      if(this.now_id){
+        var now_content = document.getElementById(`content-${this.now_id}`);
+        this.rect = now_content.getBoundingClientRect();
+      }
       for (var i=0; i < filcons.length; i++) {
         if (this.url_hash == '#'+ filcons[i].id) {
+          console.log(filcons)
           if (i+n < 0) {
               move_id = filcons[filcons.length-1-((filcons.length- ((i+1)%n) ) % n)].id;
           }else if(i+n >= filcons.length){
@@ -87,6 +94,12 @@ export default {
         }
       }
       return move_id;
+    },
+    OpenDetail(rect,content_id){
+      this.rect = rect;
+      setTimeout(() => {
+        location.hash = content_id;
+      }, 150)
     }
   },
   computed: {
@@ -100,7 +113,16 @@ export default {
           break;
         }
       }
+      this.now_id = now_content.id
       return now_content;
+    },
+    styleObject() {
+      return {
+        top: `${this.rect.top}px`,
+        left: `${this.rect.left}px`,
+        width: `${this.rect.width}px`,
+        height: `${this.rect.height}px`
+      }
     }
   }
 }
@@ -124,7 +146,7 @@ export default {
     opacity: 0;
     background: $theme-navy;
     pointer-events: none;
-    transition: .3s $bezier-fast-ease-out;
+    transition: .4s .3s $bezier-fast-ease-out;
     &-open {
       opacity: 1;
       pointer-events: auto;
@@ -133,25 +155,35 @@ export default {
   .c-d-main {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 0%;
-    height: 100%;
-    padding: 18px;
-    transform: translateX(36px);
+    left: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
     background: $theme-navy;
-    transition: .4s .2s $bezier-fast-ease-out;
-    pointer-events: auto;
+    transition: .4s $bezier-fast-ease-out;
+    pointer-events: none;
+    opacity: 0;
     overflow: hidden;
     &-open {
-      width: 100%;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      pointer-events: auto;
+      padding: 18px;
+      opacity: 1;
       transform: translateX(0);
+      div.c-d-wrapper{
+        background: #fff;
+      }
     }
     .c-d-wrapper{
       position: relative;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: $theme-navy;
       overflow: hidden;
+      transition: .4s $bezier-fast-ease-out;
       .c-d-header {
         position: absolute;
         top: 0;
@@ -203,7 +235,7 @@ export default {
           overflow-y: overlay;
         }
       }
-      .c-d-close {
+      .c-d-image-flag {
         position: absolute;
         top: 0;
         left: 0;
@@ -211,42 +243,12 @@ export default {
         width: 200px;
         height: 200px;
         background: $theme-gray;
-        transform: rotateZ(45deg) translateX(-120%);
-        transition: transform .4s .6s $bezier-fast-ease-out;
-        cursor: pointer;
-        &-open {
-          transform: rotateZ(45deg) translateX(-88%);
-        }
-        .c-d-close-back {
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          width: 200px;
-          height: 200px;
-          background: $theme-gray;
-          transition: .3s $bezier-fast-ease-out;
-          &-design {background: $theme-green-1}
-          &-video  {background: $theme-mint-1};
-          &-web    {background: $theme-navy};
-          &-illust {background: $theme-pink};
-        }
-        .close-icon {
-          position: absolute;
-          top: 84.5px;
-          left: 100px;
-          width: 30px;
-          height: 30px;
-          transform: rotateZ(-45deg);
-          font-size:40px;
-          color: white;
-          transition: .3s $bezier-fast-ease-out;
-        }
-        &:hover{
-          .close-icon {
-            left: 156px;
-          }
-        }
+        transform: rotate(45deg) translateX(-120%);
+        transition: .4s .6s $bezier-fast-ease-out;
+        &-design {background: $theme-green-1; transform: rotateZ(45deg) translateX(-88%);}
+        &-video  {background: $theme-mint-1; transform: rotateZ(45deg) translateX(-88%);}
+        &-web    {background: $theme-navy; transform: rotateZ(45deg) translateX(-88%);}
+        &-illust {background: $theme-pink; transform: rotateZ(45deg) translateX(-88%);}
       }
       .quick-menu {
         position: absolute;
@@ -255,6 +257,26 @@ export default {
         width: 86px;
         height: 100%;
         padding: 10px;
+        .c-d-close {
+          margin-bottom: 8px;
+          padding: 2px;
+          a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: $theme-gray-li;
+            transition: .3s $bezier-fast-ease-out;
+            padding: 4px;
+            .close-icon {
+              width: 16px;
+              height: 16px;
+              color: #fff;
+            }
+            &:hover {
+              background: $sub-red;
+            }
+          }
+        }
         .quick-lists {
           display: flex;
           flex-wrap: wrap;
@@ -301,6 +323,7 @@ export default {
           width: 86px;
           height: 86px;
           padding: 10px;
+          margin-bottom: 4px;
           .quick-move-wrapper {
             position: relative;
             width: 100%;

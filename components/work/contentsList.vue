@@ -3,7 +3,7 @@
     .contents-list-wrapper
       transition-group(name="content").contents-transition
         .contents-box(v-for="(content,content_id) in filteredContents" :key="content_id + '-content'")
-          nuxt-link(:to="'./works#'+content.id").content-link
+          .content-link(@click="OpenDetail(content.id)" :id="`content-${content.id}`")
             .content-img-cover
               video(v-if="content.top_video" :src="`img/works/${content.top_video}`" autoplay loop muted).content-img
               img(v-if="content.top_img" :src="`img/works/${content.top_img}`").content-img
@@ -74,6 +74,11 @@ export default {
       }else{
         return false;
       }
+    },
+    OpenDetail(content_id){
+      var open_content = document.getElementById(`content-${content_id}`);
+      var rect = open_content.getBoundingClientRect();
+      this.$emit('OpenDetail',rect,content_id);
     }
   },
   computed: {
@@ -147,6 +152,7 @@ export default {
         height: 100%;
         transition: .3s $bezier-fast-ease-out;
         overflow: hidden;
+        cursor: pointer;
         .content-img-cover {
           position: relative;
           overflow: hidden;

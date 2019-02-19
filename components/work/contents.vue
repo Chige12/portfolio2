@@ -2,7 +2,7 @@
   .work_contents
     .contents_wrapper#contents_wrapper(@scroll="headerState")
       ContentsMenu(:filter="filter" :url_hash="url_hash" :contents="contents" ref="contents_menu" @ToggleShowTag="ToggleShowTag")
-      ContentsList(:filter="filter" :contents="contents" ref="contents_list" @toggleFilter="toggleFilterTag").contents_list
+      ContentsList(:filter="filter" :contents="contents" ref="contents_list" @toggleFilter="toggleFilterTag" @OpenDetail="OpenDetail").contents_list
       
 </template>
 
@@ -57,6 +57,9 @@ export default {
     //ContentsList methods
     ToggleShowTag(eye){
       this.$refs.contents_list.ToggleShowTag(eye);
+    },
+    OpenDetail(rect,content_id){
+      this.$emit('OpenDetail',rect,content_id);
     }
   }
 }
