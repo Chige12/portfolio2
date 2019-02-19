@@ -293,9 +293,8 @@ import PopupMail from '~/components/popup/mail.vue'
       padding: 0 75px;
       background: #eee;
       .menu-button{
-        left: (365px / 2) - (110px / 2) - 30px;
-        padding: 16px 30px;
-        width: 100%;
+        padding: 16px (365px / 2) - (110px / 2);
+        width: 365px;
       }
       .circle-dot {
         width: 110px;
