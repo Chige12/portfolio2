@@ -50,7 +50,7 @@ export default {
         this.contents[content_id].state.box_lock = false;
       }
     },
-    ToggleShowTag(eye){     
+    ToggleShowTag(eye){
         if(eye=='Display'){
           for (let i = 0; i < this.contents.length; i++) {
             this.contents[i].state.tag_eye = true;
