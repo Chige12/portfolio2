@@ -17,6 +17,22 @@ export default {
     return {
       now_page:"Profile",
     }
+  },
+  methods: {
+    headerState(state){
+      this.$refs.header.headerState(state);
+    },
+    headerState(e){
+      if(e.target.scrollTop <= 180){
+          this.$emit('header-state',"Open");
+          this.$refs.contents_menu.headerState(false);
+          this.header_state_once = true;
+      }else if(this.header_state_once == true){
+          this.$emit('header-state',"Fold");
+          this.$refs.contents_menu.headerState(true);
+          this.header_state_once = false;
+      }
+    }
   }
 }
 </script>
