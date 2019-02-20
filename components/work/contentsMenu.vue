@@ -24,13 +24,9 @@ export default {
     return {
       tags:["design","video","web","illust"],//defaultのfilteringタグ
       eye:"Show all tags",//デフォルトでContentsのタグ非表示
-      contents_menu_fold:false
     }
   },
   methods: {
-    headerState(state){
-      this.contents_menu_fold = state;
-    },
     toggleEye(){
       if(this.eye=='Show all tags'){
         this.eye = 'Hide all tags'
@@ -228,7 +224,4 @@ export default {
     flex-wrap: wrap;
   }
 }
-.contents_menu_fold {
-  top: 18px + 170px;
-} 
 </style>

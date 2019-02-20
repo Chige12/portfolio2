@@ -10,6 +10,9 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    '~plugins/vue-scrollto.js',
+  ],
   /*
   ** Headers of the page
   */

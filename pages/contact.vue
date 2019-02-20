@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
-.nuxt {padding: 18px 0;}
+.nuxt {padding: 18px 0;height: 100%;}
 .contact {
   position: relative;
   p {

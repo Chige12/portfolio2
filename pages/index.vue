@@ -69,7 +69,7 @@ export default {
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
 
-.nuxt {padding: 18px 0;}
+.nuxt {padding: 18px 0;height: 100%;}
 .index {
   position: relative;
   section.reel {
