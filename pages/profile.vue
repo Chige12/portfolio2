@@ -5,7 +5,7 @@
         .profile_menu
           nuxt-link(v-scroll-to="'#top'" to :class="{'profile-link-now':link_now=='top'}").profile-link
             .now-line
-            .profile-link-text Profile
+            .profile-link-text Profile Top
           nuxt-link(v-scroll-to="'#skills'" to :class="{'profile-link-now':link_now=='skills'}").profile-link
             .now-line
             .profile-link-text Skills
@@ -16,20 +16,28 @@
             .now-line
             .profile-link-text Socials
         .profile_main
-          #top top
-          #skills skills
-          #experiences experiences
-          #socials socials
+          ProfileTop.profile_lists#top
+          Skills.profile_lists#skills
+          Experiences.profile_lists#experiences
+          Socials.profile_lists#socials
       Header(:now_page="now_page" ref="header")
 </template>
 <script>
 import Header from '~/components/header.vue'
 import Topics from '~/components/index/topics.vue'
+import ProfileTop from '~/components/profile/top.vue'
+import Skills from '~/components/profile/skills.vue'
+import Experiences from '~/components/profile/experiences.vue'
+import Socials from '~/components/profile/socials.vue'
 
 export default {
   components: {
     Header,
-    Topics
+    Topics,
+    ProfileTop,
+    Skills,
+    Experiences,
+    Socials
   },
   data() {
     return {
@@ -109,7 +117,7 @@ export default {
     overflow-y: overlay;
     .profile_menu {
       position: fixed;
-      top: 180px;
+      top: 188px;
       left: 35px;
       width: 170px;
       height:auto;
@@ -124,7 +132,8 @@ export default {
           transition: .3s $bezier-fast-ease-out;
           background: #fff;
           padding-right: 20px;
-          width: min-content;
+          display: inline-block;
+          width: auto;
         }
         .now-line {
           position: absolute;
@@ -165,6 +174,10 @@ export default {
     .profile_main {
       padding-top: 170px;
       padding-left: 170px + 35px + 26px;
+      padding-right: 365px + 45px + 26px;
+      .profile_lists {
+        margin-bottom: 30px;
+      }
     }
   }
 }
