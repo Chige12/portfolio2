@@ -69,7 +69,7 @@ export default {
   methods: {
     headerState(e){
       //headerの開閉処理
-      if(e.target.scrollTop <= 180){
+      if(e.target.scrollTop <= 80){
         if(this.header_state_once == false){
           this.$refs.header.headerState("Open");//Header Open
           this.header_state_once = true;
@@ -84,7 +84,7 @@ export default {
       var priority = false
       var height = document.documentElement.clientHeight
       this.link_now = { top : false, skills : false, experiences : false, links : false}
-      
+
       for (const key in this.rects) {
         if(e.target.scrollTop+height >= this.rects[key].top + 18 && //要素の上辺が、画面の下辺より上にある時から
           e.target.scrollTop < this.rects[key].top+this.rects[key].height + offset){ //要素の下辺が画面の上辺からoffset分下の位置より上にある時まで
@@ -125,6 +125,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: overlay;
     .profile_menu {
       position: fixed;
