@@ -2,7 +2,9 @@
   .nuxt
     .profile
       Header(:now_page="now_page" ref="header")
-      p 現在制作中です。
+      .profile_wrapper(@scroll="headerState")
+        //- profileMenu
+        //- 
 </template>
 <script>
 import Header from '~/components/header.vue'
@@ -16,20 +18,18 @@ export default {
   data() {
     return {
       now_page:"Profile",
+      header_state_once:true,
     }
   },
   methods: {
-    headerState(state){
-      this.$refs.header.headerState(state);
-    },
     headerState(e){
       if(e.target.scrollTop <= 180){
-          this.$emit('header-state',"Open");
-          this.$refs.contents_menu.headerState(false);
+        if(this.header_state_once == false){
+          this.$refs.header.headerState("Open");//Header Open
           this.header_state_once = true;
+        }
       }else if(this.header_state_once == true){
-          this.$emit('header-state',"Fold");
-          this.$refs.contents_menu.headerState(true);
+          this.$refs.header.headerState("Fold");//Header Close
           this.header_state_once = false;
       }
     }
@@ -39,12 +39,17 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
-.nuxt {padding: 18px 0;}
+.nuxt {padding: 18px 0;height: 100%;}
 .profile {
+  height: 100%;
   position: relative;
-  p {
-    font-size: 20px;
-    padding-left: 40px;
+  .profile_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: overlay;
   }
 }
 </style>

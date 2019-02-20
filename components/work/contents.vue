@@ -36,13 +36,11 @@ export default {
           this.$emit('header-state',"Open");
           this.$refs.contents_menu.headerState(false);
           this.header_state_once = true;
-          console.log("false")
         }
       }else if(this.header_state_once == true){
           this.$emit('header-state',"Fold");
           this.$refs.contents_menu.headerState(true);
           this.header_state_once = false;
-          console.log("true")
       }
     },
     tagReset(){
