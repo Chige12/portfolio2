@@ -33,13 +33,11 @@ export default {
     headerState(e){
       if(e.target.scrollTop <= 180){
         if(this.header_state_once == false){
-          this.$emit('header-state',"Open");
-          this.$refs.contents_menu.headerState(false);
+          this.$emit('header-state',"Open");//Header Open
           this.header_state_once = true;
         }
       }else if(this.header_state_once == true){
-          this.$emit('header-state',"Fold");
-          this.$refs.contents_menu.headerState(true);
+          this.$emit('header-state',"Fold");//Header Fold
           this.header_state_once = false;
       }
     },

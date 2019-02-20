@@ -29,7 +29,7 @@ export default {
           this.header_state_once = true;
         }
       }else if(this.header_state_once == true){
-          this.$refs.header.headerState("Fold");//Header Close
+          this.$refs.header.headerState("Fold");//Header Fold
           this.header_state_once = false;
       }
     }

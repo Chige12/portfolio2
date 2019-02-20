@@ -50,7 +50,7 @@ export default {
     }
   },
   methods: {
-    headerState(state){
+    headerState(state){ //Header Open or Fold
       this.$refs.header.headerState(state);
     },
     getUrlHash () {
