@@ -107,7 +107,7 @@ export default {
   .detail {
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 210px;
     .my-icon {
       position: relative;
@@ -129,7 +129,7 @@ export default {
     .detail-list{
       margin: 0;
       padding: 20px 24px;
-      margin-left: 30px;
+      margin-left: 20px;
       background: $theme-mint;
       flex-basis: 0;
       flex-grow: 1;
@@ -174,12 +174,12 @@ export default {
   .comments {
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 210px;
     .comments-text {
       margin: 0;
       padding: 42px 36px;
-      margin-right: 30px;
+      margin-right: 20px;
       background: $theme-navy;
       flex-basis: 0;
       flex-grow: 1;
