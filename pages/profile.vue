@@ -79,15 +79,15 @@ export default {
           this.header_state_once = false;
       }
       //side-menu
-      var offset = 300;
+      var offset = 100;
       var last_items = []
       var priority = false
       var height = document.documentElement.clientHeight
       this.link_now = { top : false, skills : false, experiences : false, links : false}
 
       for (const key in this.rects) {
-        if(e.target.scrollTop+height >= this.rects[key].top + 18 && //要素の上辺が、画面の下辺より上にある時から
-          e.target.scrollTop < this.rects[key].top+this.rects[key].height + offset){ //要素の下辺が画面の上辺からoffset分下の位置より上にある時まで
+        if(e.target.scrollTop+height >= this.rects[key].top + 30 && //要素の上辺が、画面の下辺より上にある時から
+          e.target.scrollTop < this.rects[key].top+this.rects[key].height - offset){ //要素の下辺が画面の上辺からoffset分下の位置より上にある時まで
             switch(String(key)){
               case 'top': 
                 if(this.link_now.top == false){
@@ -189,12 +189,16 @@ export default {
       padding-right: 365px + 45px + 26px;
       .profile_lists {
         margin-bottom: 30px;
+        &:last-child{
+          margin-bottom: 800px;
+        }
       }
       // Compornent
       .prof-sec-title {
         position: relative;
         width: 100%;
         height: 2rem;
+        margin-bottom: 18px;
         &-line {
           position: absolute;
           margin: auto;
