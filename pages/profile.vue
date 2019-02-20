@@ -3,23 +3,23 @@
     .profile
       .profile_wrapper(@scroll="headerState")#scroll_wrapper
         .profile_menu
-          nuxt-link(v-scroll-to="'#top'" to :class="{'profile-link-now':link_now=='top'}").profile-link
+          nuxt-link(v-scroll-to="'#top'" to :class="{'profile-link-now':link_now.top}").profile-link
             .now-line
             .profile-link-text Profile Top
-          nuxt-link(v-scroll-to="'#skills'" to :class="{'profile-link-now':link_now=='skills'}").profile-link
+          nuxt-link(v-scroll-to="'#skills'" to :class="{'profile-link-now':link_now.skills}").profile-link
             .now-line
             .profile-link-text Skills
-          nuxt-link(v-scroll-to="'#experiences'" to :class="{'profile-link-now':link_now=='experiences'}").profile-link
+          nuxt-link(v-scroll-to="'#experiences'" to :class="{'profile-link-now':link_now.experiences}").profile-link
             .now-line
             .profile-link-text Experiences
-          nuxt-link(v-scroll-to="'#socials'" to :class="{'profile-link-now':link_now=='socials'}").profile-link
+          nuxt-link(v-scroll-to="'#links'" to :class="{'profile-link-now':link_now.links}").profile-link
             .now-line
-            .profile-link-text Socials
+            .profile-link-text SNS / Links
         .profile_main
           ProfileTop.profile_lists#top
           Skills.profile_lists#skills
           Experiences.profile_lists#experiences
-          Socials.profile_lists#socials
+          Links.profile_lists#links
       Header(:now_page="now_page" ref="header")
 </template>
 <script>
@@ -28,7 +28,7 @@ import Topics from '~/components/index/topics.vue'
 import ProfileTop from '~/components/profile/top.vue'
 import Skills from '~/components/profile/skills.vue'
 import Experiences from '~/components/profile/experiences.vue'
-import Socials from '~/components/profile/socials.vue'
+import Links from '~/components/profile/links.vue'
 
 export default {
   components: {
@@ -37,14 +37,19 @@ export default {
     ProfileTop,
     Skills,
     Experiences,
-    Socials
+    Links
   },
   data() {
     return {
       now_page:"Profile",
       header_state_once:true,
       rects: {},
-      link_now: "top",
+      link_now: {
+        top : true,
+        skills : false,
+        experiences : false,
+        links : false
+      },
     }
   },
   mounted() {
@@ -52,12 +57,12 @@ export default {
       var top = document.getElementById('top');
       var skills = document.getElementById('skills');
       var experiences = document.getElementById('experiences');
-      var socials = document.getElementById('socials');
+      var links = document.getElementById('links');
       this.rects = {
         top : top.getBoundingClientRect(),
         skills : skills.getBoundingClientRect(),
         experiences : experiences.getBoundingClientRect(),
-        socials : socials.getBoundingClientRect()
+        links : links.getBoundingClientRect()
       }
     });
   },
@@ -77,25 +82,31 @@ export default {
       var offset = 300;
       var last_items = []
       var priority = false
+      var height = document.documentElement.clientHeight
+      this.link_now = { top : false, skills : false, experiences : false, links : false}
+      
       for (const key in this.rects) {
-        if(e.target.scrollTop >= this.rects[key].top - offset && //要素の上辺が、画面の上辺からoffset分下の位置より上にある時から
+        if(e.target.scrollTop+height >= this.rects[key].top + 18 && //要素の上辺が、画面の下辺より上にある時から
           e.target.scrollTop < this.rects[key].top+this.rects[key].height + offset){ //要素の下辺が画面の上辺からoffset分下の位置より上にある時まで
-            if(this.link_now !== String(key)){
-              this.link_now = String(key)
+            switch(String(key)){
+              case 'top': 
+                if(this.link_now.top == false){
+                  this.link_now.top = true;
+                }break;
+              case 'skills':
+                if(this.link_now.skills == false){
+                  this.link_now.skills = true;
+                } break;
+              case 'experiences':
+                if(this.link_now.experiences == false){
+                  this.link_now.experiences = true;
+                } break;
+              case 'links':
+                if(this.link_now.links == false){
+                  this.link_now.links = true;
+                } break;
             }
         }
-        var height = document.documentElement.clientHeight
-        if(e.target.scrollTop+height >= this.rects[key].top+this.rects[key].height + 18 && //要素の下辺が、画面の下辺より上にある時から
-          e.target.scrollTop < this.rects[key].top - offset){ //要素の上辺が、画面の上辺からoffset分下の位置より下ある時まで
-            if (last_items.indexOf(key) == -1){
-              last_items.push(key)
-              priority = true
-            }
-        }
-      }
-      if(priority == true){
-        console.log(last_items)
-        this.link_now = String(last_items[last_items.length - 1])
       }
     }
   }
@@ -177,6 +188,33 @@ export default {
       padding-right: 365px + 45px + 26px;
       .profile_lists {
         margin-bottom: 30px;
+      }
+      // Compornent
+      .prof-sec-title {
+        position: relative;
+        width: 100%;
+        height: 2rem;
+        &-line {
+          position: absolute;
+          margin: auto;
+          width: calc(80%);
+          height: 1px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: $theme-navy;
+          margin: auto;
+          z-index: -1;
+        }
+        &-box {
+          margin: auto;
+          width: 160px;
+          height: 2rem;
+          text-align: center;
+          background: #fff;
+          @include roboto-medium(2rem);
+        }
       }
     }
   }

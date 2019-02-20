@@ -1,5 +1,8 @@
 <template lang="pug">
-  .socilas
+  .links
+    .prof-sec-title
+      .prof-sec-title-line
+      .prof-sec-title-box SNS / Links
 </template>
 <script>
 export default {
@@ -9,4 +12,7 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/variables.scss";
 @import "~/assets/scss/mixin.scss";
+.links {
+  margin-top: 100px;
+}
 </style>
