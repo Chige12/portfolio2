@@ -69,7 +69,7 @@ export default {
   methods: {
     headerState(e){
       //headerの開閉処理
-      if(e.target.scrollTop <= 80){
+      if(e.target.scrollTop <= 40){
         if(this.header_state_once == false){
           this.$refs.header.headerState("Open");//Header Open
           this.header_state_once = true;
