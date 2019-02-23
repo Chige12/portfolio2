@@ -1,5 +1,5 @@
 <template lang="pug">
-  .contents_menu(:class="{'contents_menu_fold':contents_menu_fold}")
+  .contents_menu
     .menu_heading Keyword search
     .menu_content
       input(type="text" v-model="filter.search").search
