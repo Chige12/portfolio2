@@ -57,10 +57,8 @@ export default {
       this.urlHash = location.hash;
       if(this.urlHash){
         var tag = false;
-        console.log(this.urlHash);
         for (let i = 0; i < this.tags.length; i++) {
-          if(this.urlHash == "#"+this.tags[i]){ tag = true; }
-          break;
+          if(this.urlHash == "#"+this.tags[i]){ tag = true; break;}
         }
         if(tag==true){//hashがtagなら
           //call child method

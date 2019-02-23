@@ -22,7 +22,7 @@
           nuxt-link(to="./works#design").el.design Design
           nuxt-link(to="./works#video").el.video Video
           nuxt-link(to="./works#web").el.web Web
-          nuxt-link(to="./works#illust").el.ilust Ilust
+          nuxt-link(to="./works#illust").el.ilust Illust
           nuxt-link(to="./works#others").el.others Others
         .sns-links
           a(@click="OpenMailPopUp()").sns-icon

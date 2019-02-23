@@ -1,5 +1,5 @@
 <template lang="pug">
-  .contents_menu(:class="{'contents_menu_fold':contents_menu_fold}")
+  .contents_menu
     .menu_heading Keyword search
     .menu_content
       input(type="text" v-model="filter.search").search
@@ -42,9 +42,9 @@ export default {
         case"design": case"video": case"web": case"illust":
           this.$parent.filter.tags.push(tag); break;
         default: 
-          for (let i = 0; i < (this.TagsList.length-4); i++) {
-            this.$parent.filter.tags.push(this.TagsList[i+4]);
-          } break;
+          var random = Math.round( Math.random()*(this.TagsList.length-5)+4 );
+          this.$parent.filter.tags.push(this.TagsList[random]);
+          break;
       }
     },
     toggleFilterTag(tag){//UI操作用
