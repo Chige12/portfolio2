@@ -58,12 +58,14 @@ export default {
       var skills = document.getElementById('skills');
       var links = document.getElementById('links');
       var experiences = document.getElementById('experiences');
-      this.rects = {
-        top : top.getBoundingClientRect(),
-        skills : skills.getBoundingClientRect(),
-        links : links.getBoundingClientRect(),
-        experiences : experiences.getBoundingClientRect()
-      }
+      setTimeout(() => {
+        this.rects = {
+          top : top.getBoundingClientRect(),
+          skills : skills.getBoundingClientRect(),
+          links : links.getBoundingClientRect(),
+          experiences : experiences.getBoundingClientRect()
+        }
+      }, 150)
     });
   },
   methods: {
