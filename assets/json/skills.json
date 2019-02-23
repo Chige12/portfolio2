@@ -1,0 +1,111 @@
+[
+  {
+    "icon":"html",
+    "small_name": null,
+    "name":"HTML",
+    "sets":"HTML5 / Pug",
+    "since":"2016/12",
+    "discription": ["初めてエディタを使って書き始めた言語。","プログラミングって案外簡単なんだな〜とか思ってた自分をしばきたい。"]
+  },
+  {
+    "icon":"css",
+    "small_name": null,
+    "name":"CSS",
+    "sets":"CSS3 / Sass (SCSS)",
+    "since":"2016/12",
+    "discription": ["CSS 設計の本にはお世話になった。CSS 組版やろうかな。"]
+  },
+  {
+    "icon":"javascript",
+    "small_name": null,
+    "name":"JavaScript",
+    "sets":"Vue.js / Nuxt.js",
+    "since":"2017/4",
+    "discription": [
+      "ES2016 / 2017 の記法に追いきれてない。",
+      "便利すぎて Nuxt を無くすと無理（激ウマギャグ）。React もやってみたいな。"]
+  },
+  {
+    "icon":"illustrator",
+    "small_name": "Adobe",
+    "name":"Illustrator",
+    "sets": null,
+    "since":"2016/12",
+    "discription": [
+      "中学生くらいから父親の CS2 で遊んでた。CC を使い始めたのが 2016/12。",
+      "週に3回は開いてる。いつもお世話になっている。"]
+  },
+  {
+    "icon":"photoshop",
+    "small_name": "Adobe",
+    "name":"Photoshop",
+    "sets":null,
+    "since":"2014/4",
+    "discription": ["当時は PC に付属してた Elements を使っていた。",
+    "写真の背景抜きをしたり、Slack の絵文字を作ったりしてた。"]
+  },
+  {
+    "icon":"indesign",
+    "small_name": "Adobe",
+    "name":"InDesign",
+    "sets":null,
+    "since":"2018/4",
+    "discription": ["プログラミング言語かるたメイキングブックの制作に使用した。",
+    "複雑な組版するときに使ってる。"]
+  },
+  {
+    "icon":"aftereffects",
+    "small_name": "Adobe",
+    "name":"After Effects",
+    "sets":null,
+    "since":"2017/9",
+    "discription": ["確か電気科の PV 製作の時に初めて、PC に鞭を打ちながら使った。前の PC では重くて辛かった。",
+    "これからちゃんと学ぶぞ〜〜！"]
+  },
+  {
+    "icon":"aviutl",
+    "small_name": null,
+    "name":"AviUtl",
+    "sets":null,
+    "since":"2014/4",
+    "discription": ["最初は実況動画作りたかったので入れた。今はモーショングラフィックスガリガリやってる。",
+    "思い入れは深いが、今の環境が Mac なのでそろそろ AE に切り替える。"]
+  },
+  {
+    "icon":"git",
+    "small_name": null,
+    "name":"Git",
+    "sets":null,
+    "since":"2017/1",
+    "discription": ["自分のサイトを作りたくて Github pages で公開するために学び始めた。",
+    "Gitコマンドかるたの制作で Git の奥深さを学んだ。"]
+  },
+  {
+    "icon":"clip-studio",
+    "small_name": "CLIP STUDIO",
+    "name":"PAINT",
+    "sets":null,
+    "since":"2016/1",
+    "discription": ["使っているのはEX。ペンタブは Wacom の INTOS pro。"]
+  },
+  {
+    "icon":"minecraft",
+    "small_name": null,
+    "name":"Minecraft",
+    "sets":"Redstone circuits",
+    "since":"2014/7",
+    "discription": [
+      "ここに書くべきか迷ったが赤石回路技術もスキルってことで。",
+      "中毒者と呼ばれたくらいには好き。建築も好きだが、よく回路設計してる。"]
+  },
+  {
+    "icon":"arduino",
+    "small_name": null,
+    "name":"Arduino",
+    "sets":null,
+    "since":"2015",
+    "discription": [
+      "一応電気科なので、とりあえず一通り触れるし、ちょっとした回路も組める。",
+      "でも自費購入ならラズパイだな〜。"]
+  }
+]

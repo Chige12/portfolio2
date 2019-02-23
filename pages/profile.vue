@@ -9,17 +9,17 @@
           nuxt-link(v-scroll-to="'#skills'" to :class="{'profile-link-now':link_now.skills}").profile-link
             .now-line
             .profile-link-text Skills
-          nuxt-link(v-scroll-to="'#experiences'" to :class="{'profile-link-now':link_now.experiences}").profile-link
-            .now-line
-            .profile-link-text Experiences
           nuxt-link(v-scroll-to="'#links'" to :class="{'profile-link-now':link_now.links}").profile-link
             .now-line
             .profile-link-text SNS / Links
+          nuxt-link(v-scroll-to="'#experiences'" to :class="{'profile-link-now':link_now.experiences}").profile-link
+            .now-line
+            .profile-link-text Experiences
         .profile_main
           ProfileTop.profile_lists#top
           Skills.profile_lists#skills
-          Experiences.profile_lists#experiences
           Links.profile_lists#links
+          Experiences.profile_lists#experiences
       Header(:now_page="now_page" ref="header")
 </template>
 <script>
@@ -36,8 +36,8 @@ export default {
     Topics,
     ProfileTop,
     Skills,
-    Experiences,
-    Links
+    Links,
+    Experiences
   },
   data() {
     return {
@@ -47,8 +47,8 @@ export default {
       link_now: {
         top : true,
         skills : false,
-        experiences : false,
-        links : false
+        links : false,
+        experiences : false
       },
     }
   },
@@ -56,13 +56,13 @@ export default {
     this.$nextTick(() => {
       var top = document.getElementById('top');
       var skills = document.getElementById('skills');
-      var experiences = document.getElementById('experiences');
       var links = document.getElementById('links');
+      var experiences = document.getElementById('experiences');
       this.rects = {
         top : top.getBoundingClientRect(),
         skills : skills.getBoundingClientRect(),
-        experiences : experiences.getBoundingClientRect(),
-        links : links.getBoundingClientRect()
+        links : links.getBoundingClientRect(),
+        experiences : experiences.getBoundingClientRect()
       }
     });
   },
@@ -83,7 +83,7 @@ export default {
       var last_items = []
       var priority = false
       var height = document.documentElement.clientHeight
-      this.link_now = { top : false, skills : false, experiences : false, links : false}
+      this.link_now = { top : false, skills : false, links : false, experiences : false}
 
       for (const key in this.rects) {
         if(e.target.scrollTop+height >= this.rects[key].top + 30 && //要素の上辺が、画面の下辺より上にある時から
@@ -97,13 +97,13 @@ export default {
                 if(this.link_now.skills == false){
                   this.link_now.skills = true;
                 } break;
-              case 'experiences':
-                if(this.link_now.experiences == false){
-                  this.link_now.experiences = true;
-                } break;
               case 'links':
                 if(this.link_now.links == false){
                   this.link_now.links = true;
+                } break;
+              case 'experiences':
+                if(this.link_now.experiences == false){
+                  this.link_now.experiences = true;
                 } break;
             }
         }
