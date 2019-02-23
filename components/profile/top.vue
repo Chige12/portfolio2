@@ -34,12 +34,12 @@ export default {
         {propaty: "Birthday",value: "1998/12/15"},
         {propaty: "Age",value: "20"},
         {propaty: "Living", value: "Kyoto"},
-        {propaty: "Affiliation", value: "奈良高専専攻科 (NITNC)"}
+        {propaty: "Affiliation", value: "奈良高専 専攻科 (NITNC)"}
       ],
       comments: [
         "鍋はすき焼き、寿司は寒ブリが好きです。",
         "電気電子システムコース専攻だし、今まで学んできたのは電気工学だけど、",
-        "これからWeb系のヒューマンインターフェースの研究をやろうとしている。",
+        "これから Web 系のヒューマンインターフェースの研究をやろうとしている。",
         "デザインもエンジニアリングも頑張りたいな。"
       ]
     }
@@ -164,6 +164,7 @@ export default {
           .value {
             display: inline-block;
             @include noto-font(1.7rem, #fff);
+            font-feature-settings: "pkna";
             vertical-align:baseline;
             width: 50%;
           }
