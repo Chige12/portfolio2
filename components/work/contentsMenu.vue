@@ -42,9 +42,9 @@ export default {
         case"design": case"video": case"web": case"illust":
           this.$parent.filter.tags.push(tag); break;
         default: 
-          for (let i = 0; i < (this.TagsList.length-4); i++) {
-            this.$parent.filter.tags.push(this.TagsList[i+4]);
-          } break;
+          var random = Math.round( Math.random()*(this.TagsList.length-5)+4 );
+          this.$parent.filter.tags.push(this.TagsList[random]);
+          break;
       }
     },
     toggleFilterTag(tag){//UI操作用
