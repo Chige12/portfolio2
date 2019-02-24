@@ -1,0 +1,58 @@
+[
+  {
+    "icon":"twitter",
+    "link":"https://twitter.com/Chige12_",
+    "name":"Twitter",
+    "user":"@Chige12_",
+    "color":"1DA1F2"
+  },
+  {
+    "icon":"facebook",
+    "link":"https://www.facebook.com/chige12f",
+    "name":"Facebook",
+    "user":"chige12f",
+    "color":"4267B2"
+  },
+  {
+    "icon":"github",
+    "link":"https://github.com/Chige12",
+    "name":"Github",
+    "user":"Chige12",
+    "color":"231815"
+  },
+  {
+    "icon":"tumblr",
+    "link":"https://chige12.tumblr.com/",
+    "name":"tumblr",
+    "user":"chige12 / Finde neue",
+    "color":"001834"
+  },
+  {
+    "icon":"pixiv",
+    "link":"https://www.pixiv.net/member.php?id=7409815",
+    "name":"pixiv",
+    "user":"ちげ",
+    "color":"0096FA"
+  },
+  {
+    "icon":"hatenablog",
+    "link":"https://chige.hatenablog.com/",
+    "name":"Hatena Blog",
+    "user":"鍋はすき焼きがすき",
+    "color":"38393C"
+  },
+  {
+    "icon":"speakerdeck",
+    "link":"https://speakerdeck.com/chige",
+    "name":"Speaker Deck",
+    "user":"chige",
+    "color":"009287"
+  },
+  {
+    "icon":"youtube",
+    "link":"https://www.youtube.com/channel/UCtxSRt0BuGqiaZblOVXIPGw",
+    "name":"YouTube",
+    "user":"ちげ",
+    "color":"FF0000"
+  }
+]
