@@ -5,7 +5,7 @@
       .prof-sec-title-box Skills
     .skills-box
       .skill(v-for="skill in skills")
-        img.icon(:src="`img/skills/${skill.icon}.svg`")
+        img.icon(:src="`../img/skills/${skill.icon}.svg`")
         .name-box
           .small-name(v-if="skill.small_name") {{skill.small_name}}
           .name {{skill.name}}
