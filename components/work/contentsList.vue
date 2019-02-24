@@ -2,7 +2,7 @@
   .contents-list
     .contents-list-wrapper
       transition-group(name="content").contents-transition
-        .contents-box(v-for="(content,content_id) in filteredContents" :key="content_id + '-content'")
+        .contents-box(v-for="(content,content_id) in filteredContents" :key="`${content_id}-content`")
           .content-link(@click="OpenDetail(content.id)" :id="`content-${content.id}`")
             .content-img-cover
               video(v-if="content.top_video" :src="`img/works/${content.top_video}`" autoplay loop muted).content-img
@@ -17,12 +17,12 @@
             .content-title {{content.title}}
           .content-info
             .info-tag(v-if="content.tags" :class="{'info-tag-click': content.state.tag_eye}")
-              font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :class="['info-tag-icon-'+content.tags[0]]" @click="ToggleTag(content_id)").info-tag-icon
-              font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :class="['info-tags-icon-'+content.tags[0]]" @click="ToggleTag(content_id)").info-tags-icon
+              font-awesome-icon(icon="tag" v-if="content.tags.length == 1" :class="[`info-tag-icon-${content.tags[0]}`]" @click="ToggleTag(content_id)").info-tag-icon
+              font-awesome-icon(icon="tags" v-if="content.tags.length > 1" :class="[`info-tags-icon-${content.tags[0]}`]" @click="ToggleTag(content_id)").info-tags-icon
               ul.content-tags
                 li.taglist(v-for="tag in content.tags" @click="toggleFilterTag(tag)")
-                  .taghole(:class="'taghole-'+tag")
-                  .tagname(:class="'tagname-'+tag")
+                  .taghole(:class="`taghole-${tag}`")
+                  .tagname(:class="`tagname-${tag}`")
                     span(:class="{'no-slide':!filterTagCheck(tag)}") {{tag}}
                     font-awesome-icon(icon="circle" v-if="filterTagCheck(tag)").check-icon.check-icon-circle
                     font-awesome-icon(icon="plus-circle" v-if="filterTagCheck(tag)").check-icon.check-icon-plus
@@ -34,9 +34,10 @@ export default {
   data () {
     return {
       state:{
-        box_lock : [],
-        tag_eye : []
-      }
+        box_lock : false,
+        tag_eye : false
+      },
+      eye:'Remove'
     }
   },
   methods: {
