@@ -30,20 +30,22 @@ export default {
 .links {
   margin-top: 100px;
   .links-wrapper {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     a.link{
-      width: calc(100% / 3);
+      width: 420px;
       margin: 0.5px;
       .link-box {
         display: flex;
         flex-wrap: nowrap;
         height: auto;
         .icon {
-          width: 60px;
-          height: 60px;
+          width: 70px;
+          height: 70px;
+          padding: 10px;
+          transition: .4s $bezier-fast-ease-out;
         }
         .link-contents {
           position: relative;
@@ -61,19 +63,18 @@ export default {
             opacity: 1;
           }
           .link-text {
-            height: 60px;
+            height: 70px;
             padding: 8px 0;
             padding-left: 20px;
             overflow: hidden;
             .name {
               @include noto-font(2rem,#fff);
-              padding: 11px 0;
+              padding: 15px 0;
               transition: .4s $bezier-fast-ease-out;
             }
             .user {
               @include noto-font(1.2rem,#fff);
               padding-top: 20px;
-              opacity: .8;
               transition: .4s $bezier-fast-ease-out;
             }
           }
@@ -89,6 +90,9 @@ export default {
       }
       &:hover {
         .link-box {
+          .icon {
+            padding: 4px;
+          }
           .link-contents {
             .link-bg {
               width: 0%;
@@ -96,7 +100,7 @@ export default {
             }
             .link-text {
               .name {
-                padding:0;
+                padding-top: 6px;
                 padding-bottom: 4px;
               }
               .user {
