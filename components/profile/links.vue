@@ -30,12 +30,12 @@ export default {
 .links {
   margin-top: 100px;
   .links-wrapper {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     a.link{
-      width: calc(100% / 2.6);
+      width: 420px;
       margin: 0.5px;
       .link-box {
         display: flex;
@@ -45,6 +45,7 @@ export default {
           width: 70px;
           height: 70px;
           padding: 10px;
+          transition: .4s $bezier-fast-ease-out;
         }
         .link-contents {
           position: relative;
@@ -89,6 +90,9 @@ export default {
       }
       &:hover {
         .link-box {
+          .icon {
+            padding: 4px;
+          }
           .link-contents {
             .link-bg {
               width: 0%;
