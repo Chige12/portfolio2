@@ -35,15 +35,16 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     a.link{
-      width: calc(100% / 3);
+      width: calc(100% / 2.6);
       margin: 0.5px;
       .link-box {
         display: flex;
         flex-wrap: nowrap;
         height: auto;
         .icon {
-          width: 60px;
-          height: 60px;
+          width: 70px;
+          height: 70px;
+          padding: 10px;
         }
         .link-contents {
           position: relative;
@@ -61,19 +62,18 @@ export default {
             opacity: 1;
           }
           .link-text {
-            height: 60px;
+            height: 70px;
             padding: 8px 0;
             padding-left: 20px;
             overflow: hidden;
             .name {
               @include noto-font(2rem,#fff);
-              padding: 11px 0;
+              padding: 15px 0;
               transition: .4s $bezier-fast-ease-out;
             }
             .user {
               @include noto-font(1.2rem,#fff);
               padding-top: 20px;
-              opacity: .8;
               transition: .4s $bezier-fast-ease-out;
             }
           }
@@ -96,7 +96,7 @@ export default {
             }
             .link-text {
               .name {
-                padding:0;
+                padding-top: 6px;
                 padding-bottom: 4px;
               }
               .user {
