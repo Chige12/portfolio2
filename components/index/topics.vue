@@ -3,8 +3,8 @@
     .carousel
       .topic(v-for="(topic,topic_id) in temp_topics" :class="{'topic-display':DisplayCarousel(topic_id)}")
         nuxt-link(:to="'/works#'+topic.id" :class="`topic-`+topic.color").backcolor
-          video(v-if="topic.video" :src="`img/works/contents/${topic.id}/${topic.video}`" autoplay loop muted).topic-img
-          img(v-if="topic.img" :src="`img/works/contents/${topic.id}/${topic.img}`").topic-img
+          video(v-if="topic.video" :src="`./img/works/contents/${topic.id}/${topic.video}`" autoplay loop muted).topic-img
+          img(v-if="topic.img" :src="`./img/works/contents/${topic.id}/${topic.img}`").topic-img
           .stripe
           .title: h1 {{topic.title}}
           .discription: p {{topic.disc}}
