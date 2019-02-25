@@ -36,9 +36,83 @@
     }
   },
   {
+    "id":         "kosen_channel_eyecatch",
+    "title":      "「みんなの高専チャンネル」アイキャッチ",
+    "top_video":  "eyecatch-2.mp4",
+    "top_img":    "",
+    "top_text":   "高専の疑問に答えるYoutube「みんなの高専チャンネル」のアイキャッチ映像を制作。",
+    "tags":       ["video"],
+    "keyword":    ["kosen","ナレッジスター","ロゴ","logo","ユーチューブ"],
+    "type":       "image",
+    "date":       "2019/1",
+    "content":{
+      "img":    [],
+      "video":  {"site":"none","link":""},
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "newio2018",
+    "title":      "クリエイター交流イベント「I/O」開催",
+    "top_img":    "ogp.png",
+    "top_text":   "イベントの運営、Webサイトデザイン&コーディング、当日の司会を担当。",
+    "tags":       ["web","event","design"],
+    "keyword":    ["io2018","クリエイター"],
+    "type":       "multi",
+    "date":       "2018/10",
+    "content":{
+      "img":    [],
+      "video":  {},
+      "text":   [],
+      "link":[
+        {"name":"クリエイター交流イベント「I/O」 2018","url":"https://new-io.jp/"}
+      ]
+    }
+  },
+  {
+    "id":         "kosen14s_together",
+    "title":      "闇鍋本「TOGETHER」技術書典5",
+    "top_img":    "OGP.png",
+    "top_text":   "kosen14sで同人誌を制作。技術書典5に出典。デザイン&サイトコーディング、売り子を担当",
+    "tags":       ["web","design","event"],
+    "keyword":    ["kosen14s","github"],
+    "type":       "multi",
+    "date":       "2018/9",
+    "content":{
+      "img":    [],
+      "video":  {},
+      "text":   [],
+      "link":[
+        {"name":"TOGETHER | kosen14s #dojin [kosen14s.github.io]","url":"https://kosen14s.github.io/together"},
+        {"name":"現役高専生の闇鍋本を技術書典5に出典！｜ちげ｜note","url":"https://note.mu/chige12/n/n05bf7840789d"}
+      ]
+    }
+  },
+  {
+    "id":         "kosen14s_toppage",
+    "title":      "kosen14sサイトをリニューアル",
+    "top_img":    "kosen14s-site.png",
+    "top_text":   "所属しているkosen14sのサイトを更新。季節によって背景色が変わる仕様。",
+    "tags":       ["web","design"],
+    "keyword":    ["kosen14s","github"],
+    "type":       "multi",
+    "date":       "2018/9",
+    "content":{
+      "img":    [],
+      "video":  {},
+      "text":   [],
+      "link":[
+        {"name":"高専2014年度入学生のゆるふわ団体「kosen14s」","url":"https://kosen14s.github.io/"}
+      ]
+    }
+  },
+  {
     "id":         "rewrite_kosen",
     "title":      "高専映像塾プロモデザイン",
-    "top_video":  "content/rewrite-kosen.mp4",
+    "top_video":  "rewrite-kosen.mp4",
     "top_img":    "",
     "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
     "tags":       ["design","video"],
@@ -55,17 +129,179 @@
     }
   },
   {
+    "id":         "jig_intern",
+    "title":      "行くほど旅が好きになる「ともたび」",
+    "top_img":    "tomotabi.png",
+    "top_text":   "jig.jp学生インターンプログラム2018に参加し、4人1チームで開発したプロダクト。",
+    "tags":       ["web","design","programming"],
+    "keyword":    ["ハッカソン","jig.jp","スライド"],
+    "type":       "multi",
+    "date":       "2018/10",
+    "content":{
+      "img":    ["comu-service.png","ryoko.png"],
+      "video":  null,
+      "text":   [],
+      "link":[
+        {"name":"「ともたび」スライド｜SpeakerDeck","url":"https://speakerdeck.com/chige/xing-kuhodolu-gahao-kininaru-tomotabi"}
+      ]
+    }
+  },
+  {
     "id":         "phpcon2018_video",
-    "title":      "PHPカンファイベントムービー",
+    "title":      "PHPカンファイベントムービー2018",
     "top_img":    "phpconfvideo5.png",
     "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
     "tags":       ["video","event"],
     "keyword":    ["php"],
     "type":       "video",
-    "date":       "2018/8",
+    "date":       "2018/7",
     "content":{
       "img":    [],
-      "video":  {"site":"vimeo","link":""},
+      "video":  {
+        "Embedded":true,"site":"vimeo",
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/279948769?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "everyone_conf",
+    "title":      "高専カンファえぶりわん 開催",
+    "top_img":    "eburiwan-video4.png",
+    "top_text":   "OP映像、アーカイブ動画、かるた制作担当。副実行委員長・デザイン補佐として運営。",
+    "tags":       ["video","event","design"],
+    "keyword":    ["kosenconf"],
+    "type":       "multi",
+    "date":       "2018/1",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true,"site":"youtube",
+        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jv5i3-yqNPk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "MCI2017FINAL_video",
+    "title":      "MCI2017FINAL 映像制作",
+    "top_img":    "mci2017_video.png",
+    "top_text":   "「Mono-Coto Innovation2017 FINAL」にて、出囃子映像と結果発表映像を制作。",
+    "tags":       ["video","event"],
+    "keyword":    ["モノコトイノベーション"],
+    "type":       "video",
+    "date":       "2017/12",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true, "site":"vimeo",
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/249173649?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "e_video",
+    "title":      "「E-VIDEO」電気工学科PV",
+    "top_img":    "e-video.jpg",
+    "top_text":   "2017/11/3 高専祭に向けて制作。",
+    "tags":       ["video","electric"],
+    "keyword":    ["高専祭"],
+    "type":       "video",
+    "date":       "2017/11",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true, "site":"vimeo",
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "joken_procon28",
+    "title":      "高専プロコン 奈良チーム紹介動画",
+    "top_img":    "joken-procon28.png",
+    "top_text":   "第28回高専プロコン 競技部門１日目 奈良高専情報処理研究会のチームメンバー紹介動画",
+    "tags":       ["video","event"],
+    "keyword":    ["高専プロコン"],
+    "type":       "video",
+    "date":       "2017/10",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true, "site":"vimeo",
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "minecraft_double_piston_walls",
+    "title":      "2段ピストンシャッター｜Minecraft",
+    "top_img":    "double-piston-walls.png",
+    "top_text":   "【1.12】Double piston walls -Upper ver.-  赤石で遊んでたらできました。",
+    "tags":       ["minecraft"],
+    "keyword":    ["マイクラ","マインクラフト","レッドストーン","回路","赤石"],
+    "type":       "video",
+    "date":       "2017/9",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true, "site":"youtube",
+        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nen00nGXGa4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "phpcon2017",
+    "title":      "PHPカンファ2017 映像・サイト制作",
+    "top_img":    "phpconf.jpg",
+    "top_text":   "「PHPカンファレンス関西2017」にて、休憩時間用のムービー制作とイベントレポートサイトのコーディングを担当。",
+    "tags":       ["video","web","event"],
+    "keyword":    ["php"],
+    "type":       "multi",
+    "date":       "2017/7",
+    "content":{
+      "img":    [],
+      "video":  null,
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "ude_sketch",
+    "title":      "手のデッサン",
+    "top_img":    "ude_sketch.jpg",
+    "top_text":   "デッサン教室で書いた絵",
+    "tags":       ["illust"],
+    "keyword":    ["dessin"],
+    "type":       "image",
+    "date":       "2017/3",
+    "content":{
+      "img":    [],
+      "video":  null,
       "text":   [],
       "link":[
         {"name":"","url":""}
@@ -83,6 +319,64 @@
     "date":       "2017/2",
     "content":{
       "img":    [],
+      "video":  null,
+      "text":   [],
+      "link":[
+        {"name":"","url":""}
+      ]
+    }
+  },
+  {
+    "id":         "chige12_portfolio1",
+    "title":      "Chige12 Portfolio Ver.1",
+    "top_img":    "portfolio1_top.png",
+    "top_text":   "HTML学び出して数ヶ月。初めて作ったWebサイトです。",
+    "tags":       ["web","design","programming"],
+    "keyword":    ["github","css","javascript"],
+    "type":       "multi",
+    "date":       "2017/1",
+    "content":{
+      "img":    [],
+      "video":  null,
+      "text":   [],
+      "link":[
+        {"name":"Chige12_Portfolio [chige12.github.io]","url":"https://chige12.github.io"}
+      ]
+    }
+  },
+  {
+    "id":         "MCI2016",
+    "title":      "MCI2018FINAL 決勝4位",
+    "top_img":    "MCI2016-2.jpg",
+    "top_text":   "Mono-Coto Innovation2016に参加。京都決勝通過後、全国決勝4位敗退。",
+    "tags":       ["event","design"],
+    "keyword":    ["デザイン思考","デザインシンキング","アイデアソン","ビジネスコンテスト","モノコトイノベーション"],
+    "type":       "multi",
+    "date":       "2016/7 ~ 2017/4",
+    "content":{
+      "img":    [],
+      "video":  {
+        "Embedded":true, "site":"youtube",
+        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bhGTgiEnR7Y\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      },
+      "text":   [],
+      "link":[
+        {"name":"Mono-Coto Innovation公式ページ","url":"http://www.mono-coto-innovation.com/"},
+        {"name":"当時の記事（中高生が企業からのテーマに挑む！ Mono-Coto Innovation FINAL開催｜ものづくりニュース）[2017/4/17]","url":"https://news.aperza.jp/%E4%B8%AD%E9%AB%98%E7%94%9F%E3%81%8C%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AB%E6%8C%91%E3%82%80%EF%BC%81-mono-coto-innovation-final%E9%96%8B%E5%82%AC/"},
+        {"name":"当時の記事（2016 KYOTO 地方決勝レポート｜KYOTO TOOL CO., LTD）[2016/11/06]","url":"https://ktc.jp/facebook/70165"}
+      ]
+    }
+  },
+  {
+    "id":         "haikyo_mosya",
+    "title":      "友人の漫画のアシスタント",
+    "top_img":    "haikyo-mosya.JPG",
+    "top_text":   "手前の人物は友人の絵。背景担当。模写。ミリペンのみを使用。",
+    "tags":       ["illust"],
+    "keyword":    ["廃墟","模写"],
+    "date":       "2016/1",
+    "content":{
+      "img":    [],
       "video":  {},
       "text":   [],
       "link":[
@@ -91,89 +385,17 @@
     }
   },
   {
-    "id":         "phpcon2018_video1",
-    "title":      "PHPカンファイベントムービー",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/8",
+    "id":         "minecraft_kinkakuji",
+    "title":      "鹿苑寺金閣｜Minecraft",
+    "top_img":    "kinkaku-kage1.png",
+    "top_text":   "マイクラで初めて作った建物。クリエイティブモード。影MODを入れて撮影。",
+    "tags":       ["minecraft"],
+    "keyword":    ["kinkakuji","マインクラフト","建築","金閣寺"],
+    "type":       "multi",
+    "date":       "2014/8",
     "content":{
       "img":    [],
-      "video":  {"site":"vimeo","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
-      ]
-    }
-  },
-  {
-    "id":         "phpcon2018_video2",
-    "title":      "PHPカンファイベントムービー",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/8",
-    "content":{
-      "img":    [],
-      "video":  {"site":"vimeo","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
-      ]
-    }
-  },
-  {
-    "id":         "phpcon2018_video3",
-    "title":      "PHPカンファイベントムービー",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/8",
-    "content":{
-      "img":    [],
-      "video":  {"site":"vimeo","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
-      ]
-    }
-  },
-  {
-    "id":         "phpcon2018_video4",
-    "title":      "PHPカンファイベントムービー",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/8",
-    "content":{
-      "img":    [],
-      "video":  {"site":"vimeo","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
-      ]
-    }
-  },
-  {
-    "id":         "phpcon2018_video5",
-    "title":      "PHPカンファイベントムービー",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/8",
-    "content":{
-      "img":    [],
-      "video":  {"site":"vimeo","link":""},
+      "video":  {},
       "text":   [],
       "link":[
         {"name":"","url":""}

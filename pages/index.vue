@@ -41,7 +41,7 @@ export default {
         {
           id: "rewrite_kosen",
           title: "高専映像塾キャッチ",
-          video: "content/rewrite-kosen.mp4",
+          video: "rewrite-kosen.mp4",
           disc: "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
           color: "pink"
         },
