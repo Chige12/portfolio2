@@ -4,7 +4,7 @@
     .c-d-main(:class="{'c-d-main-open': open}" :style="styleObject")
       .c-d-wrapper
         .c-d-header
-          p.c-d-h-id {{'#' + nowContent.id}}
+          p.c-d-h-id {{`#${nowContent.id}`}}
           .c-d-h-title
             .c-d-h-title-width
               p {{nowContent.title}}
@@ -12,24 +12,24 @@
           p.c-d-h-top_text {{nowContent.top_text}}
         .c-d-contents
           .c-d-contents-wrapper
-            DetailMulti(:content="nowContent" v-if="'multi'== nowContent.type")
-            DetailImage(:content="nowContent" v-if="'image'== nowContent.type")
-            DetailVideo(:content="nowContent" v-if="'video'== nowContent.type")
-        .c-d-image-flag(:class="'c-d-image-flag-'+ nowContent.tag")
+            DetailMulti(:content="nowContent" v-if="`multi`== nowContent.type")
+            DetailImage(:content="nowContent" v-if="`image`== nowContent.type")
+            DetailVideo(:content="nowContent" v-if="`video`== nowContent.type")
+        .c-d-image-flag(:class="`c-d-image-flag-${nowContent.tag}`")
         .quick-menu
           .c-d-close
             .c-d-close-button(@click="CloseDetail()" :class="[{'c-d-close-open':open}]" )
               font-awesome-icon(icon="times").close-icon
           .quick-lists
-            .quick-list(v-for="(fil_con, fil_con_id) in filtered_contents" :key="fil_con_id + '-fill_con_quick'")
-              nuxt-link(:to="'./works#'+fil_con.id" :class="{'click-box-now': url_hash == '#'+fil_con.id}").click-box
+            .quick-list(v-for="(fil_con, fil_con_id) in filtered_contents" :key="`${fil_con_id}-fill_con_quick`")
+              nuxt-link(:to="`#${fil_con.id}`" :class="{'click-box-now': url_hash == `#${fil_con.id}`}").click-box
                 .click-box-back(:class="'click-box-back-'+ fil_con.tags[0]")
           .quick-move
             .quick-move-wrapper
-              nuxt-link(:to="`./works#${moveId(-3)}`").quick-move-icon.quick-move-icon-up:   font-awesome-icon(icon="angle-up"   ).quick-move-icon-angle
-              nuxt-link(:to="`./works#${moveId(-1)}`").quick-move-icon.quick-move-icon-left: font-awesome-icon(icon="angle-left" ).quick-move-icon-angle
-              nuxt-link(:to="`./works#${moveId(1)}`").quick-move-icon.quick-move-icon-right: font-awesome-icon(icon="angle-right").quick-move-icon-angle
-              nuxt-link(:to="`./works#${moveId(3)}`").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle
+              nuxt-link(:to="`#${moveId(-3)}`").quick-move-icon.quick-move-icon-up:   font-awesome-icon(icon="angle-up"   ).quick-move-icon-angle
+              nuxt-link(:to="`#${moveId(-1)}`").quick-move-icon.quick-move-icon-left: font-awesome-icon(icon="angle-left" ).quick-move-icon-angle
+              nuxt-link(:to="`#${moveId(1)}`").quick-move-icon.quick-move-icon-right: font-awesome-icon(icon="angle-right").quick-move-icon-angle
+              nuxt-link(:to="`#${moveId(3)}`").quick-move-icon.quick-move-icon-down:  font-awesome-icon(icon="angle-down" ).quick-move-icon-angle
 </template>
 <script>
 import DetailMulti from '~/components/work/detailType/multi.vue'
@@ -59,23 +59,23 @@ export default {
       var keyCode = event.keyCode;
       console.log(keyCode);
       if(keyCode == 39){//右
-        this.$router.push({ path: `./works#${this.moveId(1)}` })
+        this.$router.push({ path: `#${this.moveId(1)}` })
       }
       if(keyCode == 37){//左
-        this.$router.push({ path: `./works#${this.moveId(-1)}` })
+        this.$router.push({ path: `#${this.moveId(-1)}` })
       }
       if(keyCode == 38){//上
-        this.$router.push({ path: `./works#${this.moveId(-3)}` })
+        this.$router.push({ path: `#${this.moveId(-3)}` })
       }
       if(keyCode == 40){//下
-        this.$router.push({ path: `./works#${this.moveId(3)}` })
+        this.$router.push({ path: `#${this.moveId(3)}` })
       }
       if(keyCode == 8 || keyCode == 27){//backspace or esc
         if(this.now_id){
           var now_content = document.getElementById(`content-${this.now_id}`);
           this.rect = now_content.getBoundingClientRect();
         }
-        this.$router.push({ path: `./works` })
+        this.$router.push({ path: `works` })
       }
     },
     moveId(n){
@@ -106,7 +106,7 @@ export default {
         var now_content = document.getElementById(`content-${this.now_id}`);
         this.rect = now_content.getBoundingClientRect();
       }
-      this.$router.push({ path: `./works` })
+      this.$router.push({ path: `works` })
     }
   },
   computed: {
