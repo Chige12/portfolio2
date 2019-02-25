@@ -5,8 +5,8 @@
         .contents-box(v-for="(content,content_id) in filteredContents" :key="`${content_id}-content`")
           .content-link(@click="OpenDetail(content.id)" :id="`content-${content.id}`")
             .content-img-cover
-              video(v-if="content.top_video" :src="`img/works/${content.top_video}`" autoplay loop muted).content-img
-              img(v-if="content.top_img" :src="`img/works/${content.top_img}`").content-img
+              video(v-if="content.top_video" :src="`img/works/contents/${content.id}/${content.top_video}`" autoplay loop muted).content-img
+              img(v-if="content.top_img" :src="`img/works/contents/${content.id}/${content.top_img}`").content-img
               .open-info-cover
                 .stripe
                 font-awesome-icon(icon="info-circle").open-info-icon
@@ -127,8 +127,8 @@ export default {
 @import "~/assets/scss/mixin.scss";
 .contents-list {
   width: 100%;
-  padding-right: 365px + 45px + 26px - 4px;
-  padding-left: 35px + 170px + 26px - 4px;
+  padding-right: 365px + 45px + 26px - 2px;
+  padding-left: 35px + 170px + 26px - 2px;
   .contents-list-wrapper {
     width: 100%;
     height: auto;
@@ -143,8 +143,8 @@ export default {
       position: relative;
       width: calc(100% / 3);
       height: 270px;
-      padding: 4px;
-      margin-bottom: 20px;
+      padding: 2px;
+      margin-bottom: 40px;
       overflow: hidden;
       .content-link {
         position: relative;
@@ -234,9 +234,9 @@ export default {
         }
       }//end .content-link
       .content-title {
-        @include noto-font(1.8rem,$theme-navy);
+        @include noto-font(1.6rem,$theme-navy);
         font-weight: 700;
-        padding-top: 15px;
+        padding-top: 16px;
         padding-left: 32px;
         transition: .3s $bezier-fast-ease-out;
       }
