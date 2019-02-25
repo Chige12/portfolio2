@@ -91,6 +91,7 @@ export default {
       overflow: hidden;
       span{
         display: block;
+        letter-spacing: 0px;
         transition: .3s $bezier-fast-ease-out;
         transition-property: transform, letter-spacing;
         transition-duration: .3s, 1s;
