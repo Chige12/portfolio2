@@ -147,7 +147,7 @@ export default {
         width:100%;
         padding: 0;
         grid-template-rows:auto auto auto auto auto;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         li {
           display: inline-block;
           padding-left: 18px;

@@ -204,7 +204,7 @@ export default {
         &-line {
           position: absolute;
           margin: auto;
-          width: calc(80%);
+          width: 50%;
           height: 1px;
           top: 0;
           left: 0;
