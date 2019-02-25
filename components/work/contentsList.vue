@@ -5,8 +5,8 @@
         .contents-box(v-for="(content,content_id) in filteredContents" :key="`${content_id}-content`")
           .content-link(@click="OpenDetail(content.id)" :id="`content-${content.id}`")
             .content-img-cover
-              video(v-if="content.top_video" :src="`img/works/contents/${content.id}/${content.top_video}`" autoplay loop muted).content-img
-              img(v-if="content.top_img" :src="`img/works/contents/${content.id}/${content.top_img}`").content-img
+              video(v-if="content.top_video" :src="`../img/works/contents/${content.id}/${content.top_video}`" autoplay loop muted).content-img
+              img(v-if="content.top_img" :src="`../img/works/contents/${content.id}/${content.top_img}`").content-img
               .open-info-cover
                 .stripe
                 font-awesome-icon(icon="info-circle").open-info-icon
