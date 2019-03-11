@@ -105,7 +105,7 @@ export default {
         var now_content = document.getElementById(`content-${this.now_id}`);
         this.rect = now_content.getBoundingClientRect();
       }
-      this.$router.push({ path: `works` })
+      this.$router.push({ path: `./works` })
     }
   },
   computed: {
