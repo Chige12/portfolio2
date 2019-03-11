@@ -5,7 +5,7 @@
     .video-wrapper(v-html="nowContent.content.video.url_tag")
   .notembedded(v-if="nowContent.content.video.embedded==false")
     .video-box(v-for="video in nowContent.content.video.link")
-      video.video(:src="`../img/works/contents/${nowContent.id}/${video}`" loop autoplay controls)
+      video.video(:src="`../img/works/contents/${nowContent.id}/${video.src}`" loop :autoplay="video.auto" controls)
 </template>
 <script>
 export default {
@@ -23,7 +23,7 @@ export default {
   display: flex;
   flex-wrap: nowrap;
   .video-box{
-    width: 100%;
+    width: 70%;
     padding: 2px;
     video{
       width: 100%;

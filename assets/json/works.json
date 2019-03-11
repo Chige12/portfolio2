@@ -63,6 +63,30 @@
     }
   },
   {
+    "id":         "minecraft_design_tool",
+    "title":      "Minecraft Design Tool",
+    "top_video":  "",
+    "top_img":    "minecraft-road_design.png",
+    "top_text":   "マイクラの道をランダムなブロックで作るプレビューツール",
+    "tags":       ["web","minecraft","programming"],
+    "keyword":    ["Nuxt.js","Vue.js","Vuetify"],
+    "type":       "multi",
+    "date":       "2019/3",
+    "content":{
+      "imgs":    [
+        {"src":"minecraft-road_design.png","caption":""}
+      ],
+      "video":  null,
+      "text":   [
+        "マイクラで道を作る時にブロックをランダムに置くといいみたいなテクがありますが、いい感じのブロックの組み合わせを確認できるツールを作りました。背景ブロック変更、バイオーム変更、道幅&長さの変更、3D表示などの機能があります。",
+        "突貫工事なのでモロバレですがNuxt.jsとVuetifyを使っています。"
+      ],
+      "links":[
+        {"name":"Minecraft Design Tool","url":"https://minecraft-design-tools.netlify.com/road_design/"}
+      ]
+    }
+  },
+  {
     "id":         "kosen_channel_eyecatch",
     "title":      "「みんなの高専チャンネル」アイキャッチ",
     "top_video":  "eyecatch-2.mp4",
@@ -76,7 +100,10 @@
       "imgs":    [],
       "video":  {
         "embedded":false,"site":"none",
-        "link":["eyecatch-1.mp4","eyecatch-2.mp4"]
+        "link":[
+          {"src":"eyecatch-1.mp4","auto":true},
+          {"src":"eyecatch-2.mp4","auto":true}
+        ]
       },
       "text":   [
         "ナレッジスター創業者、明松真司さんからの依頼で、高専入試/高専に関する質問にお答えするQ&Aチャンネル「みんなの高専チャンネル」のアイキャッチ映像を制作しました。",
@@ -115,9 +142,13 @@
     "type":       "multi",
     "date":       "2018/9",
     "content":{
-      "imgs":    [],
+      "imgs":    [
+        {"src":"OGP.png","caption":""},
+        {"src":"together-poster3.png","caption":""},
+        {"src":"together-photo.jpg","caption":""}
+      ],
       "video":  {},
-      "text":   [],
+      "text":   ["多分しばらく販売してます。"],
       "links":[
         {"name":"TOGETHER | kosen14s #dojin [kosen14s.github.io]","url":"https://kosen14s.github.io/together"},
         {"name":"現役高専生の闇鍋本を技術書典5に出典！｜ちげ｜note","url":"https://note.mu/chige12/n/n05bf7840789d"}
@@ -134,7 +165,13 @@
     "type":       "multi",
     "date":       "2018/9",
     "content":{
-      "imgs":    [],
+      "imgs":    [
+        {"src":"kosen14s-site-spr.png","caption":"春"},
+        {"src":"kosen14s-site-sum.png","caption":"夏"},
+        {"src":"kosen14s-site-aut.png","caption":"秋"},
+        {"src":"kosen14s-site-win.png","caption":"冬"},
+        {"src":"kosen14s-site-member.png","caption":"メンバー紹介ページ"}
+      ],
       "video":  {},
       "text":   [],
       "links":[
@@ -150,15 +187,21 @@
     "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
     "tags":       ["design","video"],
     "keyword":    ["kosen","ナレッジスター","ロゴ","logo"],
-    "type":       "image",
+    "type":       "video",
     "date":       "2018/10",
     "content":{
       "imgs":    [],
-      "video":  {"site":"none","link":""},
-      "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "video":  {
+        "embedded":false,"site":"none",
+        "link":[
+          {"src":"rewrite-kosen.mp4","auto":true}
+        ]
+      },
+      "text":   [
+        "ナレッジスター創業者、明松真司さんからの依頼で高専映像塾のキャッチをデザインし、モーションをつけました。",
+        "Adobe illustratorとAviUtlをつかっています。"
+      ],
+      "links":[]
     }
   },
   {
@@ -200,7 +243,7 @@
       },
       "text":   [],
       "links":[
-        {"name":"","url":""}
+        {"name":"PHPカンファレンス関西2018","url":"https://2018.kphpug.jp/"}
       ]
     }
   },
@@ -214,14 +257,20 @@
     "type":       "multi",
     "date":       "2018/1",
     "content":{
-      "imgs":    [],
+      "imgs":    [
+        {"src":"eburiwan-video4.png","caption":""},
+        {"src":"eburiwan-video1.png","caption":""},
+        {"src":"eburiwan-video2.png","caption":""},
+        {"src":"eburiwan-video3.png","caption":""},
+        {"src":"pro-karuta-prototype.jpg","caption":""}
+      ],
       "video":  {
         "embedded":true,"site":"youtube",
         "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jv5i3-yqNPk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
       "text":   [],
       "links":[
-        {"name":"","url":""}
+        {"name":"高専カンファレンスえぶりわん！ in 大阪 | Wiki","url":"http://kosenconf.jp/?113everyone"}
       ]
     }
   },
@@ -262,9 +311,7 @@
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":[]
     }
   },
   {
@@ -280,11 +327,11 @@
       "imgs":    [],
       "video":  {
         "embedded":true, "site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/237269450?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
       "links":[
-        {"name":"","url":""}
+        {"name":"第28回大島大会(2017) - 全国高等専門学校プログラミングコンテスト","url":"http://www.procon.gr.jp/?page_id=59121"}
       ]
     }
   },
@@ -323,7 +370,7 @@
       "video":  null,
       "text":   [],
       "links":[
-        {"name":"","url":""}
+        {"name":"PHPカンファレンス関西2017 イベントレポート","url":"https://2017.kphpug.jp/report.html"}
       ]
     }
   },
@@ -355,11 +402,13 @@
     "type":       "multi",
     "date":       "2017/2",
     "content":{
-      "imgs":    [],
+      "imgs":    [
+        {"src":"can-you-read.jpg","caption":""}
+      ],
       "video":  null,
       "text":   [],
       "links":[
-        {"name":"","url":""}
+        {"name":"難読地名くいず","url":"http://yamasy.info/can-you-read/"}
       ]
     }
   },
@@ -416,9 +465,7 @@
       "imgs":    [],
       "video":  {},
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":[]
     }
   },
   {
@@ -434,9 +481,7 @@
       "imgs":    [],
       "video":  {},
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":[]
     }
   }
 ]

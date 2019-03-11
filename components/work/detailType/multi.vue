@@ -31,7 +31,7 @@ export default {
     flex-wrap: nowrap;
     width: 100%;
     .column {
-      width: 50%;
+      width: 80%;
       &-left{
         padding-right: 24px;
       }
