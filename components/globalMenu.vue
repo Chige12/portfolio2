@@ -147,6 +147,7 @@ import PopupMail from '~/components/popup/mail.vue'
             display: block;
             margin: 0;
             @include roboto-medium(3.2rem);
+            color: $theme-navy;
           }
           .link-over, .link-over .link-over-text {
             position: absolute;
