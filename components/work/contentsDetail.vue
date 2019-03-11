@@ -3,18 +3,17 @@
     .c-d-back(:class="{'c-d-back-open': open}")
     .c-d-main(:class="{'c-d-main-open': open}" :style="styleObject")
       .c-d-wrapper
-        .c-d-header
-          p.c-d-h-id {{`#${nowContent.id}`}}
-          .c-d-h-title
-            .c-d-h-title-width
-              p {{nowContent.title}}
-              p.c-d-h-title-display {{nowContent.title}}
-          p.c-d-h-top_text {{nowContent.top_text}}
         .c-d-contents
           .c-d-contents-wrapper
-            DetailMulti(:content="nowContent" v-if="`multi`== nowContent.type")
-            DetailImage(:content="nowContent" v-if="`image`== nowContent.type")
-            DetailVideo(:content="nowContent" v-if="`video`== nowContent.type")
+            .c-d-header
+              p.c-d-h-id {{`#${nowContent.id}`}}
+              .c-d-h-title
+                .c-d-h-title-width
+                  p.c-d-h-title-display {{nowContent.title}}
+              p.c-d-h-top_text {{nowContent.top_text}}
+            DetailMulti(:nowContent="nowContent" v-if="`multi`== nowContent.type")
+            DetailImage(:nowContent="nowContent" v-if="`image`== nowContent.type")
+            DetailVideo(:nowContent="nowContent" v-if="`video`== nowContent.type")
         .c-d-image-flag(:class="`c-d-image-flag-${nowContent.tag}`")
         .quick-menu
           .c-d-close
@@ -191,44 +190,6 @@ export default {
       background: $theme-navy;
       overflow: hidden;
       transition: .4s $bezier-fast-ease-out;
-      .c-d-header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 140px;
-        padding: 18px 110px 0px;
-        line-height: 1.3;
-        p.c-d-h-id {
-          @include roboto-medium(1.4rem);
-          color: $theme-navy;
-        }
-        p.c-d-h-top_text {
-          padding-top: 6px;
-          @include noto-font(1.7rem,$theme-navy);
-        }
-        .c-d-h-title {
-          width: 100%;
-          padding-top: 4px;
-          @include noto-font(3.2rem,$theme-navy);
-          font-weight: 700;
-          .c-d-h-title-width {
-            position: relative;
-            display: inline-block;
-            color: transparent;
-            user-select: none;
-            .c-d-h-title-display {
-              user-select: text;
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              pointer-events: auto;
-              color: $theme-navy;
-            }
-          }
-        }
-      }
       .c-d-contents {
         width: 100%;
         height: 100%;
@@ -236,10 +197,42 @@ export default {
         .c-d-contents-wrapper {
           width: 100%;
           height: 100%;
-          padding-top: 140px;
+          padding-top: 0px;
           padding-left: 110px;
-          padding-right: 110px - 86px;
+          padding-right: 110px - 86px + 24px;
           overflow-y: overlay;
+          .c-d-header {
+            width: 100%;
+            height: 140px;
+            padding: 18px 0px;
+            line-height: 1.3;
+            margin-bottom: 32px;
+            p.c-d-h-id {
+              @include roboto-medium(1.4rem);
+              color: $theme-navy;
+            }
+            p.c-d-h-top_text {
+              padding-top: 6px;
+              @include noto-font(1.7rem,$theme-navy);
+            }
+            .c-d-h-title {
+              width: 100%;
+              padding-top: 4px;
+              @include noto-font(3.2rem,$theme-navy);
+              font-weight: 700;
+              .c-d-h-title-width {
+                display: inline-block;
+                color: transparent;
+                user-select: none;
+                .c-d-h-title-display {
+                  user-select: text;
+                  width: 100%;
+                  pointer-events: auto;
+                  color: $theme-navy;
+                }
+              }
+            }
+          }
         }
       }
       .c-d-image-flag {

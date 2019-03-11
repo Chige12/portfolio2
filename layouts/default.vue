@@ -46,10 +46,10 @@ body {
   margin: 0;
 }
 a:link { 
-  color: $theme-navy;
+  color: $theme-mint;
   text-decoration: none;
 }
-a:visited { color: $theme-navy; }
+a:visited { color: $theme-mint; }
 :focus {outline: none;}
 
 

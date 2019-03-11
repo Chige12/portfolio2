@@ -9,11 +9,29 @@
     "type":       "multi",
     "date":       "2018/3",
     "content":{
-      "img":    [],
-      "video":  {"site":"vimeo","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
+      "imgs":    [
+        {"src":"go-haskell3ds-b.png","caption":"GoとHaskell"},
+        {"src":"grass3ds-b.png","caption":"Grass"},
+        {"src":"asobikata.png","caption":"オモテとウラで難易度を変えて遊べる"},
+        {"src":"prokaruta1.jpg","caption":""},
+        {"src":"prokaruta2.jpg","caption":""},
+        {"src":"prokaruta3.png","caption":"関連商品（売り切れ商品アリ）"}
+      ],
+      "video":  {
+        "embedded":true,"site":"vimeo",
+        "url_tag":"<iframe src=\"https://player.vimeo.com/video/258490926?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      },
+      "text":   [
+        "プログラミング言語かるたとは、プログラミング言語の特徴を読み、その特徴に最も合う言語の取り札をいち早く取るというゲームです。",
+        "2018年1月13日に行われた<a href=\"http://kosenconf.jp/?113everyone\">「高専カンファレンス えぶりわん in Osaka」</a>にて生まれました。",
+        "「欲しい」「商品化してほしい」といった声が多く、反響が大きかったため、当時カンファのデザイン班兼副実行委員長であった私と<a href=\"https://twitter.com/yamasy1549/status/952194122437160960?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E952194122437160960&ref_url=http%3A%2F%2Fyamasy.info%2Fprogramming-karuta%2Fabout.html\">やましー(@yamasy1549)</a>でクラウドファンディングを開始。たった三日で目標金額を突破し、結果<strong>100万円を超える資金</strong>が集まりました。支援者の方々には、かるたの他に関連商品としてTシャツやメイキングブックなどをリターンとしてお返ししました。",
+        "現在とはやましーと「whiims」というチーム名でゲームなどを制作しています。",
+        "詳しくは公式サイト、または購入サイトへ。"
+      ],
+      "links":[
+        {"name":"プログラミング言語かるた 公式サイト","url":"http://yamasy.info/programming-karuta/"},
+        {"name":"プログラミング言語かるた 購入サイト「BOOTH」","url":"https://whiims.booth.pm/items/908770"},
+        {"name":"whiims 公式サイト","url":"https://whiims.github.io/"}
       ]
     }
   },
@@ -27,11 +45,20 @@
     "type":       "multi",
     "date":       "2018/8",
     "content":{
-      "img":    [],
-      "video":  {},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
+      "imgs":    [
+        {"src":"gitkaruta.png","caption":""},
+        {"src":"git-karuta-tori-yomi.png","caption":""},
+        {"src":"guide-shot1.PNG","caption":""}
+      ],
+      "video":  null,
+      "text":   [
+        "Gitコマンドの説明を読んで、該当するコマンドが書かれた札をとるゲームです。",
+        "第1弾「プログラミング言語かるた」のご支援のおかげで目標金額の200%を達成できたため、第2弾「Gitコマンドかるた」も作りたくなって作りました。",
+        "Git初心者が学習のお供にできるガイドブック(PDF 38ページ ¥500)も同時に制作。実はかるたよりこちらの方が力が入ってます。図を多くして辛くならないようにし、初心者がつまづきやすいポイントもフォローしています。",
+        "詳しくは以下サイトにて"
+      ],
+      "links":[
+        {"name":"Gitコマンドかるた 公式サイト","url":"https://whiims.github.io/git-karuta"}
       ]
     }
   },
@@ -43,14 +70,20 @@
     "top_text":   "高専の疑問に答えるYoutube「みんなの高専チャンネル」のアイキャッチ映像を制作。",
     "tags":       ["video"],
     "keyword":    ["kosen","ナレッジスター","ロゴ","logo","ユーチューブ"],
-    "type":       "image",
+    "type":       "video",
     "date":       "2019/1",
     "content":{
-      "img":    [],
-      "video":  {"site":"none","link":""},
-      "text":   [],
-      "link":[
-        {"name":"","url":""}
+      "imgs":    [],
+      "video":  {
+        "embedded":false,"site":"none",
+        "link":["eyecatch-1.mp4","eyecatch-2.mp4"]
+      },
+      "text":   [
+        "ナレッジスター創業者、明松真司さんからの依頼で、高専入試/高専に関する質問にお答えするQ&Aチャンネル「みんなの高専チャンネル」のアイキャッチ映像を制作しました。",
+        "デザインは別の方によるもので、そのデザインからイメージに合う2種類のモーションを考えました。"
+      ],
+      "links":[
+        {"name":"みんなの高専チャンネル | 高専塾による高専Q&A Youtubeチャンネル","url":"http://know-star.com/minna_kosen/"}
       ]
     }
   },
@@ -64,10 +97,10 @@
     "type":       "multi",
     "date":       "2018/10",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"クリエイター交流イベント「I/O」 2018","url":"https://new-io.jp/"}
       ]
     }
@@ -82,10 +115,10 @@
     "type":       "multi",
     "date":       "2018/9",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"TOGETHER | kosen14s #dojin [kosen14s.github.io]","url":"https://kosen14s.github.io/together"},
         {"name":"現役高専生の闇鍋本を技術書典5に出典！｜ちげ｜note","url":"https://note.mu/chige12/n/n05bf7840789d"}
       ]
@@ -101,10 +134,10 @@
     "type":       "multi",
     "date":       "2018/9",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"高専2014年度入学生のゆるふわ団体「kosen14s」","url":"https://kosen14s.github.io/"}
       ]
     }
@@ -120,10 +153,10 @@
     "type":       "image",
     "date":       "2018/10",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {"site":"none","link":""},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -138,10 +171,14 @@
     "type":       "multi",
     "date":       "2018/10",
     "content":{
-      "img":    ["comu-service.png","ryoko.png"],
+      "imgs":    [
+        {"src":"tomotabi.png","caption":""},
+        {"src":"comu-service.png","caption":""},
+        {"src":"ryoko.png","caption":""}
+      ],
       "video":  null,
       "text":   [],
-      "link":[
+      "links":[
         {"name":"「ともたび」スライド｜SpeakerDeck","url":"https://speakerdeck.com/chige/xing-kuhodolu-gahao-kininaru-tomotabi"}
       ]
     }
@@ -156,13 +193,13 @@
     "type":       "video",
     "date":       "2018/7",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true,"site":"vimeo",
+        "embedded":true,"site":"vimeo",
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/279948769?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -177,13 +214,13 @@
     "type":       "multi",
     "date":       "2018/1",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true,"site":"youtube",
+        "embedded":true,"site":"youtube",
         "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jv5i3-yqNPk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -198,13 +235,13 @@
     "type":       "video",
     "date":       "2017/12",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true, "site":"vimeo",
+        "embedded":true, "site":"vimeo",
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/249173649?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -219,13 +256,13 @@
     "type":       "video",
     "date":       "2017/11",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true, "site":"vimeo",
+        "embedded":true, "site":"vimeo",
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -240,13 +277,13 @@
     "type":       "video",
     "date":       "2017/10",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true, "site":"vimeo",
+        "embedded":true, "site":"vimeo",
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -261,13 +298,13 @@
     "type":       "video",
     "date":       "2017/9",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true, "site":"youtube",
+        "embedded":true, "site":"youtube",
         "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nen00nGXGa4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -282,10 +319,10 @@
     "type":       "multi",
     "date":       "2017/7",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  null,
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -300,10 +337,10 @@
     "type":       "image",
     "date":       "2017/3",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  null,
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -318,10 +355,10 @@
     "type":       "multi",
     "date":       "2017/2",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  null,
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -336,10 +373,10 @@
     "type":       "multi",
     "date":       "2017/1",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  null,
       "text":   [],
-      "link":[
+      "links":[
         {"name":"Chige12_Portfolio [chige12.github.io]","url":"https://chige12.github.io"}
       ]
     }
@@ -354,13 +391,13 @@
     "type":       "multi",
     "date":       "2016/7 ~ 2017/4",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {
-        "Embedded":true, "site":"youtube",
+        "embedded":true, "site":"youtube",
         "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bhGTgiEnR7Y\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
       "text":   [],
-      "link":[
+      "links":[
         {"name":"Mono-Coto Innovation公式ページ","url":"http://www.mono-coto-innovation.com/"},
         {"name":"当時の記事（中高生が企業からのテーマに挑む！ Mono-Coto Innovation FINAL開催｜ものづくりニュース）[2017/4/17]","url":"https://news.aperza.jp/%E4%B8%AD%E9%AB%98%E7%94%9F%E3%81%8C%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AB%E6%8C%91%E3%82%80%EF%BC%81-mono-coto-innovation-final%E9%96%8B%E5%82%AC/"},
         {"name":"当時の記事（2016 KYOTO 地方決勝レポート｜KYOTO TOOL CO., LTD）[2016/11/06]","url":"https://ktc.jp/facebook/70165"}
@@ -376,10 +413,10 @@
     "keyword":    ["廃墟","模写"],
     "date":       "2016/1",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
@@ -394,10 +431,10 @@
     "type":       "multi",
     "date":       "2014/8",
     "content":{
-      "img":    [],
+      "imgs":    [],
       "video":  {},
       "text":   [],
-      "link":[
+      "links":[
         {"name":"","url":""}
       ]
     }
