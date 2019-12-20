@@ -201,7 +201,7 @@
         "ナレッジスター創業者、明松真司さんからの依頼で高専映像塾のキャッチをデザインし、モーションをつけました。",
         "Adobe illustratorとAviUtlをつかっています。"
       ],
-      "links":[]
+      "links":null
     }
   },
   {
@@ -290,9 +290,7 @@
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/249173649?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":null
     }
   },
   {
@@ -311,7 +309,7 @@
         "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
       "text":   [],
-      "links":[]
+      "links":null
     }
   },
   {
@@ -351,9 +349,7 @@
         "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nen00nGXGa4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":null
     }
   },
   {
@@ -387,9 +383,7 @@
       "imgs":    [],
       "video":  null,
       "text":   [],
-      "links":[
-        {"name":"","url":""}
-      ]
+      "links":null
     }
   },
   {
@@ -465,7 +459,7 @@
       "imgs":    [],
       "video":  {},
       "text":   [],
-      "links":[]
+      "links":null
     }
   },
   {
@@ -481,7 +475,7 @@
       "imgs":    [],
       "video":  {},
       "text":   [],
-      "links":[]
+      "links":null
     }
   }
 ]
