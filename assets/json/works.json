@@ -1,481 +1,690 @@
 [
   {
-    "id":         "pro_karuta",
-    "title":      "プログラミング言語かるた",
-    "top_img":    "go-haskell3ds-b.png",
-    "top_text":   "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
-    "tags":       ["design","programming","video"],
-    "keyword":    ["programming","campfire","proかるた","booth"],
-    "type":       "multi",
-    "date":       "2018/3",
-    "content":{
-      "imgs":    [
-        {"src":"go-haskell3ds-b.png","caption":"GoとHaskell"},
-        {"src":"grass3ds-b.png","caption":"Grass"},
-        {"src":"asobikata.png","caption":"オモテとウラで難易度を変えて遊べる"},
-        {"src":"prokaruta1.jpg","caption":""},
-        {"src":"prokaruta2.jpg","caption":""},
-        {"src":"prokaruta3.png","caption":"関連商品（売り切れ商品アリ）"}
+    "id": "pro_karuta",
+    "title": "プログラミング言語かるた",
+    "top_img": "go-haskell3ds-b.png",
+    "top_text": "クラウドファンディングで目標金額の270%を達成した、話題の人気商品。",
+    "tags": ["design", "programming", "video"],
+    "keyword": ["programming", "campfire", "proかるた", "booth"],
+    "type": "multi",
+    "date": "2018/3",
+    "content": {
+      "imgs": [
+        { "src": "go-haskell3ds-b.png", "caption": "GoとHaskell" },
+        { "src": "grass3ds-b.png", "caption": "Grass" },
+        {
+          "src": "asobikata.png",
+          "caption": "オモテとウラで難易度を変えて遊べる"
+        },
+        { "src": "prokaruta1.jpg", "caption": "" },
+        { "src": "prokaruta2.jpg", "caption": "" },
+        { "src": "prokaruta3.png", "caption": "関連商品（売り切れ商品アリ）" }
       ],
-      "video":  {
-        "embedded":true,"site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/258490926?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+      "video": {
+        "embedded": true,
+        "site": "vimeo",
+        "url_tag": "<iframe src=\"https://player.vimeo.com/video/258490926?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
-      "text":   [
+      "text": [
         "プログラミング言語かるたとは、プログラミング言語の特徴を読み、その特徴に最も合う言語の取り札をいち早く取るというゲームです。",
         "2018年1月13日に行われた<a href=\"http://kosenconf.jp/?113everyone\">「高専カンファレンス えぶりわん in Osaka」</a>にて生まれました。",
         "「欲しい」「商品化してほしい」といった声が多く、反響が大きかったため、当時カンファのデザイン班兼副実行委員長であった私と<a href=\"https://twitter.com/yamasy1549/status/952194122437160960?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E952194122437160960&ref_url=http%3A%2F%2Fyamasy.info%2Fprogramming-karuta%2Fabout.html\">やましー(@yamasy1549)</a>でクラウドファンディングを開始。たった三日で目標金額を突破し、結果<strong>100万円を超える資金</strong>が集まりました。支援者の方々には、かるたの他に関連商品としてTシャツやメイキングブックなどをリターンとしてお返ししました。",
         "現在とはやましーと「whiims」というチーム名でゲームなどを制作しています。",
         "詳しくは公式サイト、または購入サイトへ。"
       ],
-      "links":[
-        {"name":"プログラミング言語かるた 公式サイト","url":"http://yamasy.info/programming-karuta/"},
-        {"name":"プログラミング言語かるた 購入サイト「BOOTH」","url":"https://whiims.booth.pm/items/908770"},
-        {"name":"whiims 公式サイト","url":"https://whiims.github.io/"}
+      "links": [
+        {
+          "name": "プログラミング言語かるた 公式サイト",
+          "url": "http://yamasy.info/programming-karuta/"
+        },
+        {
+          "name": "プログラミング言語かるた 購入サイト「BOOTH」",
+          "url": "https://whiims.booth.pm/items/908770"
+        },
+        { "name": "whiims 公式サイト", "url": "https://whiims.github.io/" }
       ]
     }
   },
   {
-    "id":         "git_karuta",
-    "title":      "Gitコマンドかるた",
-    "top_img":    "gitkaruta.png",
-    "top_text":   "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
-    "tags":       ["design","programming"],
-    "keyword":    ["github","gitかるた","booth"],
-    "type":       "multi",
-    "date":       "2018/8",
-    "content":{
-      "imgs":    [
-        {"src":"gitkaruta.png","caption":""},
-        {"src":"git-karuta-tori-yomi.png","caption":""},
-        {"src":"guide-shot1.PNG","caption":""}
+    "id": "git_karuta",
+    "title": "Gitコマンドかるた",
+    "top_img": "gitkaruta.png",
+    "top_text": "プログラミング言語かるた第二弾。Gitのコマンドをかるたで楽しく学習しよう！",
+    "tags": ["design", "programming"],
+    "keyword": ["github", "gitかるた", "booth"],
+    "type": "multi",
+    "date": "2018/8",
+    "content": {
+      "imgs": [
+        { "src": "gitkaruta.png", "caption": "" },
+        { "src": "git-karuta-tori-yomi.png", "caption": "" },
+        { "src": "guide-shot1.PNG", "caption": "" }
       ],
-      "video":  null,
-      "text":   [
+      "video": null,
+      "text": [
         "Gitコマンドの説明を読んで、該当するコマンドが書かれた札をとるゲームです。",
         "第1弾「プログラミング言語かるた」のご支援のおかげで目標金額の200%を達成できたため、第2弾「Gitコマンドかるた」も作りたくなって作りました。",
         "Git初心者が学習のお供にできるガイドブック(PDF 38ページ ¥500)も同時に制作。実はかるたよりこちらの方が力が入ってます。図を多くして辛くならないようにし、初心者がつまづきやすいポイントもフォローしています。",
         "詳しくは以下サイトにて"
       ],
-      "links":[
-        {"name":"Gitコマンドかるた 公式サイト","url":"https://whiims.github.io/git-karuta"}
+      "links": [
+        {
+          "name": "Gitコマンドかるた 公式サイト",
+          "url": "https://whiims.github.io/git-karuta"
+        }
       ]
     }
   },
   {
-    "id":         "minecraft_design_tool",
-    "title":      "Minecraft Design Tool",
-    "top_video":  "",
-    "top_img":    "minecraft-road_design.png",
-    "top_text":   "マイクラの道をランダムなブロックで作るプレビューツール",
-    "tags":       ["web","minecraft","programming"],
-    "keyword":    ["Nuxt.js","Vue.js","Vuetify"],
-    "type":       "multi",
-    "date":       "2019/3",
-    "content":{
-      "imgs":    [
-        {"src":"minecraft-road_design.png","caption":""}
+    "id": "resi_karuta",
+    "title": "抵抗カラーコードかるた",
+    "top_img": "ogp.png",
+    "top_text": "かるた第三弾。抵抗器のカラーコード表記をかるたで楽しく覚えよう！",
+    "tags": ["design", "web"],
+    "keyword": ["抵抗器", "かるた", "電気工学", "booth"],
+    "type": "multi",
+    "date": "2019/7",
+    "content": {
+      "imgs": [
+        { "src": "ogp.png", "caption": "" },
+        { "src": "resikaruta_img1.jpg", "caption": "" },
+        { "src": "resikaruta_img2.jpg", "caption": "" },
+        { "src": "resikaruta_img3.jpg", "caption": "" }
       ],
-      "video":  null,
-      "text":   [
+      "video": null,
+      "text": [
+        "読まれた抵抗値を素早く取れ！ 抵抗のカラーコードをゲーム感覚で覚えられるかるたです。",
+        "抵抗値の読み方がわかるチートシート付。ウラ面には、電気工学のミニ知識もあり、楽しく学べます。",
+        "技術書同人誌博覧会でも販売しました。",
+        "詳しくは以下サイトにて"
+      ],
+      "links": [
+        {
+          "name": "抵抗カラーコードかるた 公式サイト",
+          "url": "https://whiims.github.io/resi-karuta"
+        }
+      ]
+    }
+  },
+  {
+    "id": "prossell",
+    "title": "オンコン2020 Web & Design",
+    "top_video": "",
+    "top_img": "prossell_ogp.png",
+    "top_text": "ONLINE INTERN CONTEST 2020 運営。Webコーディングとデザイン担当",
+    "tags": ["web", "design", "programming"],
+    "keyword": ["Nuxt.js", "Vue.js"],
+    "type": "multi",
+    "date": "2020/1",
+    "content": {
+      "imgs": [
+        { "src": "prossell_ogp.png", "caption": "OGP" },
+        { "src": "oic2020_poster.png", "caption": "Poster" }
+      ],
+      "video": null,
+      "text": [
+        "オンコンとは完全オンラインでやる就活系のビジコンで、運営としていろいろ動いていました。",
+        "Webやポスター、ロゴ等のデザイン、サイトのコーディング等を行いました。"
+      ],
+      "links": [
+        {
+          "name": "ONLINE INTERN CONTEST 2020",
+          "url": "http://prossell.jp/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mille_feuille",
+    "title": "オンコン2020 Web & Design",
+    "top_video": "",
+    "top_img": "millefeuille_slide.png",
+    "top_text": "HackU 2019 Osaka で開発した地図共有サービス。フロントとデザインを担当。",
+    "tags": ["web", "design", "programming"],
+    "keyword": ["Nuxt.js", "Vue.js", "ハッカソン"],
+    "type": "multi",
+    "date": "2019/9",
+    "content": {
+      "imgs": [{ "src": "millefeuille_slide.png", "caption": "" }],
+      "video": null,
+      "text": [
+        "HackU 2019 Osaka で発表した、:(){:|:&};:(forkbomb)チームのオリジナルマップSNSサービス「Mille Feuille」",
+        "インターン先で一日バグ修正をしながら、ホテルに帰ったら深夜まで開発して過ごした夏休み。"
+      ],
+      "links": [
+        {
+          "name": "Mille Feuille app｜SpeakerDeck",
+          "url": "https://speakerdeck.com/chige/mille-feuille-app-hacku2019osaka-team-forkbomb-39b98e4d-73e6-4a40-bc74-a9bb7cb9f7e5"
+        }
+      ]
+    }
+  },
+  {
+    "id": "minecraft_design_tool",
+    "title": "Minecraft Design Tool",
+    "top_video": "",
+    "top_img": "minecraft-road_design.png",
+    "top_text": "マイクラの道をランダムなブロックで作るプレビューツール",
+    "tags": ["web", "minecraft", "programming"],
+    "keyword": ["Nuxt.js", "Vue.js", "Vuetify"],
+    "type": "multi",
+    "date": "2019/3",
+    "content": {
+      "imgs": [{ "src": "minecraft-road_design.png", "caption": "" }],
+      "video": null,
+      "text": [
         "マイクラで道を作る時にブロックをランダムに置くといいみたいなテクがありますが、いい感じのブロックの組み合わせを確認できるツールを作りました。背景ブロック変更、バイオーム変更、道幅&長さの変更、3D表示などの機能があります。",
         "突貫工事なのでモロバレですがNuxt.jsとVuetifyを使っています。"
       ],
-      "links":[
-        {"name":"Minecraft Design Tool","url":"https://minecraft-design-tools.netlify.com/road_design/"}
+      "links": [
+        {
+          "name": "Minecraft Design Tool",
+          "url": "https://minecraft-design-tools.netlify.com/road_design/"
+        }
       ]
     }
   },
   {
-    "id":         "kosen_channel_eyecatch",
-    "title":      "「みんなの高専チャンネル」アイキャッチ",
-    "top_video":  "eyecatch-2.mp4",
-    "top_img":    "",
-    "top_text":   "高専の疑問に答えるYoutube「みんなの高専チャンネル」のアイキャッチ映像を制作。",
-    "tags":       ["video"],
-    "keyword":    ["kosen","ナレッジスター","ロゴ","logo","ユーチューブ"],
-    "type":       "video",
-    "date":       "2019/1",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":false,"site":"none",
-        "link":[
-          {"src":"eyecatch-1.mp4","auto":true},
-          {"src":"eyecatch-2.mp4","auto":true}
+    "id": "nitnc_swim_site",
+    "title": "奈良高専水泳部サイト",
+    "top_video": "",
+    "top_img": "pool.jpg",
+    "top_text": "水泳部のサイトを作りました。スマホは現在対応中。",
+    "tags": ["web", "design", "programming"],
+    "keyword": ["Nuxt.js", "Vue.js"],
+    "type": "multi",
+    "date": "2019/11",
+    "content": {
+      "imgs": [{ "src": "index.png", "caption": "" }],
+      "video": null,
+      "text": [
+        "全く知識がなくてもサイトを更新できるよう、/develop ページを作成。",
+        "データ中身の Json や MarkDown が簡単に書けるツールを提供。"
+      ],
+      "links": [
+        {
+          "name": "奈良高専水泳部HP (現在スマホ対応作業中)",
+          "url": "https://nitncswim.netlify.com/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "talkcafe_nara",
+    "title": "奈良高専TalkCafe",
+    "top_img": "talkcafe.png",
+    "top_text": "学生交流LT会「奈良高専TalkCafe」発案・発起人。運営代表。",
+    "tags": ["event", "design"],
+    "keyword": ["トークカフェ", "交流イベント"],
+    "type": "multi",
+    "date": "2018/3",
+    "content": {
+      "imgs": [{ "src": "poster_A3.png", "caption": "" }],
+      "video": null,
+      "text": [
+        "学生間の交流が少ないことに対して、友人と二人で学内LT会を開催。",
+        "個人名義での開催はグレー、使用できる部屋の時間制限など問題多数。企画書を作成し、教員、学生課、学生会執行部等とやり取りし実現。",
+        "2018年初開催から運営を後輩に引き継ぎ、継続中"
+      ],
+      "links": [
+        {
+          "name": "奈良高専TalkCafe公式サイト｜Google site",
+          "url": "https://sites.google.com/view/talkcafe/"
+        },
+        {
+          "name": "奈良高専TalkCafe - connpass",
+          "url": "https://nitnc-talkcafe.connpass.com/"
+        },
+        {
+          "name": "TalkCafe#2 Keynote Speech｜SpeakerDeck",
+          "url": "https://speakerdeck.com/chige/talkcafe-number-2-keynote-speech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kosen_channel_eyecatch",
+    "title": "「みんなの高専チャンネル」アイキャッチ",
+    "top_video": "eyecatch-2.mp4",
+    "top_img": "",
+    "top_text": "高専の疑問に答えるYoutube「みんなの高専チャンネル」のアイキャッチ映像を制作。",
+    "tags": ["video"],
+    "keyword": ["kosen", "ナレッジスター", "ロゴ", "logo", "ユーチューブ"],
+    "type": "video",
+    "date": "2019/1",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": false,
+        "site": "none",
+        "link": [
+          { "src": "eyecatch-1.mp4", "auto": true },
+          { "src": "eyecatch-2.mp4", "auto": true }
         ]
       },
-      "text":   [
+      "text": [
         "ナレッジスター創業者、明松真司さんからの依頼で、高専入試/高専に関する質問にお答えするQ&Aチャンネル「みんなの高専チャンネル」のアイキャッチ映像を制作しました。",
         "デザインは別の方によるもので、そのデザインからイメージに合う2種類のモーションを考えました。"
       ],
-      "links":[
-        {"name":"みんなの高専チャンネル | 高専塾による高専Q&A Youtubeチャンネル","url":"http://know-star.com/minna_kosen/"}
+      "links": [
+        {
+          "name": "みんなの高専チャンネル | 高専塾による高専Q&A Youtubeチャンネル",
+          "url": "http://know-star.com/minna_kosen/"
+        }
       ]
     }
   },
   {
-    "id":         "newio2018",
-    "title":      "クリエイター交流イベント「I/O」開催",
-    "top_img":    "ogp.png",
-    "top_text":   "イベントの運営、Webサイトデザイン&コーディング、当日の司会を担当。",
-    "tags":       ["web","event","design"],
-    "keyword":    ["io2018","クリエイター"],
-    "type":       "multi",
-    "date":       "2018/10",
-    "content":{
-      "imgs":    [],
-      "video":  {},
-      "text":   [],
-      "links":[
-        {"name":"クリエイター交流イベント「I/O」 2018","url":"https://new-io.jp/"}
+    "id": "newio2018",
+    "title": "クリエイター交流イベント「I/O」開催",
+    "top_img": "ogp.png",
+    "top_text": "イベントの運営、Webサイトデザイン&コーディング、当日の司会を担当。",
+    "tags": ["web", "event", "design"],
+    "keyword": ["io2018", "クリエイター"],
+    "type": "multi",
+    "date": "2018/10",
+    "content": {
+      "imgs": [],
+      "video": {},
+      "text": [],
+      "links": [
+        {
+          "name": "クリエイター交流イベント「I/O」 2018",
+          "url": "https://new-io.jp/"
+        }
       ]
     }
   },
   {
-    "id":         "kosen14s_together",
-    "title":      "闇鍋本「TOGETHER」技術書典5",
-    "top_img":    "OGP.png",
-    "top_text":   "kosen14sで同人誌を制作。技術書典5に出典。デザイン&サイトコーディング、売り子を担当",
-    "tags":       ["web","design","event"],
-    "keyword":    ["kosen14s","github"],
-    "type":       "multi",
-    "date":       "2018/9",
-    "content":{
-      "imgs":    [
-        {"src":"OGP.png","caption":""},
-        {"src":"together-poster3.png","caption":""},
-        {"src":"together-photo.jpg","caption":""}
+    "id": "kosen14s_together",
+    "title": "闇鍋本「TOGETHER」技術書典5",
+    "top_img": "OGP.png",
+    "top_text": "kosen14sで同人誌を制作。技術書典5に出典。デザイン&サイトコーディング、売り子を担当",
+    "tags": ["web", "design", "event"],
+    "keyword": ["kosen14s", "github"],
+    "type": "multi",
+    "date": "2018/9",
+    "content": {
+      "imgs": [
+        { "src": "OGP.png", "caption": "" },
+        { "src": "together-poster3.png", "caption": "" },
+        { "src": "together-photo.jpg", "caption": "" }
       ],
-      "video":  {},
-      "text":   ["多分しばらく販売してます。"],
-      "links":[
-        {"name":"TOGETHER | kosen14s #dojin [kosen14s.github.io]","url":"https://kosen14s.github.io/together"},
-        {"name":"現役高専生の闇鍋本を技術書典5に出典！｜ちげ｜note","url":"https://note.mu/chige12/n/n05bf7840789d"}
+      "video": {},
+      "text": ["多分しばらく販売してます。"],
+      "links": [
+        {
+          "name": "TOGETHER | kosen14s #dojin [kosen14s.github.io]",
+          "url": "https://kosen14s.github.io/together"
+        },
+        {
+          "name": "現役高専生の闇鍋本を技術書典5に出典！｜ちげ｜note",
+          "url": "https://note.mu/chige12/n/n05bf7840789d"
+        }
       ]
     }
   },
   {
-    "id":         "kosen14s_toppage",
-    "title":      "kosen14sサイトをリニューアル",
-    "top_img":    "kosen14s-site.png",
-    "top_text":   "所属しているkosen14sのサイトを更新。季節によって背景色が変わる仕様。",
-    "tags":       ["web","design"],
-    "keyword":    ["kosen14s","github"],
-    "type":       "multi",
-    "date":       "2018/9",
-    "content":{
-      "imgs":    [
-        {"src":"kosen14s-site-spr.png","caption":"春"},
-        {"src":"kosen14s-site-sum.png","caption":"夏"},
-        {"src":"kosen14s-site-aut.png","caption":"秋"},
-        {"src":"kosen14s-site-win.png","caption":"冬"},
-        {"src":"kosen14s-site-member.png","caption":"メンバー紹介ページ"}
+    "id": "kosen14s_toppage",
+    "title": "kosen14sサイトをリニューアル",
+    "top_img": "kosen14s-site.png",
+    "top_text": "所属しているkosen14sのサイトを更新。季節によって背景色が変わる仕様。",
+    "tags": ["web", "design"],
+    "keyword": ["kosen14s", "github"],
+    "type": "multi",
+    "date": "2018/9",
+    "content": {
+      "imgs": [
+        { "src": "kosen14s-site-spr.png", "caption": "春" },
+        { "src": "kosen14s-site-sum.png", "caption": "夏" },
+        { "src": "kosen14s-site-aut.png", "caption": "秋" },
+        { "src": "kosen14s-site-win.png", "caption": "冬" },
+        { "src": "kosen14s-site-member.png", "caption": "メンバー紹介ページ" }
       ],
-      "video":  {},
-      "text":   [],
-      "links":[
-        {"name":"高専2014年度入学生のゆるふわ団体「kosen14s」","url":"https://kosen14s.github.io/"}
+      "video": {},
+      "text": [],
+      "links": [
+        {
+          "name": "高専2014年度入学生のゆるふわ団体「kosen14s」",
+          "url": "https://kosen14s.github.io/"
+        }
       ]
     }
   },
   {
-    "id":         "rewrite_kosen",
-    "title":      "高専映像塾プロモデザイン",
-    "top_video":  "rewrite-kosen.mp4",
-    "top_img":    "",
-    "top_text":   "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
-    "tags":       ["design","video"],
-    "keyword":    ["kosen","ナレッジスター","ロゴ","logo"],
-    "type":       "video",
-    "date":       "2018/10",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":false,"site":"none",
-        "link":[
-          {"src":"rewrite-kosen.mp4","auto":true}
-        ]
+    "id": "rewrite_kosen",
+    "title": "高専映像塾プロモデザイン",
+    "top_video": "rewrite-kosen.mp4",
+    "top_img": "",
+    "top_text": "高専映像塾のキャッチのデザインとプロモーション用の映像を制作。",
+    "tags": ["design", "video"],
+    "keyword": ["kosen", "ナレッジスター", "ロゴ", "logo"],
+    "type": "video",
+    "date": "2018/10",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": false,
+        "site": "none",
+        "link": [{ "src": "rewrite-kosen.mp4", "auto": true }]
       },
-      "text":   [
+      "text": [
         "ナレッジスター創業者、明松真司さんからの依頼で高専映像塾のキャッチをデザインし、モーションをつけました。",
         "Adobe illustratorとAviUtlをつかっています。"
       ],
-      "links":null
+      "links": null
     }
   },
   {
-    "id":         "jig_intern",
-    "title":      "行くほど旅が好きになる「ともたび」",
-    "top_img":    "tomotabi.png",
-    "top_text":   "jig.jp学生インターンプログラム2018に参加し、4人1チームで開発したプロダクト。",
-    "tags":       ["web","design","programming"],
-    "keyword":    ["ハッカソン","jig.jp","スライド"],
-    "type":       "multi",
-    "date":       "2018/10",
-    "content":{
-      "imgs":    [
-        {"src":"tomotabi.png","caption":""},
-        {"src":"comu-service.png","caption":""},
-        {"src":"ryoko.png","caption":""}
+    "id": "jig_intern",
+    "title": "行くほど旅が好きになる「ともたび」",
+    "top_img": "tomotabi.png",
+    "top_text": "jig.jp学生インターンプログラム2018に参加し、4人1チームで開発したプロダクト。",
+    "tags": ["web", "design", "programming"],
+    "keyword": ["ハッカソン", "jig.jp", "スライド"],
+    "type": "multi",
+    "date": "2018/10",
+    "content": {
+      "imgs": [
+        { "src": "tomotabi.png", "caption": "" },
+        { "src": "comu-service.png", "caption": "" },
+        { "src": "ryoko.png", "caption": "" }
       ],
-      "video":  null,
-      "text":   [],
-      "links":[
-        {"name":"「ともたび」スライド｜SpeakerDeck","url":"https://speakerdeck.com/chige/xing-kuhodolu-gahao-kininaru-tomotabi"}
+      "video": null,
+      "text": [],
+      "links": [
+        {
+          "name": "「ともたび」スライド｜SpeakerDeck",
+          "url": "https://speakerdeck.com/chige/xing-kuhodolu-gahao-kininaru-tomotabi"
+        }
       ]
     }
   },
   {
-    "id":         "phpcon2018_video",
-    "title":      "PHPカンファイベントムービー2018",
-    "top_img":    "phpconfvideo5.png",
-    "top_text":   "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
-    "tags":       ["video","event"],
-    "keyword":    ["php"],
-    "type":       "video",
-    "date":       "2018/7",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true,"site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/279948769?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "id": "phpcon2018_video",
+    "title": "PHPカンファイベントムービー2018",
+    "top_img": "phpconfvideo5.png",
+    "top_text": "「PHPカンファレンス関西2018」のイベントのOP用にムービーを制作。",
+    "tags": ["video", "event"],
+    "keyword": ["php"],
+    "type": "video",
+    "date": "2018/7",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "vimeo",
+        "url_tag": "<iframe src=\"https://player.vimeo.com/video/279948769?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":[
-        {"name":"PHPカンファレンス関西2018","url":"https://2018.kphpug.jp/"}
+      "text": [],
+      "links": [
+        {
+          "name": "PHPカンファレンス関西2018",
+          "url": "https://2018.kphpug.jp/"
+        }
       ]
     }
   },
   {
-    "id":         "everyone_conf",
-    "title":      "高専カンファえぶりわん 開催",
-    "top_img":    "eburiwan-video4.png",
-    "top_text":   "OP映像、アーカイブ動画、かるた制作担当。副実行委員長・デザイン補佐として運営。",
-    "tags":       ["video","event","design"],
-    "keyword":    ["kosenconf"],
-    "type":       "multi",
-    "date":       "2018/1",
-    "content":{
-      "imgs":    [
-        {"src":"eburiwan-video4.png","caption":""},
-        {"src":"eburiwan-video1.png","caption":""},
-        {"src":"eburiwan-video2.png","caption":""},
-        {"src":"eburiwan-video3.png","caption":""},
-        {"src":"pro-karuta-prototype.jpg","caption":""}
+    "id": "everyone_conf",
+    "title": "高専カンファえぶりわん 開催",
+    "top_img": "eburiwan-video4.png",
+    "top_text": "OP映像、アーカイブ動画、かるた制作担当。副実行委員長・デザイン補佐として運営。",
+    "tags": ["video", "event", "design"],
+    "keyword": ["kosenconf"],
+    "type": "multi",
+    "date": "2018/1",
+    "content": {
+      "imgs": [
+        { "src": "eburiwan-video4.png", "caption": "" },
+        { "src": "eburiwan-video1.png", "caption": "" },
+        { "src": "eburiwan-video2.png", "caption": "" },
+        { "src": "eburiwan-video3.png", "caption": "" },
+        { "src": "pro-karuta-prototype.jpg", "caption": "" }
       ],
-      "video":  {
-        "embedded":true,"site":"youtube",
-        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jv5i3-yqNPk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      "video": {
+        "embedded": true,
+        "site": "youtube",
+        "url_tag": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Jv5i3-yqNPk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":[
-        {"name":"高専カンファレンスえぶりわん！ in 大阪 | Wiki","url":"http://kosenconf.jp/?113everyone"}
+      "text": [],
+      "links": [
+        {
+          "name": "高専カンファレンスえぶりわん！ in 大阪 | Wiki",
+          "url": "http://kosenconf.jp/?113everyone"
+        }
       ]
     }
   },
   {
-    "id":         "MCI2017FINAL_video",
-    "title":      "MCI2017FINAL 映像制作",
-    "top_img":    "mci2017_video.png",
-    "top_text":   "「Mono-Coto Innovation2017 FINAL」にて、出囃子映像と結果発表映像を制作。",
-    "tags":       ["video","event"],
-    "keyword":    ["モノコトイノベーション"],
-    "type":       "video",
-    "date":       "2017/12",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true, "site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/249173649?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "id": "MCI2017FINAL_video",
+    "title": "MCI2017FINAL 映像制作",
+    "top_img": "mci2017_video.png",
+    "top_text": "「Mono-Coto Innovation2017 FINAL」にて、出囃子映像と結果発表映像を制作。",
+    "tags": ["video", "event"],
+    "keyword": ["モノコトイノベーション"],
+    "type": "video",
+    "date": "2017/12",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "vimeo",
+        "url_tag": "<iframe src=\"https://player.vimeo.com/video/249173649?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":null
+      "text": [],
+      "links": null
     }
   },
   {
-    "id":         "e_video",
-    "title":      "「E-VIDEO」電気工学科PV",
-    "top_img":    "e-video.jpg",
-    "top_text":   "2017/11/3 高専祭に向けて制作。",
-    "tags":       ["video","electric"],
-    "keyword":    ["高専祭"],
-    "type":       "video",
-    "date":       "2017/11",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true, "site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "id": "e_video",
+    "title": "「E-VIDEO」電気工学科PV",
+    "top_img": "e-video.jpg",
+    "top_text": "2017/11/3 高専祭に向けて制作。",
+    "tags": ["video", "electric"],
+    "keyword": ["高専祭"],
+    "type": "video",
+    "date": "2017/11",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "vimeo",
+        "url_tag": "<iframe src=\"https://player.vimeo.com/video/241308517?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":null
+      "text": [],
+      "links": null
     }
   },
   {
-    "id":         "joken_procon28",
-    "title":      "高専プロコン 奈良チーム紹介動画",
-    "top_img":    "joken-procon28.png",
-    "top_text":   "第28回高専プロコン 競技部門１日目 奈良高専情報処理研究会のチームメンバー紹介動画",
-    "tags":       ["video","event"],
-    "keyword":    ["高専プロコン"],
-    "type":       "video",
-    "date":       "2017/10",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true, "site":"vimeo",
-        "url_tag":"<iframe src=\"https://player.vimeo.com/video/237269450?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "id": "joken_procon28",
+    "title": "高専プロコン 奈良チーム紹介動画",
+    "top_img": "joken-procon28.png",
+    "top_text": "第28回高専プロコン 競技部門１日目 奈良高専情報処理研究会のチームメンバー紹介動画",
+    "tags": ["video", "event"],
+    "keyword": ["高専プロコン"],
+    "type": "video",
+    "date": "2017/10",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "vimeo",
+        "url_tag": "<iframe src=\"https://player.vimeo.com/video/237269450?title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":[
-        {"name":"第28回大島大会(2017) - 全国高等専門学校プログラミングコンテスト","url":"http://www.procon.gr.jp/?page_id=59121"}
+      "text": [],
+      "links": [
+        {
+          "name": "第28回大島大会(2017) - 全国高等専門学校プログラミングコンテスト",
+          "url": "http://www.procon.gr.jp/?page_id=59121"
+        }
       ]
     }
   },
   {
-    "id":         "minecraft_double_piston_walls",
-    "title":      "2段ピストンシャッター｜Minecraft",
-    "top_img":    "double-piston-walls.png",
-    "top_text":   "【1.12】Double piston walls -Upper ver.-  赤石で遊んでたらできました。",
-    "tags":       ["minecraft"],
-    "keyword":    ["マイクラ","マインクラフト","レッドストーン","回路","赤石"],
-    "type":       "video",
-    "date":       "2017/9",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true, "site":"youtube",
-        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nen00nGXGa4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    "id": "minecraft_double_piston_walls",
+    "title": "2段ピストンシャッター｜Minecraft",
+    "top_img": "double-piston-walls.png",
+    "top_text": "【1.12】Double piston walls -Upper ver.-  赤石で遊んでたらできました。",
+    "tags": ["minecraft"],
+    "keyword": ["マイクラ", "マインクラフト", "レッドストーン", "回路", "赤石"],
+    "type": "video",
+    "date": "2017/9",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "youtube",
+        "url_tag": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nen00nGXGa4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":null
+      "text": [],
+      "links": null
     }
   },
   {
-    "id":         "phpcon2017",
-    "title":      "PHPカンファ2017 映像・サイト制作",
-    "top_img":    "phpconf.jpg",
-    "top_text":   "「PHPカンファレンス関西2017」にて、休憩時間用のムービー制作とイベントレポートサイトのコーディングを担当。",
-    "tags":       ["video","web","event"],
-    "keyword":    ["php"],
-    "type":       "multi",
-    "date":       "2017/7",
-    "content":{
-      "imgs":    [],
-      "video":  null,
-      "text":   [],
-      "links":[
-        {"name":"PHPカンファレンス関西2017 イベントレポート","url":"https://2017.kphpug.jp/report.html"}
+    "id": "phpcon2017",
+    "title": "PHPカンファ2017 映像・サイト制作",
+    "top_img": "phpconf.jpg",
+    "top_text": "「PHPカンファレンス関西2017」にて、休憩時間用のムービー制作とイベントレポートサイトのコーディングを担当。",
+    "tags": ["video", "web", "event"],
+    "keyword": ["php"],
+    "type": "multi",
+    "date": "2017/7",
+    "content": {
+      "imgs": [],
+      "video": null,
+      "text": [],
+      "links": [
+        {
+          "name": "PHPカンファレンス関西2017 イベントレポート",
+          "url": "https://2017.kphpug.jp/report.html"
+        }
       ]
     }
   },
   {
-    "id":         "ude_sketch",
-    "title":      "手のデッサン",
-    "top_img":    "ude_sketch.jpg",
-    "top_text":   "デッサン教室で書いた絵",
-    "tags":       ["illust"],
-    "keyword":    ["dessin"],
-    "type":       "image",
-    "date":       "2017/3",
-    "content":{
-      "imgs":    [],
-      "video":  null,
-      "text":   [],
-      "links":null
+    "id": "ude_sketch",
+    "title": "手のデッサン",
+    "top_img": "ude_sketch.jpg",
+    "top_text": "デッサン教室で書いた絵",
+    "tags": ["illust"],
+    "keyword": ["dessin"],
+    "type": "image",
+    "date": "2017/3",
+    "content": {
+      "imgs": [],
+      "video": null,
+      "text": [],
+      "links": null
     }
   },
   {
-    "id":         "can_you_read",
-    "title":      "難読地名くいず",
-    "top_img":    "can-you-read.jpg",
-    "top_text":   "友人と全国の難読地名を集めてクイズを制作。デザインとCSSを担当。",
-    "tags":       ["web","design"],
-    "keyword":    ["canyouread","can-you-read"],
-    "type":       "multi",
-    "date":       "2017/2",
-    "content":{
-      "imgs":    [
-        {"src":"can-you-read.jpg","caption":""}
-      ],
-      "video":  null,
-      "text":   [],
-      "links":[
-        {"name":"難読地名くいず","url":"http://yamasy.info/can-you-read/"}
+    "id": "can_you_read",
+    "title": "難読地名くいず",
+    "top_img": "can-you-read.jpg",
+    "top_text": "友人と全国の難読地名を集めてクイズを制作。デザインとCSSを担当。",
+    "tags": ["web", "design"],
+    "keyword": ["canyouread", "can-you-read"],
+    "type": "multi",
+    "date": "2017/2",
+    "content": {
+      "imgs": [{ "src": "can-you-read.jpg", "caption": "" }],
+      "video": null,
+      "text": [],
+      "links": [
+        { "name": "難読地名くいず", "url": "http://yamasy.info/can-you-read/" }
       ]
     }
   },
   {
-    "id":         "chige12_portfolio1",
-    "title":      "Chige12 Portfolio Ver.1",
-    "top_img":    "portfolio1_top.png",
-    "top_text":   "HTML学び出して数ヶ月。初めて作ったWebサイトです。",
-    "tags":       ["web","design","programming"],
-    "keyword":    ["github","css","javascript"],
-    "type":       "multi",
-    "date":       "2017/1",
-    "content":{
-      "imgs":    [],
-      "video":  null,
-      "text":   [],
-      "links":[
-        {"name":"Chige12_Portfolio [chige12.github.io]","url":"https://chige12.github.io"}
+    "id": "chige12_portfolio1",
+    "title": "Chige12 Portfolio Ver.1",
+    "top_img": "portfolio1_top.png",
+    "top_text": "HTML学び出して数ヶ月。初めて作ったWebサイトです。",
+    "tags": ["web", "design", "programming"],
+    "keyword": ["github", "css", "javascript"],
+    "type": "multi",
+    "date": "2017/1",
+    "content": {
+      "imgs": [],
+      "video": null,
+      "text": [],
+      "links": [
+        {
+          "name": "Chige12_Portfolio [chige12.github.io]",
+          "url": "https://chige12.github.io"
+        }
       ]
     }
   },
   {
-    "id":         "MCI2016",
-    "title":      "MCI2018FINAL 決勝4位",
-    "top_img":    "MCI2016-2.jpg",
-    "top_text":   "Mono-Coto Innovation2016に参加。京都決勝通過後、全国決勝4位敗退。",
-    "tags":       ["event","design"],
-    "keyword":    ["デザイン思考","デザインシンキング","アイデアソン","ビジネスコンテスト","モノコトイノベーション"],
-    "type":       "multi",
-    "date":       "2016/7 ~ 2017/4",
-    "content":{
-      "imgs":    [],
-      "video":  {
-        "embedded":true, "site":"youtube",
-        "url_tag":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bhGTgiEnR7Y\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    "id": "MCI2016",
+    "title": "MCI2018FINAL 決勝4位",
+    "top_img": "MCI2016-2.jpg",
+    "top_text": "Mono-Coto Innovation2016に参加。京都決勝通過後、全国決勝4位敗退。",
+    "tags": ["event", "design"],
+    "keyword": [
+      "デザイン思考",
+      "デザインシンキング",
+      "アイデアソン",
+      "ビジネスコンテスト",
+      "モノコトイノベーション"
+    ],
+    "type": "multi",
+    "date": "2016/7 ~ 2017/4",
+    "content": {
+      "imgs": [],
+      "video": {
+        "embedded": true,
+        "site": "youtube",
+        "url_tag": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bhGTgiEnR7Y\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       },
-      "text":   [],
-      "links":[
-        {"name":"Mono-Coto Innovation公式ページ","url":"http://www.mono-coto-innovation.com/"},
-        {"name":"当時の記事（中高生が企業からのテーマに挑む！ Mono-Coto Innovation FINAL開催｜ものづくりニュース）[2017/4/17]","url":"https://news.aperza.jp/%E4%B8%AD%E9%AB%98%E7%94%9F%E3%81%8C%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AB%E6%8C%91%E3%82%80%EF%BC%81-mono-coto-innovation-final%E9%96%8B%E5%82%AC/"},
-        {"name":"当時の記事（2016 KYOTO 地方決勝レポート｜KYOTO TOOL CO., LTD）[2016/11/06]","url":"https://ktc.jp/facebook/70165"}
+      "text": [],
+      "links": [
+        {
+          "name": "Mono-Coto Innovation公式ページ",
+          "url": "http://www.mono-coto-innovation.com/"
+        },
+        {
+          "name": "当時の記事（中高生が企業からのテーマに挑む！ Mono-Coto Innovation FINAL開催｜ものづくりニュース）[2017/4/17]",
+          "url": "https://news.aperza.jp/%E4%B8%AD%E9%AB%98%E7%94%9F%E3%81%8C%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AB%E6%8C%91%E3%82%80%EF%BC%81-mono-coto-innovation-final%E9%96%8B%E5%82%AC/"
+        },
+        {
+          "name": "当時の記事（2016 KYOTO 地方決勝レポート｜KYOTO TOOL CO., LTD）[2016/11/06]",
+          "url": "https://ktc.jp/facebook/70165"
+        }
       ]
     }
   },
   {
-    "id":         "haikyo_mosya",
-    "title":      "友人の漫画のアシスタント",
-    "top_img":    "haikyo-mosya.JPG",
-    "top_text":   "手前の人物は友人の絵。背景担当。模写。ミリペンのみを使用。",
-    "tags":       ["illust"],
-    "keyword":    ["廃墟","模写"],
-    "date":       "2016/1",
-    "content":{
-      "imgs":    [],
-      "video":  {},
-      "text":   [],
-      "links":null
+    "id": "haikyo_mosya",
+    "title": "友人の漫画のアシスタント",
+    "top_img": "haikyo-mosya.JPG",
+    "top_text": "手前の人物は友人の絵。背景担当。模写。ミリペンのみを使用。",
+    "tags": ["illust"],
+    "keyword": ["廃墟", "模写"],
+    "date": "2016/1",
+    "content": {
+      "imgs": [],
+      "video": {},
+      "text": [],
+      "links": null
     }
   },
   {
-    "id":         "minecraft_kinkakuji",
-    "title":      "鹿苑寺金閣｜Minecraft",
-    "top_img":    "kinkaku-kage1.png",
-    "top_text":   "マイクラで初めて作った建物。クリエイティブモード。影MODを入れて撮影。",
-    "tags":       ["minecraft"],
-    "keyword":    ["kinkakuji","マインクラフト","建築","金閣寺"],
-    "type":       "multi",
-    "date":       "2014/8",
-    "content":{
-      "imgs":    [],
-      "video":  {},
-      "text":   [],
-      "links":null
+    "id": "minecraft_kinkakuji",
+    "title": "鹿苑寺金閣｜Minecraft",
+    "top_img": "kinkaku-kage1.png",
+    "top_text": "マイクラで初めて作った建物。クリエイティブモード。影MODを入れて撮影。",
+    "tags": ["minecraft"],
+    "keyword": ["kinkakuji", "マインクラフト", "建築", "金閣寺"],
+    "type": "multi",
+    "date": "2014/8",
+    "content": {
+      "imgs": [],
+      "video": {},
+      "text": [],
+      "links": null
     }
   }
 ]
