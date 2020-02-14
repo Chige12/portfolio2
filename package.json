@@ -21,7 +21,7 @@
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.3.0",
     "vue-scrollto": "^2.13.0",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
