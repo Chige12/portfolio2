@@ -136,7 +136,7 @@
   },
   {
     "id": "mille_feuille",
-    "title": "オンコン2020 Web & Design",
+    "title": "Mille Feuille - HackU",
     "top_video": "",
     "top_img": "millefeuille_slide.png",
     "top_text": "HackU 2019 Osaka で開発した地図共有サービス。フロントとデザインを担当。",
@@ -238,6 +238,27 @@
         {
           "name": "TalkCafe#2 Keynote Speech｜SpeakerDeck",
           "url": "https://speakerdeck.com/chige/talkcafe-number-2-keynote-speech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sayo_food",
+    "title": "佐用風土ONLINE STORE 制作",
+    "top_img": "sayo_food.png",
+    "top_text": "HTML, CSSのコーディングを担当",
+    "tags": ["web"],
+    "keyword": ["オンラインストア"],
+    "type": "multi",
+    "date": "2019/3",
+    "content": {
+      "imgs": [],
+      "video": null,
+      "text": [],
+      "links": [
+        {
+          "name": "佐用風土オンラインストア",
+          "url": "https://sayofood.com/"
         }
       ]
     }
@@ -572,7 +593,7 @@
     "type": "image",
     "date": "2017/3",
     "content": {
-      "imgs": [],
+      "imgs": [{ "src": "ude_sketch.jpg", "caption": "" }],
       "video": null,
       "text": [],
       "links": null
@@ -619,7 +640,7 @@
   },
   {
     "id": "MCI2016",
-    "title": "MCI2018FINAL 決勝4位",
+    "title": "MCI2016FINAL 決勝4位",
     "top_img": "MCI2016-2.jpg",
     "top_text": "Mono-Coto Innovation2016に参加。京都決勝通過後、全国決勝4位敗退。",
     "tags": ["event", "design"],
@@ -665,7 +686,7 @@
     "keyword": ["廃墟", "模写"],
     "date": "2016/1",
     "content": {
-      "imgs": [],
+      "imgs": [{ "src": "haikyo-mosya.JPG", "caption": "" }],
       "video": {},
       "text": [],
       "links": null
@@ -681,7 +702,7 @@
     "type": "multi",
     "date": "2014/8",
     "content": {
-      "imgs": [],
+      "imgs": [{ "src": "kinkaku-kage1.png", "caption": "" }],
       "video": {},
       "text": [],
       "links": null
